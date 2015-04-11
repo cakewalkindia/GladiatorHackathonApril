@@ -1,0 +1,17 @@
+.tagText{
+    width: 120px;
+}
+
+.tagDiv{
+    margin-left: 5px;
+}
+
+.parentTag {
+    margin-top: 3px;
+    margin-left: 7px;
+}
+
+.tagMargin{
+    margin-top: -20px;
+    margin-left: -4px;
+}
