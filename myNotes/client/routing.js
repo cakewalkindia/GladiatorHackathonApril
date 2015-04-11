@@ -5,7 +5,7 @@ Router.configure({
 
 Router.map(function(){
 
-    this.route('NoteList',{path:'/'});
+    this.route('notes',{path:'/'});
 
     this.route('group',{path:'/group'});
 

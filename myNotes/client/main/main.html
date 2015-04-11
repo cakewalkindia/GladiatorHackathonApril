@@ -16,39 +16,26 @@
                 <li><a href="#"><span class="teamName">by Gladiators!</span></a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-              {{> loginButtons}}  <!--here -->
+                {{> loginButtons}}  <!--here -->
             </ul>
         </div>
     </div>
 
-  {{#if currentUser}}
-      <div class="container-fluid">
+    {{#if currentUser}}
+        <div class="container-fluid">
 
-          <div class="col-sm-2"> {{> leftPanel}}</div>
-          <!--<div class="col-sm-5">{{> centerList}}</div>-->
-          <!--<div class="col-sm-5">{{> notes}}</div>-->
-          <div class="col-sm-10">{{> yield}}</div>
-          <!--<div>{{> createNewNote}}</div>-->
-
-      </div>
-  {{else}}
-      <div class="row sidebarMargin ">
-          <div class="col-sm-12">{{>imageSlider}}</div>
-      </div>
-
-      <div class="jumbotron container-fluid setContent">
-        <div class="row">
-
-          <div class="col-sm-6 fontStyle">
-            <b>Yuppy....!  Now create your notes and access it from anywhere .....</b>
-          </div>
-
+            <div class="col-sm-2"> {{> navigationBar}}</div>
+            <!--<div class="col-sm-5">{{> centerList}}</div>-->
+            <!--<div class="col-sm-5">{{> notes}}</div>-->
+            <div class="col-sm-10">{{> yield}}</div>
+            <!--<div>{{> createNewNote}}</div>-->
 
         </div>
-
-       </div>
-
-  {{/if}}
+    {{else}}
+        <div class="row sidebarMargin ">
+            <div class="col-sm-12">{{>imageSlider}}</div>
+        </div>
+    {{/if}}
 
 </template>
 

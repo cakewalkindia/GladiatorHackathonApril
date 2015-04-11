@@ -11,6 +11,61 @@
 
 .backgroudImage
 {
-    background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, .5) 20%, rgba(0, 0, 0, .0001) 100%);
-    margin-top: -20px;
+    background-image: -webkit-linear-gradient(left, white,white) !important;
+    /*margin-top: -20px;*/
+}
+
+.carousel-control.left {
+    background-repeat: repeat-x;
+    background-image: linear-gradient(to right,rgba(255, 255, 255, 1) 0,rgba(255, 255, 255, 1) 100%);
+}
+ .carousel-control.right {
+     right: 0;
+     left: auto;
+     background-repeat: repeat-x;
+     background-image: linear-gradient(to right,rgba(255, 255, 255, 1) 0,rgba(255, 255, 255, 1) 100%);
+ }
+
+ .btnColor{
+     color:black;
+ }
+
+ 
+ .setContent
+ {
+     margin-top: 30px;
+     border-radius: 4px;
+     /*background: -webkit-linear-gradient(bottom, lightblue,white) !important;*/
+
+  }
+ 
+ .setFont
+ {
+     text-align: center;
+     color: darkgray;
+     font-size: 20px;
+
+ }
+ .setMargin
+ {
+     margin-left: 4px;
+
+ }
+
+ .setColor1
+ {
+     background-color: #ffb72b;
+     border-radius: 10px;
+ }
+
+.setColor2
+{
+    background-color:#d24b5a ;
+    border-radius: 10px;
+}
+
+.setColor3
+{
+    background-color: #A21EB5;
+    border-radius: 10px;
 }
