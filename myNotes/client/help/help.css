@@ -1,0 +1,27 @@
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+    width: 60%;
+    margin: auto;
+}
+
+.backgroudImage
+{
+    background-image: -webkit-linear-gradient(left, white,white) !important;
+    /*margin-top: -20px;*/
+}
+
+.carousel-control.left {
+    background-repeat: repeat-x;
+    background-image: linear-gradient(to right,rgba(255, 255, 255, 1) 0,rgba(255, 255, 255, 1) 100%);
+}
+.carousel-control.right {
+    right: 0;
+    left: auto;
+    background-repeat: repeat-x;
+    background-image: linear-gradient(to right,rgba(255, 255, 255, 1) 0,rgba(255, 255, 255, 1) 100%);
+}
+
+.btnColor{
+    color:black;
+}
+
