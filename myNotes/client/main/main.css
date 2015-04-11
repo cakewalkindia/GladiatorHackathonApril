@@ -1,0 +1,40 @@
+
+.navBarTemp {
+    /*background:  -moz-linear-gradient(top,#222, #333) !important;*/
+    /*background: -webkit-linear-gradient(top,#286090, #333) !important;*/
+
+    /*background: -webkit-linear-gradient(top,#d24b5a, #8f0222)!important;*/
+    /*border-color: #222;*/
+}
+
+
+.leftPanelTemp{}
+
+.createButtonFooter{
+    padding: 0px;
+    margin:20px;
+    width: 44px;
+}
+
+.createButton
+{
+    height: 50px;
+    width: 50px;
+    background: -webkit-linear-gradient(top,#d24b5a, #8f0222) !important;
+
+}
+
+.setContent
+{
+    margin: 20px;
+    border-radius: 4px;
+    background: -webkit-linear-gradient(bottom, lightblue,white) !important;
+
+}
+
+.fontStyle
+{
+    font-size: 20px;
+    color: gray;
+    margin-left: 20px;
+}

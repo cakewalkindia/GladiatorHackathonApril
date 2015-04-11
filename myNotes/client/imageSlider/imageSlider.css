@@ -1,0 +1,16 @@
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+    width: 60%;
+    margin: auto;
+}
+
+.carousel-inner-height
+{
+    height: 50vh;
+}
+
+.backgroudImage
+{
+    background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, .5) 20%, rgba(0, 0, 0, .0001) 100%);
+    margin-top: -20px;
+}

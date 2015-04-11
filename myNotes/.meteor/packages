@@ -6,10 +6,10 @@
 
 meteor-platform
 accounts-password
-ian:accounts-ui-bootstrap-3
-twbs:bootstrap
 froala:editor
 accounts-google
 accounts-facebook
 accounts-twitter
 iron:router
+ian:accounts-ui-bootstrap-3
+twbs:bootstrap

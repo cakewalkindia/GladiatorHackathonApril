@@ -1,13 +1,10 @@
-/**
- * Created by soheb on 11-Apr-15.
- */
-
 
 Router.configure({
     layoutTemplate:'main'
 });
 
 Router.map(function(){
+
     this.route('NoteList',{path:'/'});
 
     this.route('group',{path:'/group'});
