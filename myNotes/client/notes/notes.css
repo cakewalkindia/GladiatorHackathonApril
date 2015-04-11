@@ -1,0 +1,123 @@
+.jumbotronDetails{
+    /*height:80vh !important;*/
+    /*min-height: 100%;*/
+    /*overflow-y: auto;*/
+}
+
+.notesJumbotron {
+    padding: 20px;
+    height: 100%;
+}
+
+.notesCreated
+{
+    font-size: 12px;
+    color: cornflowerblue;
+}
+
+.notesCreatedTime
+{
+    font-size: 11px;
+    color: grey;
+}
+
+.notesUpdated
+{
+    font-size: 12px;
+    color: cornflowerblue;
+}
+
+.notesUpdatedTime
+{
+    font-size: 11px;
+    color: grey;
+}
+
+.noteDetails
+{
+    overflow-y: scroll;
+    width: 100%;
+}
+
+.htmlEditorJumbotron
+{
+    overflow-y: auto;
+    max-height: 40vh !important;
+    padding-bottom: 2px;
+
+}
+
+.glyphiconButton {
+    margin-right: 4px;
+}
+
+.spn { color:blue; font-weight:bold; }
+
+.btnSaveNote {
+    margin-top: -7px;
+    float: left;
+}
+
+.btnClearNote {
+    margin-top: -7px;
+    float: right;
+}
+
+
+.container-fluid,
+.row-fluid { height: inherit; }
+
+
+.serachNotes {
+    height:100%;
+
+}
+
+.jumbotron{
+    padding: 10px !important;
+}
+
+.noteListTable{
+    height: 82vh !important;
+
+    padding: 6px;
+    overflow-y: scroll;
+    margin-top: 4px;
+
+}
+
+
+
+
+/*css for table column 2 font size*/
+td:nth-child(4)
+{
+    font-size: 11px;
+}
+
+
+
+.deleteNote
+{
+    color: maroon !important;
+    padding-top: 9px;
+
+}
+
+.addNote
+{
+    margin-bottom: 3px !important;
+}
+
+.container-fluid,
+.row-fluid { height: inherit; }
+
+
+.borderTop
+{
+    border-top: 1px Solid lightgray;
+}
+
+
+
+
