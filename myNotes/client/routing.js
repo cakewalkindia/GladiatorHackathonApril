@@ -22,7 +22,3 @@ Router.map(function(){
 
 });
 
-Router.onBeforeAction(function() {
-    GoogleMaps.load();
-    this.next();
-}, { only: ['contactUs'] });
