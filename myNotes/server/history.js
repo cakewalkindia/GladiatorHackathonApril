@@ -24,6 +24,9 @@ Meteor.methods({
             });
 
         }
+    },
+    'getHistory': function(noteId){
+        var history = historyList.find({NoteId: noteId});
     }
 
 });

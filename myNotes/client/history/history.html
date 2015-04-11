@@ -1,5 +1,5 @@
-<template name="history">
-    <div class="col-md-12" style="background-color: #ecf0f5;max-height: 262px;  overflow: scroll;width: 40% !important;">
+<template name="history1">
+
         <ul class="timeline">
             <!-- timeline time label -->
             <li class="time-label">
@@ -72,19 +72,19 @@
                 </div>
             </li>
         </ul>
-    </div>
+
 </template>
 
-<template name="history1">
-    <div class="col-md-12" style="background-color: #ecf0f5;max-height: 262px;  overflow: scroll;width: 40% !important;">
+<template name="history">
+
         <ul class="timeline">
-          {{#each dates}}
+          {{#each getHistoryList}}
               <li class="time-label">
                   <span class="bg-red dateSpan">
-                    10 Feb. 2014
+                    {{date}}
                   </span>
               </li>
-            {{#each history}}
+            {{#each data}}
                 <li>
                     <!-- timeline icon -->
                     <i class="fa fa-envelope bg-blue"></i>
@@ -92,22 +92,22 @@
                     <!-- timeline item -->
                     <div class="timeline-item">
                         <span class="time"><i class="fa fa-clock-o"></i> {{time}}</span>
-                        <h3 class="timeline-header"><a href="#">{{user}}</a> {{message}}</h3>
+                        <h3 class="timeline-header"><a href="#">{{uName  }}</a> {{status}}</h3>
                         <div class="timeline-body">
-                            Title: {{title}}
-                            Details:{{Details}}
+                            Title: {{historyDetails.title}}
+                            <br/>Details:{{historyDetails.noteDetails}}
                         </div>
                         <!-- timeline footer -->
-                        <div class="timeline-footer">
+                        <!--<div class="timeline-footer">
                             <a class="btn btn-primary btn-xs">Read more</a>
                             <a class="btn btn-danger btn-xs">Delete</a>
-                        </div>
+                        </div> -->
                     </div>
                 </li>
             {{/each}}
 
           {{/each}}
         </ul>
-    </div>
+
 </template>
 

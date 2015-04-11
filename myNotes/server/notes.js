@@ -13,9 +13,7 @@ Meteor.publish('noteList', function(strParam){
 
         if(type=="Tag")
         {
-            var arrId=[];
-            tagList.find({ "TagName" :{ $regex:strToSearch} }).fetch().forEach(function(doc) {arrId.push(doc.NoteId)});
-            return noteList.find({ _id : { $in : arrId },CreatedBy: currentUserId });
+           des
         }
         else if(type=="Note")
         {

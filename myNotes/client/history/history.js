@@ -27,6 +27,8 @@ clsHistory = function () {
 
 
 clsHistory.prototype.createHistoryForNote=function(noteId,status,title,noteDetails){
+
+
     var userId = Meteor.userId();
     var objHistoryData = new clsHistory();
 
@@ -47,9 +49,9 @@ clsHistory.prototype.createHistoryForNote=function(noteId,status,title,noteDetai
     else if(status==Status.Update)
     {
         objHistoryData.historyDetails.oldtitle=Session.get('oldTitle');
-        objHistoryData.historyDetails.newtitle=title;
+        objHistoryData.historyDetails.title=title;
         objHistoryData.historyDetails.oldNoteDetails=Session.get('oldNoteDetails');
-        objHistoryData.historyDetails.newNoteDetails=noteDetails;
+        objHistoryData.historyDetails.noteDetails=noteDetails;
     }
     else if(status==Status.Delete)
     {
@@ -59,10 +61,60 @@ clsHistory.prototype.createHistoryForNote=function(noteId,status,title,noteDetai
 }
 
 
-clsHistory.prototype.getHistory= function () {
-    var noteId = Session.get('noteId');
-    return historyList.find({NoteId: noteId});
+
+
+
+historySubscription=Meteor.subscribe('historyList');
+
+
+Template.history.helpers({
+    getHistory: function () {
+       var noteId="TKLFw35sWAXtREAck"
+        //var currentUserId = Meteor.userId();
+        return Meteor.call('getHistory', noteId);
+
+    },
+    getHistoryList:function(){
+        var hist = historyList.find({NoteId:"2G7k6cveNm4aoAEST"}).fetch();
+        //var groupedDates = _.groupBy(_.pluck(hist[0].HistoryData, 'changedDate'));
+
+        var arrDates=_.pluck(hist[0].HistoryData, 'changedDate');
+
+        var uniqDates=arrDates.unique();
+        var arrReturnList=[];
+        for(i = 0; i < uniqDates.length; i++){
+
+            var obj={date:'',data:[]}
+            for(j = 0; j < hist[0].HistoryData.length; j++){
+                if(uniqDates[i] === hist[0].HistoryData[j].changedDate.toDateString())
+                {
+                    obj.date = uniqDates[i];
+                    hist[0].HistoryData[j].time= new Date(hist[0].HistoryData[j].changedDate).toLocaleTimeString().replace(/([\d]+:[\d]{2})(:[\d]{2})(.*)/, "$1$3")
+                    hist[0].HistoryData[j].uName=Meteor.users.find({_id:hist[0].HistoryData[j].changedBy}).fetch()[0].profile.first-name;
+                    obj.data.push(hist[0].HistoryData[j]);
+
+                }
+            }
+            arrReturnList.push(obj);
+        }
+        return arrReturnList;
+    }
+});
+
+
+Array.prototype.contains = function(v) {
+    for(var i = 0; i < this.length; i++) {
+        if(this[i] === v.toDateString())  return true;
+    }
+    return false;
+};
+
+Array.prototype.unique = function() {
+    var arr = [];
+    for(var i = 0; i < this.length; i++) {
+        if(!arr.contains(this[i])) {
+            arr.push(this[i].toDateString());
+        }
+    }
+    return arr;
 }
-
-
-
