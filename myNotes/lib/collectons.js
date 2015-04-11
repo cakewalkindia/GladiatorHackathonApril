@@ -1,0 +1,1 @@
+historyList= new Mongo.Collection('historyList')
