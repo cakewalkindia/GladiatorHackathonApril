@@ -1,0 +1,1 @@
+noteList = new Mongo.Collection('noteList');
