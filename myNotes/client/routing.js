@@ -12,10 +12,17 @@ Router.map(function(){
 
     this.route('contactUs', {path:'/contactUs'});
 
-    this.route('aboutUs', {path:'/aboutUs'});
+    this.route('ourTeam', {path:'/ourTeam'});
 
     this.route('help', {path:'/help'});
 
     this.route('tagList', {path:'/tagList'});
 
+    this.route('trash', {path:'/trash'});
+
 });
+
+Router.onBeforeAction(function() {
+    GoogleMaps.load();
+    this.next();
+}, { only: ['contactUs'] });

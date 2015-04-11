@@ -1,5 +1,6 @@
-<template name="contactUs">
 
+
+<template name="contactUs">
 
     <div id="contact" class="jumbotron container-fluid">
         <div class="row">
@@ -16,8 +17,10 @@
             <br/>
                 For support : skype name: sohel.cakewalk
             </div>
-            <div class="col-sm-9">
-
+            <div class="col-sm-7">
+                <div class="map-container">
+                    {{> googleMap name="exampleMap" options=exampleMapOptions}}
+                </div>
             </div>
 
 
@@ -26,3 +29,5 @@
 
 
 </template>
+
+
