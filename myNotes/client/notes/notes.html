@@ -1,0 +1,257 @@
+<template name="notes">
+    <!--<link href="red.css" rel="stylesheet" type="text/css" />-->
+
+    <!--//below script is for share drpdwn-->
+    <script>
+        var options = [];
+
+        $( '.dropdown-menu a' ).on( 'click', function( event ) {
+
+            var $target = $( event.currentTarget ),
+                    val = $target.attr( 'data-value' ),
+                    $inp = $target.find( 'input' ),
+                    idx;
+
+            if ( ( idx = options.indexOf( val ) ) > -1 ) {
+                options.splice( idx, 1 );
+                setTimeout( function() { $inp.prop( 'checked', false ) }, 0);
+            } else {
+                options.push( val );
+                setTimeout( function() { $inp.prop( 'checked', true ) }, 0);
+            }
+
+            $( event.target ).blur();
+
+            console.log( options );
+            return false;
+        });
+    </script>
+
+    <script src="/client/js/file_upload.min.js" ></script>
+
+    <script language="Javascript">
+        var i=1;
+        //        function creatediv(element)
+        //        {
+        //            if(txtTag.value != "") {
+        //                mNewObj = document.createElement('div');
+        //
+        //
+        //                mNewObj.id = "BOX" + i;
+        //                mNewObj.style.backgroundColor = "grey";
+        //                mNewObj.style.visibility = "show";
+        //                mNewObj.innerText = txtTag.value + i;
+        //                document.getElementById("parentTag").appendChild(mNewObj);
+        ////                alert(mNewObj.innerText);
+        //                i++;
+        //
+        //                txtTag.value = '';
+        //            }
+        //        }
+
+        function add(type){
+            var element=document.createElement("DIV");
+            element.setAttribute("type",type);
+            element.setAttribute("value",type);
+            element.setAttribute("name",type);
+            var foo=document.getElementById("childTag");
+            foo.appendChild(element);
+        }
+
+        //  below function is for remove tag onclose icon click
+        function removeElement(parentDiv, childDiv){
+            if (childDiv == parentDiv) {
+                alert("The parent div cannot be removed.");
+            }
+            else if (document.getElementById(childDiv)) {
+                var child = document.getElementById(childDiv);
+                var parent = document.getElementById(parentDiv);
+                parent.removeChild(child);
+            }
+            else {
+                alert("Child div has already been removed or does not exist.");
+                return false;
+            }
+        }
+
+
+    </script>
+
+    <script>
+
+
+
+
+        $(function() {
+            $('textarea#noteDetails').editable({
+                theme:'royal',
+                inlineMode: false,
+                placeholder: 'Note details...',
+                colors: [
+                    '#15E67F', '#E3DE8C', '#D8A076', '#D83762', '#76B6D8', 'REMOVE',
+                    '#1C7A90', '#249CB8', '#4ABED9', '#FBD75B', '#FBE571', '#FFFFFF'
+                ],
+                minHeight: 220,
+                maxHeight: 220,
+                showFileUpload: true
+            })
+
+
+
+
+
+        });
+
+
+    </script>
+
+    <div class="col-sm-7">
+        <div id="test" class="jumbotron container-fluid">
+            <div class="row">
+                <div class="col-sm-12">
+
+
+                    <div class="serachNotes">
+
+
+
+                        <div class="input-group" >
+                            <input class="form-control" name="q" type="text" placeholder="Search Notes" id="txtSearch">
+                        <span class="input-group-addon searchNote">
+                            <i class="glyphicon glyphicon-search"></i>
+                        </span>
+
+                            <div class="input-group btn-info">
+                                <select class="form-control" id="cmbSearch">
+                                    <option value="By Tag">By Tag</option>
+                                    <option value="By Notes" selected>By Notes</option>
+                                </select>
+                            </div>
+                        </div>
+
+
+
+                        <div class="jumbotron noteListTable">
+                            <table class="table table-hover">
+                                <tbody>
+                                {{#if getNotes.count}}
+                                  {{#each getNotes}}
+                                      <tr class="borderTop">
+                                          <a href="#"><span class="glyphicon glyphicon-edit editNote" alt="Delete this Note" TITLE="Edit this Note"></span></a>
+                                          &nbsp;&nbsp; &nbsp;&nbsp;
+                                          <a href="#"><span class="glyphicon glyphicon-tags editNote" alt="Add Tag" TITLE="Add Tag"></span></a>
+
+                                          <td>{{NoteTitle}}</td>
+                                          <!--<td>{{NoteDetails}}</td>-->
+                                          <td style="text-align: end">{{CreatedDate}}</td>
+
+                                          <a href="#"><span class="glyphicon glyphicon-remove-circle deleteNote pull-right" alt="Delete this Note" TITLE="Delete this Note"></span></a>
+                                      </tr>
+                                  {{/each}}
+                                {{else}}
+                                    <tr>
+                                        <td style="text-align: center;">
+                                            No Notes Exits.
+                                        </td>
+
+                                    </tr>
+                                {{/if}}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="col-sm-5">
+
+    <div id="test" class="jumbotron container-fluid">
+        <div class="row">
+            <div class="col-sm-12">
+
+                <!--<div>-->
+
+                <!--<a href="#" class="btn btn-default btn-sm btnCreateNote"><span class="glyphicon glyphicon-plus glyphiconButton"></span>Create Note</a>-->
+
+
+
+
+
+                <!--<div class="btn-group pull-right">-->
+                <!--<button class="btn btn-primary" data-label-placement>Share</button>-->
+                <!--<button data-toggle="dropdown" class="btn btn-primary dropdown-toggle"><span class="caret"></span></button>-->
+                <!--<ul class="dropdown-menu" style="max-height: 100px; overflow-y: auto;">-->
+                <!--&lt;!&ndash;<li><input type="checkbox" id="ID" name="NAME" value="VALUE"><label for="ID">Label</label></li>&ndash;&gt;-->
+
+                <!--<li><a href="#" class="small" data-value="option4" tabIndex="-1"><input type="checkbox"/>&nbsp;Option 4</a></li>-->
+                <!--<li><a href="#" class="small" data-value="option4" tabIndex="-1"><input type="checkbox"/>&nbsp;Option 4</a></li>-->
+                <!--<li><a href="#" class="small" data-value="option4" tabIndex="-1"><input type="checkbox"/>&nbsp;Option 4</a></li>-->
+                <!--<li><a href="#" class="small" data-value="option4" tabIndex="-1"><input type="checkbox"/>&nbsp;Option 4</a></li>-->
+                <!--<li><a href="#" class="small" data-value="option4" tabIndex="-1"><input type="checkbox"/>&nbsp;Option 4</a></li>-->
+                <!--<li><a href="#" class="small" data-value="option4" tabIndex="-1"><input type="checkbox"/>&nbsp;Option 4</a></li>-->
+
+                <!--&lt;!&ndash; Other items &ndash;&gt;-->
+                <!--</ul>-->
+                <!--</div>-->
+
+
+                <!--</div>-->
+
+                <br/>
+
+
+              {{#if isTagVisible}}
+                {{> tags}}
+              {{/if}}
+
+                <div class="jumbotron" style="overflow-y: auto;">
+
+                    <div>
+                <span>
+                <label class="control-label notesCreated">Created:</label>
+                <label class="control-label notesCreatedTime">24 Mar 2015 11:10 AM</label>
+                </span>
+                <span class="pull-right">
+                <label class="control-label notesUpdated" >Updated:</label>
+                <label class="control-label notesUpdatedTime">25 Mar 2015 12:16 PM</label>
+                </span>
+                    </div>
+
+
+
+
+
+                    <!--code for textEditor-->
+
+
+
+                    <input class="form-control noteDetails" id="noteTitle" type="text" placeholder="Note title">
+
+
+
+                    <br/>
+
+
+
+                    <!--<div class="jumbotron htmlEditorJumbotron">-->
+                    <textarea id="noteDetails" class="form-control custom-control htmlEditorJumbotron" rows="15"></textarea>
+
+                    <br/>
+
+                    <!--</div>-->
+                    <a href="#" class="btn btn-sm btn-success btnSaveNote"><span class="glyphicon glyphicon-floppy-disk"></span>&nbsp;Save</a>
+                    <a href="#" class="btn btn-sm btn-warning btnClearNote btnCreateNote"><span class="glyphicon glyphicon-refresh"></span>&nbsp;Clear</a>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+
+</template>
