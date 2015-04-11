@@ -4,11 +4,19 @@
 
 Session.setDefault('noteMode','addNote');
 Session.setDefault('noteId', '');
+//Session.setDefault('editType', 'note');
 
-
+getFormatedDate = function (dateToConvert, includeTime) {
+    var mon = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+    if(includeTime) {
+        return dateToConvert.getDate() + ' ' + mon[dateToConvert.getMonth() - 1] + ' ' + dateToConvert.getFullYear()
+         + ' '  + dateToConvert.toLocaleTimeString();
+    }else{
+        return dateToConvert.getDate() + ' ' + mon[dateToConvert.getMonth() - 1] + ' ' + dateToConvert.getFullYear();
+    }
+}
 
 noteSubscription=Meteor.subscribe('noteList');
-
 
 Template.notes.helpers({
     'isTagVisible': function () {
@@ -24,9 +32,27 @@ Template.notes.helpers({
         return noteList.find({}, {sort: {NoteTitle: 1}});
     },
 
-    'CreatedDate': function () {
+    'createdDate': function () {
         var me = this;
-        return me.CreatedDate.toDateString();
+        return getFormatedDate(me.CreatedDate, false);
+    },
+
+    'noteCreatedDate': function(){
+        var nt = noteList.findOne(Session.get('noteId'));
+        if(nt != undefined && nt!= null) {
+            return getFormatedDate(nt.CreatedDate, true);
+        }else {
+            return null;
+        }
+    },
+
+    'noteLastUpdated': function () {
+        var nt = noteList.findOne(Session.get('noteId'));
+        if (nt != undefined && nt != null) {
+            return getFormatedDate(nt.LastUpdated, true);
+        } else {
+            return null;
+        }
     }
 });
 
@@ -77,10 +103,6 @@ Template.notes.events({
         $('#noteTitle').focus();
     },
 
-    'click .btnSaveTag': function () {
-        var tagName = $('#txtTag')[0].value;
-    },
-
     'click .deleteNote': function(){
         var noteId = this._id;
 
@@ -102,28 +124,36 @@ Template.notes.events({
         }
     },
 
+
+
     'click .editNote': function(){
-        var noteId = this._id;
-        var note = noteList.findOne(noteId);
+        var me=this;
+        //var noteId = this._id;
+        //var note = noteList.findOne(noteId);
 
-        $('#noteTitle')[0].value = note.NoteTitle;
-        $('textarea#noteDetails').editable("setHTML", note.NoteDetails, false);
+        $('#noteTitle')[0].value = me.NoteTitle;
+        $('textarea#noteDetails').editable("setHTML", me.NoteDetails, false);
         Session.set('noteMode','editNote');
-        Session.set('noteId', noteId);
+        Session.set('noteId', me._id);
 
-        Session.set('oldTitle', note.NoteTitle);
-        Session.set('oldNoteDetails', note.NoteDetails);
+        Session.set('oldTitle', me.NoteTitle);
+        Session.set('oldNoteDetails', me.NoteDetails);
 
         $('textarea#noteDetails').editable("focus");
         $('#noteTitle').focus();
     },
+
+    'click .addTag': function () {
+        $( "#txtTag" ).focus();
+    },
+
     'click .searchNote':function(){
         var strToSearch=$("#txtSearch")[0].value;
         var strParam="";
 
         if(strToSearch!="")
         {
-            if($("#cmbSearch")[0].value=="By Tag")
+            if($("#cmbSearch")[0].value=="By Tags")
             {
                 strParam= strToSearch +"@@@"+"Tag";
             }
@@ -139,4 +169,3 @@ Template.notes.events({
 
     }
 });
-

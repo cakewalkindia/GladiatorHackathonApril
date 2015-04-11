@@ -27,61 +27,7 @@
         });
     </script>
 
-    <script src="/client/js/file_upload.min.js" ></script>
-
-    <script language="Javascript">
-        var i=1;
-        //        function creatediv(element)
-        //        {
-        //            if(txtTag.value != "") {
-        //                mNewObj = document.createElement('div');
-        //
-        //
-        //                mNewObj.id = "BOX" + i;
-        //                mNewObj.style.backgroundColor = "grey";
-        //                mNewObj.style.visibility = "show";
-        //                mNewObj.innerText = txtTag.value + i;
-        //                document.getElementById("parentTag").appendChild(mNewObj);
-        ////                alert(mNewObj.innerText);
-        //                i++;
-        //
-        //                txtTag.value = '';
-        //            }
-        //        }
-
-        function add(type){
-            var element=document.createElement("DIV");
-            element.setAttribute("type",type);
-            element.setAttribute("value",type);
-            element.setAttribute("name",type);
-            var foo=document.getElementById("childTag");
-            foo.appendChild(element);
-        }
-
-        //  below function is for remove tag onclose icon click
-        function removeElement(parentDiv, childDiv){
-            if (childDiv == parentDiv) {
-                alert("The parent div cannot be removed.");
-            }
-            else if (document.getElementById(childDiv)) {
-                var child = document.getElementById(childDiv);
-                var parent = document.getElementById(parentDiv);
-                parent.removeChild(child);
-            }
-            else {
-                alert("Child div has already been removed or does not exist.");
-                return false;
-            }
-        }
-
-
-    </script>
-
     <script>
-
-
-
-
         $(function() {
             $('textarea#noteDetails').editable({
                 theme:'royal',
@@ -95,14 +41,7 @@
                 maxHeight: 220,
                 showFileUpload: true
             })
-
-
-
-
-
         });
-
-
     </script>
 
     <div class="col-sm-7">
@@ -123,7 +62,7 @@
 
                             <div class="input-group btn-info">
                                 <select class="form-control" id="cmbSearch">
-                                    <option value="By Tag">By Tag</option>
+                                    <option value="By Tags">By Tags</option>
                                     <option value="By Notes" selected>By Notes</option>
                                 </select>
                             </div>
@@ -139,11 +78,11 @@
                                       <tr class="borderTop">
                                           <a href="#"><span class="glyphicon glyphicon-edit editNote" alt="Delete this Note" TITLE="Edit this Note"></span></a>
                                           &nbsp;&nbsp; &nbsp;&nbsp;
-                                          <a href="#"><span class="glyphicon glyphicon-tags editNote" alt="Add Tag" TITLE="Add Tag"></span></a>
+                                          <a href="#"><span class="glyphicon glyphicon-tags addTag editNote" alt="Add Tag" TITLE="Add Tag"></span></a>
 
                                           <td>{{NoteTitle}}</td>
                                           <!--<td>{{NoteDetails}}</td>-->
-                                          <td style="text-align: end">{{CreatedDate}}</td>
+                                          <td style="text-align: end">{{createdDate}}</td>
 
                                           <a href="#"><span class="glyphicon glyphicon-remove-circle deleteNote pull-right" alt="Delete this Note" TITLE="Delete this Note"></span></a>
                                       </tr>
@@ -165,42 +104,15 @@
         </div>
     </div>
 
-
     <div class="col-sm-5">
 
     <div id="test" class="jumbotron container-fluid">
         <div class="row">
             <div class="col-sm-12">
 
-                <!--<div>-->
-
-                <!--<a href="#" class="btn btn-default btn-sm btnCreateNote"><span class="glyphicon glyphicon-plus glyphiconButton"></span>Create Note</a>-->
 
 
-
-
-
-                <!--<div class="btn-group pull-right">-->
-                <!--<button class="btn btn-primary" data-label-placement>Share</button>-->
-                <!--<button data-toggle="dropdown" class="btn btn-primary dropdown-toggle"><span class="caret"></span></button>-->
-                <!--<ul class="dropdown-menu" style="max-height: 100px; overflow-y: auto;">-->
-                <!--&lt;!&ndash;<li><input type="checkbox" id="ID" name="NAME" value="VALUE"><label for="ID">Label</label></li>&ndash;&gt;-->
-
-                <!--<li><a href="#" class="small" data-value="option4" tabIndex="-1"><input type="checkbox"/>&nbsp;Option 4</a></li>-->
-                <!--<li><a href="#" class="small" data-value="option4" tabIndex="-1"><input type="checkbox"/>&nbsp;Option 4</a></li>-->
-                <!--<li><a href="#" class="small" data-value="option4" tabIndex="-1"><input type="checkbox"/>&nbsp;Option 4</a></li>-->
-                <!--<li><a href="#" class="small" data-value="option4" tabIndex="-1"><input type="checkbox"/>&nbsp;Option 4</a></li>-->
-                <!--<li><a href="#" class="small" data-value="option4" tabIndex="-1"><input type="checkbox"/>&nbsp;Option 4</a></li>-->
-                <!--<li><a href="#" class="small" data-value="option4" tabIndex="-1"><input type="checkbox"/>&nbsp;Option 4</a></li>-->
-
-                <!--&lt;!&ndash; Other items &ndash;&gt;-->
-                <!--</ul>-->
-                <!--</div>-->
-
-
-                <!--</div>-->
-
-                <br/>
+              <br/>
 
 
               {{#if isTagVisible}}
@@ -210,14 +122,19 @@
                 <div class="jumbotron" style="overflow-y: auto;">
 
                     <div>
-                <span>
-                <label class="control-label notesCreated">Created:</label>
-                <label class="control-label notesCreatedTime">24 Mar 2015 11:10 AM</label>
-                </span>
-                <span class="pull-right">
-                <label class="control-label notesUpdated" >Updated:</label>
-                <label class="control-label notesUpdatedTime">25 Mar 2015 12:16 PM</label>
-                </span>
+                        {{#if noteCreatedDate}}
+                            <span>
+                            <label class="control-label notesCreated">Created:</label>
+                            <label class="control-label notesCreatedTime">{{noteCreatedDate}}</label>
+                            </span>
+                        {{/if}}
+
+                        {{#if noteLastUpdated}}
+                        <span class="pull-right">
+                        <label class="control-label notesUpdated" >Updated:</label>
+                        <label class="control-label notesUpdatedTime">{{noteLastUpdated}}</label>
+                        </span>
+                        {{/if}}
                     </div>
 
 
@@ -228,7 +145,7 @@
 
 
 
-                    <input class="form-control noteDetails" id="noteTitle" type="text" placeholder="Note title">
+                    <input class="form-control noteDetails" id="noteTitle" maxlength="35" type="text" placeholder="Note title">
 
 
 
@@ -258,7 +175,5 @@
 
 
     </div>
-
-
 
 </template>
