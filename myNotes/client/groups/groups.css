@@ -43,14 +43,31 @@
     margin-bottom: 8px;
 }
 
+.btnSaveGroup {
+    margin-top: -7px;
+    float: left;
+}
+
+.btnClearGroup {
+    margin-top: -7px;
+    float: right;
+}
 
 
 
 
+.searchGroups {
+    height:100%;
 
+}
 
+.borderTop
+{
+    border-top: 1px Solid lightgray;
+}
 
-
-
-
+.paddingTop
+{
+    padding-top: 10px !important;
+}
 

@@ -39,7 +39,7 @@ Meteor.publish('noteList', function(strParam){
 });
 
 Meteor.methods({
-    'addNote': function( type, noteId, noteTitle, noteDetails ){
+    'addUpdateNote': function( type, noteId, noteTitle, noteDetails ){
         var currentUserId = Meteor.userId();
         if(type == 'addNote') {
             var ret =  noteList.insert({

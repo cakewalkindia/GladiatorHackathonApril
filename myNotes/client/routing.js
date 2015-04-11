@@ -7,7 +7,7 @@ Router.map(function(){
 
     this.route('notes',{path:'/'});
 
-    this.route('group',{path:'/group'});
+    this.route('groups',{path:'/groups'});
 
 
     this.route('contactUs', {path:'/contactUs'});

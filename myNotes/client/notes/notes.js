@@ -16,10 +16,28 @@ getFormatedDate = function (dateToConvert, includeTime) {
     }
 }
 
+loadHtmlEditor= function () {
+    //$(function() {
+        $('textarea#noteDetails').editable({
+            theme:'royal',
+            inlineMode: false,
+            placeholder: 'Note details...',
+            colors: [
+                '#15E67F', '#E3DE8C', '#D8A076', '#D83762', '#76B6D8', 'REMOVE',
+                '#1C7A90', '#249CB8', '#4ABED9', '#FBD75B', '#FBE571', '#FFFFFF'
+            ],
+            minHeight: 220,
+            maxHeight: 220,
+            showFileUpload: true
+        });
+    //});
+}
+
 noteSubscription=Meteor.subscribe('noteList');
 
 Template.notes.helpers({
     'isTagVisible': function () {
+        loadHtmlEditor();
         if(Session.get('noteMode') == 'editNote'){
             return true;
         }else{
@@ -27,7 +45,7 @@ Template.notes.helpers({
         }
     },
 
-    getNotes: function () {
+    'getNotes': function () {
         //var currentUserId = Meteor.userId();
         return noteList.find({}, {sort: {NoteTitle: 1}});
     },
@@ -70,7 +88,7 @@ Template.notes.events({
             if(nTit.trim().length==0){
                 alert("Note Title can not be empty");
             }else {
-                Meteor.call('addNote', Session.get('noteMode'), Session.get('noteId'), nTit, nDet, function (error, response) {
+                Meteor.call('addUpdateNote', Session.get('noteMode'), Session.get('noteId'), nTit, nDet, function (error, response) {
                     if (error) {
                         console.log('ERROR :', error);
                     } else {
@@ -95,7 +113,7 @@ Template.notes.events({
         }
     },
 
-    'click .btnCreateNote': function(){
+    "click .btnClearNote": function(){
         $('#noteTitle')[0].value = "";
         $('textarea#noteDetails').editable("setHTML", "", false);
         Session.set('noteMode','addNote');
@@ -104,20 +122,20 @@ Template.notes.events({
     },
 
     'click .deleteNote': function(){
-        var noteId = this._id;
+        var me = this;
 
-        var nTit = noteList.findOne(noteId).NoteTitle;
+        var nTit = me.NoteTitle;
         var r = confirm("Are you sure you want delete \"" + nTit + "\"");
         if (r == true) {
             //PlayersList.remove(selectedPlayer);
-            Meteor.call('removeNote', noteId, function (error, response) {
+            Meteor.call('removeNote', me._id, function (error, response) {
                 if (error) {
                     console.log('ERROR :', error);
                 } else {
                     var objHistory= new clsHistory();
 
                     //add History  for delete
-                    objHistory.createHistoryForNote(noteId,Status.Delete, nTit)
+                    objHistory.createHistoryForNote(noteId,Status.Delete, nTit);
                     console.log('response:', response);
                 }
             });
@@ -148,7 +166,7 @@ Template.notes.events({
     },
 
     'click .searchNote':function(){
-        var strToSearch=$("#txtSearch")[0].value;
+        var strToSearch=$("#txtNoteSearch")[0].value;
         var strParam="";
 
         if(strToSearch!="")
@@ -169,3 +187,10 @@ Template.notes.events({
 
     }
 });
+
+
+Template.notes.rendered = function(){
+    Session.set('noteMode','addNote');
+    Session.set('noteId', '');
+    loadHtmlEditor();
+}

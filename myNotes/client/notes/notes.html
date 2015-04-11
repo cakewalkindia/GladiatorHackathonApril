@@ -27,35 +27,18 @@
         });
     </script>
 
-    <script>
-        $(function() {
-            $('textarea#noteDetails').editable({
-                theme:'royal',
-                inlineMode: false,
-                placeholder: 'Note details...',
-                colors: [
-                    '#15E67F', '#E3DE8C', '#D8A076', '#D83762', '#76B6D8', 'REMOVE',
-                    '#1C7A90', '#249CB8', '#4ABED9', '#FBD75B', '#FBE571', '#FFFFFF'
-                ],
-                minHeight: 220,
-                maxHeight: 220,
-                showFileUpload: true
-            })
-        });
-    </script>
-
     <div class="col-sm-7">
         <div id="test" class="jumbotron container-fluid">
             <div class="row">
                 <div class="col-sm-12">
 
 
-                    <div class="serachNotes">
+                    <div class="searchNotes">
 
 
 
                         <div class="input-group" >
-                            <input class="form-control" name="q" type="text" placeholder="Search Notes" id="txtSearch">
+                            <input class="form-control" name="q" type="text" placeholder="Search Notes" id="txtNoteSearch">
                         <span class="input-group-addon searchNote">
                             <i class="glyphicon glyphicon-search"></i>
                         </span>
@@ -76,7 +59,7 @@
                                 {{#if getNotes.count}}
                                   {{#each getNotes}}
                                       <tr class="borderTop">
-                                          <a href="#"><span class="glyphicon glyphicon-edit editNote" alt="Delete this Note" TITLE="Edit this Note"></span></a>
+                                          <a href="#"><span class="glyphicon glyphicon-edit editNote" alt="Edit this Note" TITLE="Edit this Note"></span></a>
                                           &nbsp;&nbsp; &nbsp;&nbsp;
                                           <a href="#"><span class="glyphicon glyphicon-tags addTag editNote" alt="Add Tag" TITLE="Add Tag"></span></a>
 
@@ -160,7 +143,7 @@
 
                     <!--</div>-->
                     <a href="#" class="btn btn-sm btn-success btnSaveNote"><span class="glyphicon glyphicon-floppy-disk"></span>&nbsp;Save</a>
-                    <a href="#" class="btn btn-sm btn-warning btnClearNote btnCreateNote"><span class="glyphicon glyphicon-refresh"></span>&nbsp;Clear</a>
+                    <a href="#" class="btn btn-sm btn-warning btnClearNote"><span class="glyphicon glyphicon-refresh"></span>&nbsp;Clear</a>
                 </div>
 
 
