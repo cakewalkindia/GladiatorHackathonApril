@@ -29,6 +29,5 @@ accountsUIBootstrap3.logoutCallback = function(error) {
 
     Session.set('noteMode','addNote');
     Session.set('noteId', '');
-
-
+    Router.go('notes');
 }
