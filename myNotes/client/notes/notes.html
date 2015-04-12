@@ -38,13 +38,13 @@
 
 
                         <div class="input-group" >
-                            <input class="form-control" name="q" type="text" placeholder="Search Notes" id="txtNoteSearch">
+                            <input class="form-control tbNoteSearch" name="q" type="text" placeholder="Search Notes" id="txtNoteSearch">
                         <span class="input-group-addon searchNote">
                             <i class="glyphicon glyphicon-search"></i>
                         </span>
 
                             <div class="input-group btn-info">
-                                <select class="form-control" id="cmbSearch">
+                                <select class="form-control searchBy" id="cmbSearch">
                                     <option value="By Tags">By Tags</option>
                                     <option value="By Notes" selected>By Notes</option>
                                 </select>
@@ -152,7 +152,7 @@
     </div>
         {{#if isTagVisible}}
 
-        <div class="jumbotron">
+        <div class="jumbotron" style="overflow-y: scroll;height: 288px;">
            {{>history}}
         </div>
         {{/if}}
