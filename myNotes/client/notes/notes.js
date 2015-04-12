@@ -10,10 +10,10 @@ noteSubscription=Meteor.subscribe('noteList');
 getFormatedDate = function (dateToConvert, includeTime) {
     var mon = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
     if(includeTime) {
-        return dateToConvert.getDate() + ' ' + mon[dateToConvert.getMonth() - 1] + ' ' + dateToConvert.getFullYear()
+        return dateToConvert.getDate() + ' ' + mon[dateToConvert.getMonth()] + ' ' + dateToConvert.getFullYear()
          + ' '  + dateToConvert.toLocaleTimeString();
     }else{
-        return dateToConvert.getDate() + ' ' + mon[dateToConvert.getMonth() - 1] + ' ' + dateToConvert.getFullYear();
+        return dateToConvert.getDate() + ' ' + mon[dateToConvert.getMonth()] + ' ' + dateToConvert.getFullYear();
     }
 }
 
@@ -45,6 +45,23 @@ clearNoteSessions= function () {
     Session.set('oldNoteDetails', '');
     $('#noteTitle').focus();
 }
+
+//confirmDialog= function (me) {
+//    //$(function() {
+//    $(".shareNote").dialog({
+//        resizable: false,
+//        height: 140,
+//        modal: true,
+//        buttons: {
+//            "Delete all items": function () {
+//                $(this).dialog("close");
+//            },
+//            Cancel: function () {
+//                $(this).dialog("close");
+//            }
+//        }
+//    });
+//}
 
 Template.notes.helpers({
     'isTagVisible': function () {
@@ -90,14 +107,16 @@ Template.notes.events({
         var objHistory= new clsHistory();
 
         var nTit = $('#noteTitle')[0].value;
-        var nDet = $('textarea#noteDetails').editable("getHTML", true, true); //$('#noteDetails')[0].value;
+        var nDet = $('textarea#noteDetails').editable("getHTML", false, false); //$('#noteDetails')[0].value;
 
 
         if(nTit == undefined || nTit == '' || nTit == null){
-            alert("Note Title can not be empty");
+            //alert("Note Title can not be empty");
+            bootbox.alert("Note Title can not be empty!");
         } else {
             if(nTit.trim().length==0){
-                alert("Note Title can not be empty");
+                //alert("Note Title can not be empty");
+                bootbox.alert("Note Title can not be empty!");
             }else {
                 Meteor.call('addUpdateNote', Session.get('noteMode'), Session.get('noteId'), nTit, nDet, function (error, response) {
                     if (error) {
@@ -139,22 +158,23 @@ Template.notes.events({
         var me = this;
         Session.set('noteId', me._id);
         var nTit = me.NoteTitle;
-        var r = confirm("Are you sure you want to delete \"" + nTit + "\"");
-        if (r == true) {
-            //PlayersList.remove(selectedPlayer);
-            Meteor.call('removeNote', me._id, function (error, response) {
-                if (error) {
-                    console.log('ERROR :', error);
-                } else {
-                    var objHistory= new clsHistory();
+        bootbox.confirm("Are you sure you want to delete \"" + nTit + "\"", function (result) {
+            if(result) {
+                //PlayersList.remove(selectedPlayer);
+                Meteor.call('removeNote', me._id, function (error, response) {
+                    if (error) {
+                        console.log('ERROR :', error);
+                    } else {
+                        var objHistory= new clsHistory();
 
-                    //add History  for delete
-                    objHistory.createHistoryForNote(Session.get('noteId'),Status.Delete, nTit);
-                    console.log('response:', response);
-                }
-                clearNoteSessions();
-            });
-        }
+                        //add History  for delete
+                        objHistory.createHistoryForNote(Session.get('noteId'),Status.Delete, nTit);
+                        console.log('response:', response);
+                    }
+                    clearNoteSessions();
+                });
+            }
+        });
     },
 
     'click .editNote': function(){
@@ -240,6 +260,42 @@ Template.notes.events({
             noteSubscription.stop();
         }
         noteSubscription=  Meteor.subscribe('noteList',strParam);
+    },
+
+    'click .shareNote': function () {
+        var me= this;
+        //var msgDet = "<!DOCTYPE html><html xmlns='http://www.w3.org/1999/xhtml'><head></head><body>" + me.NoteDetails + "</body></html>";
+        var msgDet =me.NoteDetails;
+        var str ='';
+        str+= '<div class="row">' +
+              '<div class="col-md-12">' +
+              '<form class="form-horizontal">' +
+              '<div class="form-group">' +
+              '<label class="col-md-3 control-label" for="name">Email Id(s): </label>' +
+              '<div class="col-md-8">' +
+              '<textarea id="name" name="name" class="form-control custom-control htmlEditorJumbotron" rows="10" placeholder="Enter multiple email ids with coma seprated"></textarea>' +
+              '</div></div></form></div></div>';
+        bootbox.dialog({
+                title: "Select user(s) from the below list!",
+                message: str,
+                buttons: {
+                    success: {
+                        label: "Share",
+                        className: "btn-success",
+                        callback: function () {
+                            var name = $('#name').val();
+                            var from = Meteor.user().emails[0].address;
+                            if (name != undefined && name != null && name != '') {
+                                var mulEmIds = name.split(',');
+                                for (i = 0; i < mulEmIds.length; i++) {
+                                    Meteor.call('sendEmail', mulEmIds[i].trim(), from, me.NoteTitle, msgDet);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        );
     }
 
 });

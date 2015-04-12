@@ -22,7 +22,7 @@ getSelectedNoteIds= function () {
             if (lst == '') {
                 lst = me.name;
             } else {
-                lst += '||' + me.name;
+                lst += ',' + me.name;
             }
         }
     }
@@ -30,7 +30,7 @@ getSelectedNoteIds= function () {
 }
 
 setSelectedNoteIds=function(noteIds) {
-    var ids = noteIds.split('||');
+    var ids = noteIds.split(',');
 
     for (i = 0; i < ids.length; i++) {
         var chkLst = $('.noteChkbox');
@@ -82,12 +82,15 @@ Template.groups.events({
         var gNm = $('#groupName')[0].value;
         var nIds = getSelectedNoteIds();
         if(gNm == undefined || gNm == '' || gNm == null){
-            alert("Group Name can not be empty");
+            //alert("Group Name can not be empty");
+            bootbox.alert("Group Name can not be empty");
         } else {
             if(gNm.trim().length==0){
-                alert("Group Name can not be empty");
+                //alert("Group Name can not be empty");
+                bootbox.alert("Group Name can not be empty");
             }else if(nIds == ''){
-                alert("Please select atleast one note.");
+                //alert("Please select atleast one note.");
+                bootbox.alert("Please select atleast one note.");
             }
             else {
                 Meteor.call('addUpdateGroup', Session.get('groupMode'), Session.get('groupId'), gNm, nIds, function (error, response) {
@@ -114,18 +117,20 @@ Template.groups.events({
     'click .deleteGroup': function(){
         var me = this;
         var gNm = me.GroupName;
-        var r = confirm("Are you sure you want to delete \"" + gNm + "\"");
-        if (r == true) {
-            //PlayersList.remove(selectedPlayer);
-            Meteor.call('removeGroup', me._id, function (error, response) {
-                if (error) {
-                    console.log('ERROR :', error);
-                } else {
-                    console.log('response:', response);
-                }
-                clearGroupSessions();
-            });
-        }
+
+        bootbox.confirm("Are you sure you want to delete \"" + gNm + "\"", function (result) {
+            if (result) {
+                //PlayersList.remove(selectedPlayer);
+                Meteor.call('removeGroup', me._id, function (error, response) {
+                    if (error) {
+                        console.log('ERROR :', error);
+                    } else {
+                        console.log('response:', response);
+                    }
+                    clearGroupSessions();
+                });
+            }
+        });
     },
 
     'click .editGroup': function(){
@@ -164,6 +169,62 @@ Template.groups.events({
         //    nLst = this._id;
         //}
         //Session.set('selectedNoteList', nLst);
+    },
+
+    'click .shareGroupNote': function () {
+        var me= this;
+        var ntIds= this.NoteIds;
+        //var msgDet =me.NoteDetails;
+        var str ='';
+        str+= '<div class="row">' +
+        '<div class="col-md-12">' +
+        '<form class="form-horizontal">' +
+        '<div class="form-group">' +
+        '<label class="col-md-3 control-label" for="name">Email Id(s): </label>' +
+        '<div class="col-md-8">' +
+        '<textarea id="name" name="name" class="form-control custom-control htmlEditorJumbotron" rows="10" placeholder="Enter multiple email ids with coma seprated"></textarea>' +
+        '</div></div></form></div></div>';
+        bootbox.dialog({
+                title: "Select user(s) from the below list!",
+                message: str,
+                buttons: {
+                    success: {
+                        label: "Share",
+                        className: "btn-success",
+                        callback: function () {
+                            var name = $('#name').val();
+                            var from = Meteor.user().emails[0].address;
+                            if (name != undefined && name != null && name != '') {
+                                //if (name.indexOf(',') != -1) {
+                                    var mulEmIds = name.split(',');
+                                    for (i = 0; i < mulEmIds.length; i++) {
+                                        if (ntIds != undefined && ntIds != null && ntIds != '') {
+                                            //if (ntIds.indexOf(',') != -1) {
+                                                var mulNtIds = ntIds.split(',');
+                                                for (j = 0; j < mulNtIds.length; j++) {
+                                                    var ntDet = noteList.findOne({_id: mulNtIds[j]});
+                                                    if(ntDet != undefined && ntDet != null && ntDet != ''){
+                                                        Meteor.call('sendEmail', mulEmIds[i].trim(), from, ntDet.NoteTitle, ntDet.NoteDetails);
+                                                    }
+                                                }
+                                            //} else {
+                                            //    var ntDet = noteList.findOne({NoteId: mulNtIds[j]});
+                                            //    if(ntDet != undefined && ntDet != null && ntDet != ''){
+                                            //        Meteor.call('sendEmail', mulEmIds[i].trim(), from, ntDet.NoteTitle, ntDet.NoteDetails);
+                                            //    }
+                                            //}
+                                        }
+                                        //Meteor.call('sendEmail', mulEmIds[i].trim(), from, me.NoteTitle, msgDet);
+                                    }
+                                //} else {
+                                //    Meteor.call('sendEmail', name.trim(), from, me.NoteTitle, msgDet);
+                                //}
+                            }
+                        }
+                    }
+                }
+            }
+        );
     }
 });
 

@@ -14,3 +14,5 @@ iron:router
 ian:accounts-ui-bootstrap-3
 twbs:bootstrap
 dburles:google-maps
+mizzao:bootboxjs
+email

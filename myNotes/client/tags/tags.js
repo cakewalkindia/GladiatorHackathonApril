@@ -17,10 +17,12 @@ Template.tags.events({
         var tagName = event.target.tagName.value;
 
         if(tagName == undefined || tagName == '' || tagName == null){
-            alert("Tag Name can not be empty");
+            //alert("Tag Name can not be empty");
+            bootbox.alert("Tag Name can not be empty");
         } else {
             if(tagName.trim().length==0){
-                alert("Tag Name can not be empty");
+                //alert("Tag Name can not be empty");
+                bootbox.alert("Tag Name can not be empty");
             }else {
                 Meteor.call('addTag', tagName, Session.get('noteId'), function (error, response) {
                     //if (error) {
@@ -38,16 +40,18 @@ Template.tags.events({
         var tagId = this._id;
 
         var tName = tagList.findOne(tagId).TagName;
-        var r = confirm("Are you sure you want delete \"" + tName + "\"");
-        if (r == true) {
-            //PlayersList.remove(selectedPlayer);
-            Meteor.call('removeTag', tagId, function (error, response) {
-                if (error) {
-                    console.log('ERROR :', error);
-                } else {
-                    console.log('response:', response);
-                }
-            });
-        }
+        bootbox.confirm("Are you sure you want delete \"" + tName + "\"", function (result) {
+            //var r = confirm("Are you sure you want delete \"" + tName + "\"");
+            if (result) {
+                //PlayersList.remove(selectedPlayer);
+                Meteor.call('removeTag', tagId, function (error, response) {
+                    if (error) {
+                        console.log('ERROR :', error);
+                    } else {
+                        console.log('response:', response);
+                    }
+                });
+            }
+        });
     }
 });

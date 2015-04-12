@@ -34,6 +34,7 @@ Meteor.publish('noteList', function(strParam){
 
 });
 
+
 Meteor.methods({
     'addUpdateNote': function( type, noteId, noteTitle, noteDetails ){
         var currentUserId = Meteor.userId();

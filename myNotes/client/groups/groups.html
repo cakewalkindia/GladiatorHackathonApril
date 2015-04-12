@@ -27,7 +27,8 @@
                                   {{#each getGroups}}
                                       <tr class="borderTop">
                                           <a href="#"><span class="glyphicon glyphicon-edit editGroup paddingTop" alt="Edit Group" TITLE="Edit Group"></span></a>
-
+                                          &nbsp;&nbsp; &nbsp;&nbsp;
+                                          <a href="#"><span class="glyphicon glyphicon-share addTag shareGroupNote"  alt="Share Note" TITLE="Share Note"></span></a>
                                           <td>{{GroupName}}</td>
                                           <!--<td>{{NoteDetails}}</td>-->
                                           <td style="text-align: end">{{CreatedDate}}</td>
@@ -70,7 +71,7 @@
 
                         <br/>
                         <div>
-                            Select notes to add in group.
+                            Select note(s) to add in group.
                         </div>
 
                         <div class="checkbox chkGrp">
@@ -89,7 +90,7 @@
                                 <label class="border">Notes are not available to select</label>
                             {{/if}}
                         </div>
-
+<sub></sub>
 
                         <br/>
                         <br/>
