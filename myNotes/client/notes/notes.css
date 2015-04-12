@@ -99,7 +99,7 @@ td:nth-child(4)
 
 .deleteNote
 {
-    color: maroon !important;
+    color: red !important;
     padding-top: 9px;
 
 }

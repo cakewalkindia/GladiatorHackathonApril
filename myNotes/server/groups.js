@@ -9,11 +9,12 @@ Meteor.publish('groupList', function(strToSearch) {
 });
 
 Meteor.methods({
-    'addUpdateGroup': function( type, groupId, groupName ){
+    'addUpdateGroup': function( type, groupId, groupName, selNoteIds ){
         var currentUserId = Meteor.userId();
         if(type == 'addGroup') {
             var ret =  groupList.insert({
                 GroupName: groupName,
+                NoteIds: selNoteIds,
                 CreatedBy: currentUserId,
                 CreatedDate: new Date(),
                 LastUpdated: new Date()
@@ -21,7 +22,7 @@ Meteor.methods({
             return ret;
         }else{
             groupList.update(groupId, {$set: {
-                GroupName: groupName, LastUpdated: new Date()}
+                GroupName: groupName,NoteIds: selNoteIds, LastUpdated: new Date()}
             });
         }
     },

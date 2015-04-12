@@ -28,7 +28,7 @@
     </script>
 
     <div class="col-sm-7">
-        <div id="test" class="jumbotron container-fluid">
+        <div class="jumbotron container-fluid">
             <div class="row">
                 <div class="col-sm-12">
 
@@ -59,7 +59,7 @@
                                 {{#if getNotes.count}}
                                   {{#each getNotes}}
                                       <tr class="borderTop">
-                                          <a href="#"><span class="glyphicon glyphicon-edit editNote" alt="Edit this Note" TITLE="Edit this Note"></span></a>
+                                          <a href="#"><span class="glyphicon glyphicon-edit editNote" alt="Edit Note" TITLE="Edit Note"></span></a>
                                           &nbsp;&nbsp; &nbsp;&nbsp;
                                           <a href="#"><span class="glyphicon glyphicon-tags addTag editNote" alt="Add Tag" TITLE="Add Tag"></span></a>
 
@@ -67,7 +67,7 @@
                                           <!--<td>{{NoteDetails}}</td>-->
                                           <td style="text-align: end">{{createdDate}}</td>
 
-                                          <a href="#"><span class="glyphicon glyphicon-remove-circle deleteNote pull-right" alt="Delete this Note" TITLE="Delete this Note"></span></a>
+                                          <a href="#"><span class="glyphicon glyphicon glyphicon-trash deleteNote pull-right" alt="Delete Note" TITLE="Delete Note"></span></a>
                                       </tr>
                                   {{/each}}
                                 {{else}}

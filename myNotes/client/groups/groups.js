@@ -1,8 +1,46 @@
 
 Session.setDefault('groupMode','addGroup');
 Session.setDefault('groupId', '');
+Session.setDefault('selectedNoteList','');
 
 groupSubscription=Meteor.subscribe('groupList');
+
+clearGroupSessions= function () {
+    $('#groupName')[0].value = "";
+    $('.noteChkbox').removeAttr('checked');
+    Session.set('groupMode', 'addGroup');
+    Session.set('groupId', '');
+    $('#groupName').focus();
+}
+
+getSelectedNoteIds= function () {
+    var lst = '';
+    var chkLst = $('.noteChkbox');
+    for (i = 0; i < chkLst.length; i++) {
+        var me = chkLst[i];
+        if (me.checked) {
+            if (lst == '') {
+                lst = me.name;
+            } else {
+                lst += '||' + me.name;
+            }
+        }
+    }
+    return lst;
+}
+
+setSelectedNoteIds=function(noteIds) {
+    var ids = noteIds.split('||');
+
+    for (i = 0; i < ids.length; i++) {
+        var chkLst = $('.noteChkbox');
+        for (j = 0; j < chkLst.length; j++) {
+            if (chkLst[j].name == ids[i]) {
+                chkLst[j].checked=true;
+            }
+        }
+    }
+}
 
 Template.groups.helpers({
     'getGroups': function () {
@@ -30,6 +68,11 @@ Template.groups.helpers({
         } else {
             return null;
         }
+    },
+
+    'getNotes': function () {
+        //var currentUserId = Meteor.userId();
+        return noteList.find({IsTrash: false}, {sort: {NoteTitle: 1}});
     }
 });
 
@@ -37,41 +80,41 @@ Template.groups.events({
     'click .btnSaveGroup': function () {
 
         var gNm = $('#groupName')[0].value;
-
+        var nIds = getSelectedNoteIds();
         if(gNm == undefined || gNm == '' || gNm == null){
-            alert("Note Title can not be empty");
+            alert("Group Name can not be empty");
         } else {
             if(gNm.trim().length==0){
-                alert("Note Title can not be empty");
-            }else {
-                Meteor.call('addUpdateGroup', Session.get('groupMode'), Session.get('groupId'), gNm, function (error, response) {
+                alert("Group Name can not be empty");
+            }else if(nIds == ''){
+                alert("Please select atleast one note.");
+            }
+            else {
+                Meteor.call('addUpdateGroup', Session.get('groupMode'), Session.get('groupId'), gNm, nIds, function (error, response) {
                     if (error) {
                         console.log('ERROR :', error);
                     } else {
                         console.log('response:', response);
                     }
-                    $('#groupName')[0].value = "";
-
-
-                    Session.set('groupMode', 'addGroup');
-                    Session.set('groupId', '');
+                    clearGroupSessions();
                 });
             }
         }
     },
 
     "click .btnClearGroup": function(){
-        $('#groupName')[0].value = "";
-
-        Session.set('groupMode','addGroup');
-        Session.set('groupId', '');
-        $('#groupName').focus();
+        clearGroupSessions();
+        //$('#groupName')[0].value = "";
+        //
+        //Session.set('groupMode','addGroup');
+        //Session.set('groupId', '');
+        //$('#groupName').focus();
     },
 
     'click .deleteGroup': function(){
         var me = this;
         var gNm = me.GroupName;
-        var r = confirm("Are you sure you want delete \"" + gNm + "\"");
+        var r = confirm("Are you sure you want to delete \"" + gNm + "\"");
         if (r == true) {
             //PlayersList.remove(selectedPlayer);
             Meteor.call('removeGroup', me._id, function (error, response) {
@@ -80,30 +123,47 @@ Template.groups.events({
                 } else {
                     console.log('response:', response);
                 }
+                clearGroupSessions();
             });
         }
     },
 
     'click .editGroup': function(){
         var me=this;
-
+        clearGroupSessions();
         $('#groupName')[0].value = me.GroupName;
-
+        if(me.NoteIds != '' && me.NoteIds != null && me.NoteIds != undefined){
+            setSelectedNoteIds(me.NoteIds);
+        }
         Session.set('groupMode','editGroup');
         Session.set('groupId', me._id);
 
         $('#groupName').focus();
     },
 
-
     'click .searchGroup':function(){
-        var strToSearch=$("#groupName")[0].value;
+        var strToSearch=$("#txtGroupSearch")[0].value;
 
         if (groupSubscription != null) {
             groupSubscription.stop();
         }
         groupSubscription=  Meteor.subscribe('groupList',strToSearch);
 
+    },
+    
+    'click .noteChkbox': function () {
+
+        //var me = this;
+        //var nLst = Session.get('selectedNoteList');
+        //var selNLst = '';
+        //if (nLst != undefined && nLst != null && nLst != '') {
+        //    if(nLst.indexOf(this._id)==-1) {
+        //        nLst += ',' + this._id;
+        //    }
+        //} else {
+        //    nLst = this._id;
+        //}
+        //Session.set('selectedNoteList', nLst);
     }
 });
 

@@ -2,14 +2,12 @@
 
     <div class="col-sm-7">
 
-        <div id="test" class="jumbotron container-fluid">
+        <div class="jumbotron container-fluid">
             <div class="row">
                 <div class="col-sm-12">
 
 
                     <div class="searchGroups">
-
-
 
                         <div class="input-group" >
                             <input class="form-control" name="q" type="text" placeholder="Search Group" id="txtGroupSearch">
@@ -23,19 +21,18 @@
 
 
                         <div class="jumbotron noteListTable">
-
                             <table class="table table-hover">
                                 <tbody>
                                 {{#if getGroups.count}}
                                   {{#each getGroups}}
                                       <tr class="borderTop">
-                                          <a href="#"><span class="glyphicon glyphicon-edit editGroup paddingTop" alt="Edit Note" TITLE="Edit Note"></span></a>
+                                          <a href="#"><span class="glyphicon glyphicon-edit editGroup paddingTop" alt="Edit Group" TITLE="Edit Group"></span></a>
 
                                           <td>{{GroupName}}</td>
                                           <!--<td>{{NoteDetails}}</td>-->
                                           <td style="text-align: end">{{CreatedDate}}</td>
 
-                                          <a href="#"><span class="glyphicon glyphicon-remove-circle deleteGroup pull-right paddingTop" alt="Delete Note" TITLE="Delete Note"></span></a>
+                                          <a href="#"><span class="glyphicon glyphicon glyphicon-trash deleteGroup pull-right paddingTop" alt="Delete Group" TITLE="Delete Group"></span></a>
                                       </tr>
                                   {{/each}}
                                 {{else}}
@@ -77,15 +74,20 @@
                         </div>
 
                         <div class="checkbox chkGrp">
-                            <label class="border"><input type="checkbox">Note Name sdfjh sjdfhj sfhj hfhj sjuf sdbfjhd fhjsplay here..</label>
-                            <hr class="hr1"/>
-                            <label class="border"><input type="checkbox">Note Name display here..</label>
-                            <hr class="hr1"/>
-                            <label class="border"><input type="checkbox">Note Name display here..</label>
-                            <hr class="hr1"/>
-
-
-
+                            <!--<label class="border"><input type="checkbox">Note Name sdfjh sjdfhj sfhj hfhj sjuf sdbfjhd fhjsplay here..</label>-->
+                            <!--<hr class="hr1"/>-->
+                            <!--<label class="border"><input type="checkbox">Note Name display here..</label>-->
+                            <!--<hr class="hr1"/>-->
+                            <!--<label class="border"><input type="checkbox">Note Name display here..</label>-->
+                            <!--<hr class="hr1"/>-->
+                            {{#if getNotes.count}}
+                                {{#each getNotes}}
+                                    <label class="border"><input type="checkbox" name="{{_id}}" class="noteChkbox">{{NoteTitle}}</label>
+                                    <hr class="hr1"/>
+                                {{/each}}
+                            {{else}}
+                                <label class="border">Notes are not available to select</label>
+                            {{/if}}
                         </div>
 
 

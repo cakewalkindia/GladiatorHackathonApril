@@ -23,13 +23,11 @@ Meteor.publish('noteList', function(strParam){
                 return null;
             //return noteList.find({CreatedBy: currentUserId});
         }
-        else
-        {
+        else {
             return noteList.find({CreatedBy: currentUserId});
         }
     }
-    else
-    {
+    else {
         return noteList.find({CreatedBy: currentUserId});
     }
 
@@ -45,7 +43,8 @@ Meteor.methods({
                 NoteDetails: noteDetails,
                 CreatedBy: currentUserId,
                 CreatedDate: new Date(),
-                LastUpdated: new Date()
+                LastUpdated: new Date(),
+                IsTrash:false
             });
             return ret;
         }else{
@@ -57,7 +56,8 @@ Meteor.methods({
     },
 
     'removeNote': function (noteId) {
-        noteList.remove(noteId);
+        //noteList.remove(noteId);
+        noteList.update(noteId, {$set: {IsTrash: true}});
     }
 });
 

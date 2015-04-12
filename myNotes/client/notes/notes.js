@@ -5,6 +5,7 @@
 Session.setDefault('noteMode','addNote');
 Session.setDefault('noteId', '');
 //Session.setDefault('editType', 'note');
+noteSubscription=Meteor.subscribe('noteList');
 
 getFormatedDate = function (dateToConvert, includeTime) {
     var mon = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
@@ -33,7 +34,17 @@ loadHtmlEditor= function () {
     //});
 }
 
-noteSubscription=Meteor.subscribe('noteList');
+clearNoteSessions= function () {
+    $('#noteTitle')[0].value = "";
+    $('textarea#noteDetails').editable("setHTML", "", false);
+
+    Session.set('noteMode', 'addNote');
+    Session.set('noteId', '');
+
+    Session.set('oldTitle', '');
+    Session.set('oldNoteDetails', '');
+    $('#noteTitle').focus();
+}
 
 Template.notes.helpers({
     'isTagVisible': function () {
@@ -47,7 +58,7 @@ Template.notes.helpers({
 
     'getNotes': function () {
         //var currentUserId = Meteor.userId();
-        return noteList.find({}, {sort: {NoteTitle: 1}});
+        return noteList.find({IsTrash: false}, {sort: {NoteTitle: 1}});
     },
 
     'createdDate': function () {
@@ -100,32 +111,35 @@ Template.notes.events({
                             objHistory.createHistoryForNote(response, Status.Insert, nTit, nDet)
                         }
                     }
-                    $('#noteTitle')[0].value = "";
-                    $('textarea#noteDetails').editable("setHTML", "", false);
 
-                    Session.set('noteMode', 'addNote');
-                    Session.set('noteId', '');
-
-                    Session.set('oldTitle', '');
-                    Session.set('oldNoteDetails', '');
+                    clearNoteSessions();
+                    //$('#noteTitle')[0].value = "";
+                    //$('textarea#noteDetails').editable("setHTML", "", false);
+                    //
+                    //Session.set('noteMode', 'addNote');
+                    //Session.set('noteId', '');
+                    //
+                    //Session.set('oldTitle', '');
+                    //Session.set('oldNoteDetails', '');
                 });
             }
         }
     },
 
     "click .btnClearNote": function(){
-        $('#noteTitle')[0].value = "";
-        $('textarea#noteDetails').editable("setHTML", "", false);
-        Session.set('noteMode','addNote');
-        Session.set('noteId', '');
-        $('#noteTitle').focus();
+        clearNoteSessions();
+        //$('#noteTitle')[0].value = "";
+        //$('textarea#noteDetails').editable("setHTML", "", false);
+        //Session.set('noteMode','addNote');
+        //Session.set('noteId', '');
+        //$('#noteTitle').focus();
     },
 
     'click .deleteNote': function(){
         var me = this;
-
+        Session.set('noteId', me._id);
         var nTit = me.NoteTitle;
-        var r = confirm("Are you sure you want delete \"" + nTit + "\"");
+        var r = confirm("Are you sure you want to delete \"" + nTit + "\"");
         if (r == true) {
             //PlayersList.remove(selectedPlayer);
             Meteor.call('removeNote', me._id, function (error, response) {
@@ -135,14 +149,13 @@ Template.notes.events({
                     var objHistory= new clsHistory();
 
                     //add History  for delete
-                    objHistory.createHistoryForNote(noteId,Status.Delete, nTit);
+                    objHistory.createHistoryForNote(Session.get('noteId'),Status.Delete, nTit);
                     console.log('response:', response);
                 }
+                clearNoteSessions();
             });
         }
     },
-
-
 
     'click .editNote': function(){
         var me=this;
