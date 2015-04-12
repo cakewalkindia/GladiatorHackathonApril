@@ -1,0 +1,13 @@
+
+.deleteTrashNote
+{
+    color: red !important;
+    /*padding-top: 9px;*/
+
+}
+
+.topHeader{
+    margin-left: 9px;
+    color: #286090;
+    font-size: 16px;
+}

@@ -1,0 +1,42 @@
+<template name="sharedBy">
+    <div class="col-sm-12">
+        <div class="jumbotron container-fluid">
+            <div class="row">
+                <div class="col-sm-12">
+
+
+                    <div class="searchNotes">
+                        <b class="topHeader">Shared List</b>
+                        <div class="jumbotron noteListTable">
+
+                            <table class="table table-hover">
+                                <tbody>
+                                {{#if getNotes.count}}
+                                  {{#each getNotes}}
+                                      <tr class="borderTop">
+                                          <a href="#"><span class="glyphicon glyphicon-open-file restoreTrashNote paddingTop" alt="Restore Note" TITLE="Restore Note"></span></a>
+
+                                          <td>{{NoteTitle}}</td>
+                                          <!--<td>{{NoteDetails}}</td>-->
+                                          <td style="text-align: end">{{createdDate}}</td>
+
+                                          <a href="#"><span class="glyphicon glyphicon glyphicon-trash deleteTrashNote paddingTop pull-right" alt="Permanently Delete Note" TITLE="Permanently Delete Note"></span></a>
+                                      </tr>
+                                  {{/each}}
+                                {{else}}
+                                    <tr>
+                                        <td style="text-align: center;">
+                                            No Notes Exits.
+                                        </td>
+
+                                    </tr>
+                                {{/if}}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
