@@ -198,7 +198,50 @@ Template.notes.events({
         }
         noteSubscription=  Meteor.subscribe('noteList',strParam);
 
+    },
+    'keyup .tbNoteSearch':function(){
+        var strToSearch=$("#txtNoteSearch")[0].value;
+        var strParam="";
+
+        if(strToSearch!="")
+        {
+            if($("#cmbSearch")[0].value=="By Tags")
+            {
+                strParam= strToSearch +"@@@"+"Tag";
+            }
+            else if($("#cmbSearch")[0].value=="By Notes")
+            {
+                strParam=strToSearch +"@@@"+"Note";
+            }
+        }
+        if (noteSubscription != null) {
+            noteSubscription.stop();
+        }
+        noteSubscription=  Meteor.subscribe('noteList',strParam);
+
+    },
+    'change .searchBy':function(){
+
+        var strToSearch=$("#txtNoteSearch")[0].value;
+        var strParam="";
+
+        if(strToSearch!="")
+        {
+            if($("#cmbSearch")[0].value=="By Tags")
+            {
+                strParam= strToSearch +"@@@"+"Tag";
+            }
+            else if($("#cmbSearch")[0].value=="By Notes")
+            {
+                strParam=strToSearch +"@@@"+"Note";
+            }
+        }
+        if (noteSubscription != null) {
+            noteSubscription.stop();
+        }
+        noteSubscription=  Meteor.subscribe('noteList',strParam);
     }
+
 });
 
 
