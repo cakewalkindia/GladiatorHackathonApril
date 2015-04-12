@@ -90,7 +90,7 @@ Template.history.helpers({
             for(j = 0; j < hist[0].HistoryData.length; j++){
                 if(uniqDates[i] === hist[0].HistoryData[j].changedDate.toDateString())
                 {
-                    obj.date = uniqDates[i];
+                    obj.date = getFormatedDate(hist[0].HistoryData[j].changedDate,false);
                     if(hist[0].HistoryData[j].status==Status.Insert)
                     {
                         hist[0].HistoryData[j].message="Created Note";
