@@ -288,7 +288,7 @@ Template.notes.events({
               '<textarea id="name" name="name" class="form-control custom-control htmlEditorJumbotron" rows="10" placeholder="Enter multiple email ids with coma seprated"></textarea>' +
               '</div></div></form></div></div>';
         bootbox.dialog({
-                title: "Select user(s) from the below list!",
+                title: "Enter email address to share (Multiple email with comma separated)",
                 message: str,
                 buttons: {
                     success: {
