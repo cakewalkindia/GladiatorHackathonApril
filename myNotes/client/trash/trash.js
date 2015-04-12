@@ -22,7 +22,7 @@ Template.trash.events({
                     var objHistory= new clsHistory();
 
                     //add History  for delete
-                    objHistory.createHistoryForNote(Session.get('noteId'),Status.Delete, nTit);
+                    objHistory.createHistoryForNote(Session.get('noteId'),Status.PDelete, nTit);
                     console.log('response:', response);
                 }
                 clearNoteSessions();
@@ -34,6 +34,7 @@ Template.trash.events({
         var me = this;
         Session.set('noteId', me._id);
         var nTit = me.NoteTitle;
+        var nDet=me.NoteDetails;
         var r = confirm("Are you sure you want to restore \"" + nTit + "\"");
         if (r == true) {
             Meteor.call('restoreTrashNote', me._id, function (error, response) {
@@ -43,7 +44,7 @@ Template.trash.events({
                     var objHistory= new clsHistory();
 
                     //add History  for delete
-                    objHistory.createHistoryForNote(Session.get('noteId'),Status.Delete, nTit);
+                    objHistory.createHistoryForNote(Session.get('noteId'),Status.Restore, nTit,nDet);
                     console.log('response:', response);
                 }
                 clearNoteSessions();

@@ -5,8 +5,9 @@ Meteor.subscribe('historyList');
 Status = {
     Insert: "Inserted",
     Update: "Updated",
-    Delete: "deleted"
-
+    Delete: "Deleted",
+    PDelete:"Permanently Deleted",
+    Restore:"Restored"
 };
 Type = {
     Note: "Note",
@@ -57,6 +58,15 @@ clsHistory.prototype.createHistoryForNote=function(noteId,status,title,noteDetai
     {
         objHistoryData.historyDetails.reason=title;
     }
+    else if(status==Status.PDelete)
+    {
+        objHistoryData.historyDetails.reason=title;
+    }
+    else if(status==Status.Restore)
+    {
+        objHistoryData.historyDetails.title=title;
+        objHistoryData.historyDetails.noteDetails=noteDetails;
+    }
     Meteor.call('addHistory', noteId , objHistoryData);
 }
 
@@ -93,15 +103,23 @@ Template.history.helpers({
                     obj.date = getFormatedDate(hist[0].HistoryData[j].changedDate,false);
                     if(hist[0].HistoryData[j].status==Status.Insert)
                     {
-                        hist[0].HistoryData[j].message="Created Note";
+                        hist[0].HistoryData[j].message="created note";
                     }
                     else if(hist[0].HistoryData[j].status==Status.Update)
                     {
-                        hist[0].HistoryData[j].message="Modified Note";
+                        hist[0].HistoryData[j].message="modified note";
                     }
                     else if(hist[0].HistoryData[j].status==Status.Delete)
                     {
-                        hist[0].HistoryData[j].message="Deleted Note";
+                        hist[0].HistoryData[j].message="deleted note";
+                    }
+                    else if(hist[0].HistoryData[j].status==Status.PDelete)
+                    {
+                        hist[0].HistoryData[j].message="deleted note permanently";
+                    }
+                    else if(hist[0].HistoryData[j].status==Status.Restore)
+                    {
+                        hist[0].HistoryData[j].message="restored note from trash.";
                     }
                     hist[0].HistoryData[j].time= new Date(hist[0].HistoryData[j].changedDate).toLocaleTimeString().replace(/([\d]+:[\d]{2})(:[\d]{2})(.*)/, "$1$3")
                     hist[0].HistoryData[j].uName=Meteor.users.find({_id:hist[0].HistoryData[j].changedBy}).fetch()[0].profile["first-name"];
