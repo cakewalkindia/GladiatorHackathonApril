@@ -25,6 +25,19 @@ Meteor.publish('noteList', function(strParam){
                 return null;
             //return noteList.find({CreatedBy: currentUserId});
         }
+        else if(type=="Group")
+        {
+            var arrId=[];
+            groupList.find({ "GroupName" :{ $regex:strToSearch} }).fetch().forEach(function(doc) {
+                var notIds=doc.NoteIds.split('||');
+                for(i = 0; i < notIds.length; i++){
+                    arrId.push(notIds[i]);
+                }
+
+            });
+            return noteList.find({ _id : { $in : arrId },CreatedBy: currentUserId });
+            //return noteList.find({CreatedBy: currentUserId});
+        }
         else {
             return noteList.find({CreatedBy: currentUserId});
         }
