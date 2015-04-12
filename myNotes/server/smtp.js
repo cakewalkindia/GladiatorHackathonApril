@@ -25,7 +25,7 @@ Meteor.methods({
             to: to,
             from: from,
             subject: subject,
-            text: text
+            html : text
         });
     }
 });

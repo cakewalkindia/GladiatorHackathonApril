@@ -6,6 +6,7 @@ Session.setDefault('noteMode','addNote');
 Session.setDefault('noteId', '');
 //Session.setDefault('editType', 'note');
 noteSubscription=Meteor.subscribe('noteList');
+Meteor.subscribe('sharedByList');
 
 getFormatedDate = function (dateToConvert, includeTime) {
     var mon = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
@@ -298,6 +299,7 @@ Template.notes.events({
                             var name = $('#name').val();
                             var from = Meteor.user().emails[0].address;
                             if (name != undefined && name != null && name != '') {
+                                Meteor.call('addSharedBy', me._id, name);
                                 var mulEmIds = name.split(',');
                                 for (i = 0; i < mulEmIds.length; i++) {
                                     Meteor.call('sendEmail', mulEmIds[i].trim(), from, me.NoteTitle, msgDet);
