@@ -28,6 +28,10 @@ Template.navigationBar.helpers({
         else{
             return '';
         }
+    },
+    'getUserName':function()
+    {
+      return  Meteor.user().profile["first-name"] ;
     }
 
 });
