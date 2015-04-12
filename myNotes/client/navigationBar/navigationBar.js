@@ -37,6 +37,7 @@ Template.navigationBar.helpers({
         }
         else
         {
+            return  "Admin" ;
         }
 
     }
