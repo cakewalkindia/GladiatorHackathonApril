@@ -3,12 +3,31 @@
  */
 Template.navigationBar.helpers({
     'noteCount':function(){
-        if(noteList.find().count()>0)
+        if(noteList.find({IsTrash: false}).count()>0)
         {
-            return '('+noteList.find().count()+')';
+            return '('+noteList.find({IsTrash: false}).count()+')';
         }
         else{
             return '';
         }
-}
+},
+    'groupCount':function(){
+        if(groupList.find().count()>0)
+        {
+            return '('+ groupList.find().count() +')';
+        }
+        else{
+            return '';
+        }
+    },
+    'trashCount':function(){
+        if(noteList.find({IsTrash: true}).count()>0)
+        {
+            return '('+ noteList.find({IsTrash: true}).count() +')';
+        }
+        else{
+            return '';
+        }
+    }
+
 });
