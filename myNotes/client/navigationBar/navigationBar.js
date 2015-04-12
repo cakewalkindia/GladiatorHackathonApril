@@ -31,7 +31,14 @@ Template.navigationBar.helpers({
     },
     'getUserName':function()
     {
-      return  Meteor.user().profile["first-name"] ;
+        if( Meteor.user().profile["first-name"]!="")
+        {
+            return  Meteor.user().profile["first-name"] ;
+        }
+        else
+        {
+        }
+
     }
 
 });
