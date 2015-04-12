@@ -3,6 +3,12 @@
  */
 Template.navigationBar.helpers({
     'noteCount':function(){
-    return noteList.find().count();
+        if(noteList.find().count()>0)
+        {
+            return '('+noteList.find().count()+')';
+        }
+        else{
+            return '';
+        }
 }
 });
