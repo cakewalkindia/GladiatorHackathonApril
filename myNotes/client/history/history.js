@@ -69,18 +69,20 @@ historySubscription=Meteor.subscribe('historyList');
 
 Template.history.helpers({
     getHistory: function () {
-       var noteId="TKLFw35sWAXtREAck"
+        var noteId = Session.get('noteId');
         //var currentUserId = Meteor.userId();
         return Meteor.call('getHistory', noteId);
 
     },
     getHistoryList:function(){
-        var hist = historyList.find({NoteId:"2G7k6cveNm4aoAEST"}).fetch();
-        //var groupedDates = _.groupBy(_.pluck(hist[0].HistoryData, 'changedDate'));
+        var noteId = Session.get('noteId');
+        var hist = historyList.find({NoteId:noteId}).fetch();
+
 
         var arrDates=_.pluck(hist[0].HistoryData, 'changedDate');
 
         var uniqDates=arrDates.unique();
+
         var arrReturnList=[];
         for(i = 0; i < uniqDates.length; i++){
 
@@ -89,8 +91,20 @@ Template.history.helpers({
                 if(uniqDates[i] === hist[0].HistoryData[j].changedDate.toDateString())
                 {
                     obj.date = uniqDates[i];
+                    if(hist[0].HistoryData[j].status==Status.Insert)
+                    {
+                        hist[0].HistoryData[j].message="Created Note";
+                    }
+                    else if(hist[0].HistoryData[j].status==Status.Update)
+                    {
+                        hist[0].HistoryData[j].message="Modified Note";
+                    }
+                    else if(hist[0].HistoryData[j].status==Status.Delete)
+                    {
+                        hist[0].HistoryData[j].message="Deleted Note";
+                    }
                     hist[0].HistoryData[j].time= new Date(hist[0].HistoryData[j].changedDate).toLocaleTimeString().replace(/([\d]+:[\d]{2})(:[\d]{2})(.*)/, "$1$3")
-                    hist[0].HistoryData[j].uName=Meteor.users.find({_id:hist[0].HistoryData[j].changedBy}).fetch()[0].profile.first-name;
+                    hist[0].HistoryData[j].uName=Meteor.users.find({_id:hist[0].HistoryData[j].changedBy}).fetch()[0].profile["first-name"];
                     obj.data.push(hist[0].HistoryData[j]);
 
                 }
@@ -113,6 +127,9 @@ Array.prototype.unique = function() {
     var arr = [];
     for(var i = 0; i < this.length; i++) {
         if(!arr.contains(this[i])) {
+            //var options = {  year: 'numeric', month: 'long', day: 'numeric' };
+
+            //a.toLocaleDateString('de-DE', options)
             arr.push(this[i].toDateString());
         }
     }
