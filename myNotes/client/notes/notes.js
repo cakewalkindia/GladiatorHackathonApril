@@ -186,11 +186,15 @@ Template.notes.events({
         {
             if($("#cmbSearch")[0].value=="By Tags")
             {
-                strParam= strToSearch +"@@@"+"Tag";
+                strParam= strToSearch +"@@@"+ Type.Tag;
             }
             else if($("#cmbSearch")[0].value=="By Notes")
             {
-                strParam=strToSearch +"@@@"+"Note";
+                strParam=strToSearch +"@@@"+Type.Note;
+            }
+            else if($("#cmbSearch")[0].value=="By Groups")
+            {
+                strParam=strToSearch +"@@@"+Type.Group;
             }
         }
         if (noteSubscription != null) {
@@ -207,11 +211,15 @@ Template.notes.events({
         {
             if($("#cmbSearch")[0].value=="By Tags")
             {
-                strParam= strToSearch +"@@@"+"Tag";
+                strParam= strToSearch +"@@@"+ Type.Tag;
             }
             else if($("#cmbSearch")[0].value=="By Notes")
             {
-                strParam=strToSearch +"@@@"+"Note";
+                strParam=strToSearch +"@@@"+Type.Note;
+            }
+            else if($("#cmbSearch")[0].value=="By Groups")
+            {
+                strParam=strToSearch +"@@@"+Type.Group;
             }
         }
         if (noteSubscription != null) {
@@ -229,11 +237,15 @@ Template.notes.events({
         {
             if($("#cmbSearch")[0].value=="By Tags")
             {
-                strParam= strToSearch +"@@@"+"Tag";
+                strParam= strToSearch +"@@@"+ Type.Tag;
             }
             else if($("#cmbSearch")[0].value=="By Notes")
             {
-                strParam=strToSearch +"@@@"+"Note";
+                strParam=strToSearch +"@@@"+Type.Note;
+            }
+            else if($("#cmbSearch")[0].value=="By Groups")
+            {
+                strParam=strToSearch +"@@@"+Type.Group;
             }
         }
         if (noteSubscription != null) {
