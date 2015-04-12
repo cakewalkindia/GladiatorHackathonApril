@@ -69,7 +69,33 @@ clsHistory.prototype.createHistoryForNote=function(noteId,status,title,noteDetai
     }
     Meteor.call('addHistory', noteId , objHistoryData);
 }
+clsHistory.prototype.createHistoryForTag=function(noteId,tagId,status,tagName,details){
+    var userId = Meteor.userId();
+    var objHistoryData = new clsHistory();
 
+    var randomNo = 1 + Math.floor(Math.random() * 6);
+    var Id = 'history-' + randomNo + '-' + new Date().getTime();
+
+
+    objHistoryData.historyDataId=Id;
+    objHistoryData.changedBy = userId;
+    objHistoryData.changedDate = new Date();
+    objHistoryData.status = status;
+    objHistoryData.type = Type.Tag;
+
+    objHistoryData.historyDetails={};
+    objHistoryData.historyDetails.tagId=tagId;
+
+    if(status==Status.Insert)
+    {
+        objHistoryData.historyDetails.title=tagName;
+    }
+    else if(status==Status.Delete)
+    {
+        objHistoryData.historyDetails.title=tagName;
+    }
+    Meteor.call('addHistory', noteId , objHistoryData);
+}
 
 
 
@@ -97,34 +123,53 @@ Template.history.helpers({
         for(i = 0; i < uniqDates.length; i++){
 
             var obj={date:'',data:[]}
+
             for(j = 0; j < hist[0].HistoryData.length; j++){
+                var message='';
                 if(uniqDates[i] === hist[0].HistoryData[j].changedDate.toDateString())
                 {
                     obj.date = getFormatedDate(hist[0].HistoryData[j].changedDate,false);
-                    if(hist[0].HistoryData[j].status==Status.Insert)
+
+                    if(hist[0].HistoryData[j].type==Type.Note)
                     {
-                        hist[0].HistoryData[j].message="created note";
+                        if(hist[0].HistoryData[j].status==Status.Insert)
+                        {
+                            message="created note";
+                        }
+                        else if(hist[0].HistoryData[j].status==Status.Update)
+                        {
+                            message="modified note";
+                        }
+                        else if(hist[0].HistoryData[j].status==Status.Delete)
+                        {
+                            message="deleted note";
+                        }
+                        else if(hist[0].HistoryData[j].status==Status.PDelete)
+                        {
+                            message="deleted note permanently";
+                        }
+                        else if(hist[0].HistoryData[j].status==Status.Restore)
+                        {
+                            message="restored note from trash.";
+                        }
                     }
-                    else if(hist[0].HistoryData[j].status==Status.Update)
+                    else if(hist[0].HistoryData[j].type==Type.Tag)
                     {
-                        hist[0].HistoryData[j].message="modified note";
+                        if(hist[0].HistoryData[j].status==Status.Insert)
+                        {
+                            message="created tag ";
+                        }
+                        else if(hist[0].HistoryData[j].status==Status.Delete)
+                        {
+                            message="deleted tag ";
+                        }
+
                     }
-                    else if(hist[0].HistoryData[j].status==Status.Delete)
-                    {
-                        hist[0].HistoryData[j].message="deleted note";
-                    }
-                    else if(hist[0].HistoryData[j].status==Status.PDelete)
-                    {
-                        hist[0].HistoryData[j].message="deleted note permanently";
-                    }
-                    else if(hist[0].HistoryData[j].status==Status.Restore)
-                    {
-                        hist[0].HistoryData[j].message="restored note from trash.";
-                    }
+                    hist[0].HistoryData[j].message= message;
+
                     hist[0].HistoryData[j].time= new Date(hist[0].HistoryData[j].changedDate).toLocaleTimeString().replace(/([\d]+:[\d]{2})(:[\d]{2})(.*)/, "$1$3")
                     hist[0].HistoryData[j].uName=Meteor.users.find({_id:hist[0].HistoryData[j].changedBy}).fetch()[0].profile["first-name"];
                     obj.data.push(hist[0].HistoryData[j]);
-
                 }
             }
             arrReturnList.push(obj);
