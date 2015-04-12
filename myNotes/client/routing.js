@@ -23,12 +23,4 @@ Router.map(function(){
 
 });
 
-<<<<<<< HEAD
-Router.onBeforeAction(function() {
-    GoogleMaps.load();
-    this.next();
-}, { only: ['contactUs'] });
-=======
 
-
->>>>>>> origin/master
