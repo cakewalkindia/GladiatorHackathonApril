@@ -1,7 +1,3 @@
-/**
- * Created by SOHEB.RAPATI on 10-04-2015.
- */
-
 Meteor.subscribe('tagList');
 
 Template.tags.helpers({
@@ -25,33 +21,41 @@ Template.tags.events({
                 bootbox.alert("Tag Name can not be empty");
             }else {
                 Meteor.call('addTag', tagName, Session.get('noteId'), function (error, response) {
-                    //if (error) {
-                    //    console.log('ERROR :', error);
-                    //} else {
-                    //    console.log('response:', response);
-                    //}
+                    if (error) {
+                        console.log('ERROR :', error);
+                    } else {
+                        console.log('response:', response);
+                        var objHistory= new clsHistory();
+                        //add History  for delete
+                        var tDet=tagList.findOne(response);
+                        objHistory.createHistoryForTag(tDet.NoteId,response,Status.Insert, tDet.TagName);
+                    }
                     $('#txtTag')[0].value = "";
                 });
             }
         }
     },
 
-    'click .removeTag' : function(){
-        var tagId = this._id;
+    'click .removeTag' : function() {
+        var me = this;
 
-        var tName = tagList.findOne(tagId).TagName;
-        bootbox.confirm("Are you sure you want delete \"" + tName + "\"", function (result) {
-            //var r = confirm("Are you sure you want delete \"" + tName + "\"");
+        var tDet = tagList.findOne(tagId);
+        bootbox.confirm("Are you sure you want delete \"" + me.TagName + "\"", function (result) {
             if (result) {
                 //PlayersList.remove(selectedPlayer);
-                Meteor.call('removeTag', tagId, function (error, response) {
+                Meteor.call('removeTag', me._id, function (error, response) {
                     if (error) {
                         console.log('ERROR :', error);
                     } else {
                         console.log('response:', response);
+                        var objHistory = new clsHistory();
+
+                        //add History  for delete
+                        objHistory.createHistoryForTag(me.NoteId, me._id, Status.Delete, me.TagName);
                     }
                 });
             }
+
         });
     }
 });

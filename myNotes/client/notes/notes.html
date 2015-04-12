@@ -47,6 +47,7 @@
                                 <select class="form-control searchBy" id="cmbSearch">
                                     <option value="By Tags">By Tags</option>
                                     <option value="By Notes" selected>By Notes</option>
+                                    <option value="By Groups">By Groups</option>
                                 </select>
                             </div>
                         </div>
@@ -153,10 +154,11 @@
         </div>
     </div>
         {{#if isTagVisible}}
-
-        <div class="jumbotron" style="overflow-y: scroll;height: 288px;">
+<div class="jumbotron container-fluid">
+        <div class="jumbotron " style="overflow-y: scroll;height: 288px;">
            {{>history}}
         </div>
+</div>
         {{/if}}
 
     </div>

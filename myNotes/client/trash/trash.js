@@ -12,8 +12,9 @@ Template.trash.events({
     'click .deleteTrashNote': function(){
         var me = this;
         Session.set('noteId', me._id);
-        var nTit = me.NoteTitle;
-        bootbox.confirm("Are you sure you want to permanently delete \"" + nTit + "\"", function (result) {
+        //var nTit = me.NoteTitle;
+
+        bootbox.confirm("Are you sure you want to permanently delete \"" + me.NoteTitle + "\"", function (result) {
             if (result) {
                 Meteor.call('removeTrashNote', me._id, function (error, response) {
                     if (error) {
@@ -22,7 +23,7 @@ Template.trash.events({
                         var objHistory= new clsHistory();
 
                         //add History  for delete
-                        objHistory.createHistoryForNote(Session.get('noteId'),Status.Delete, nTit);
+                        objHistory.createHistoryForNote(Session.get('noteId'),Status.PDelete, me.NoteTitle);
                         console.log('response:', response);
                     }
                     clearNoteSessions();
@@ -35,7 +36,8 @@ Template.trash.events({
         var me = this;
         Session.set('noteId', me._id);
         var nTit = me.NoteTitle;
-        bootbox.confirm("Are you sure you want to restore \"" + nTit + "\"", function (result) {
+
+        bootbox.confirm("Are you sure you want to restore \"" + me.NoteTitle + "\"", function (result) {
             if (result) {
                 Meteor.call('restoreTrashNote', me._id, function (error, response) {
                     if (error) {
@@ -44,7 +46,7 @@ Template.trash.events({
                         var objHistory = new clsHistory();
 
                         //add History  for delete
-                        objHistory.createHistoryForNote(Session.get('noteId'), Status.Delete, nTit);
+                        objHistory.createHistoryForNote(Session.get('noteId'), Status.Restore, me.NoteTitle, me.NoteDetails);
                         console.log('response:', response);
                     }
                     clearNoteSessions();

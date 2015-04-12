@@ -18,10 +18,17 @@
                     <div class="timeline-item">
                         <span class="time"><i class="fa fa-clock-o"></i> {{time}}</span>
                         <h3 class="timeline-header"><a href="#">{{uName  }}</a> {{message}}</h3>
+                {{#if historyDetails.title }}
+
                         <div class="timeline-body">
+                {{#if historyDetails.title}}
                             <b>Title:</b> {{historyDetails.title}}
+                {{/if}}
+                {{#if historyDetails.noteDetails}}
                             <br/><b>Details:</b>{{{historyDetails.noteDetails}}}
+                {{/if}}
                         </div>
+                {{/if}}
                         <!-- timeline footer -->
                         <!--<div class="timeline-footer">
                             <a class="btn btn-primary btn-xs">Read more</a>

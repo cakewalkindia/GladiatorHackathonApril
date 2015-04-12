@@ -220,7 +220,10 @@ section{
     box-shadow: 10px 10px 6px 6px #ecf0f5;
 }
 
-
+.iconbarBackColor
+{
+    background-color: white;
+}
 
 
 

@@ -6,12 +6,13 @@ Meteor.publish('tagList', function(){
 Meteor.methods({
     'addTag': function( tagName, noteId ) {
         var currentUserId = Meteor.userId();
-        tagList.insert({
+        var ret=tagList.insert({
             TagName: tagName,
             NoteId: noteId,
             TagBy: currentUserId,
             TagDate: new Date()
         });
+        return ret;
     },
 
     'removeTag': function (tagId) {
