@@ -11,7 +11,7 @@ Template.trash.helpers({
 Template.trash.events({
     'click .deleteTrashNote': function(){
         var me = this;
-        Session.set('noteId', me._id);
+        //Session.set('noteId', me._id);
         //var nTit = me.NoteTitle;
 
         bootbox.confirm("Are you sure you want to permanently delete \"" + me.NoteTitle + "\"", function (result) {
@@ -23,10 +23,9 @@ Template.trash.events({
                         var objHistory= new clsHistory();
 
                         //add History  for delete
-                        objHistory.createHistoryForNote(Session.get('noteId'),Status.PDelete, me.NoteTitle);
+                        objHistory.createHistoryForNote(me._id,Status.PDelete, me.NoteTitle);
                         console.log('response:', response);
                     }
-                    clearNoteSessions();
                 });
             }
         });
@@ -34,8 +33,8 @@ Template.trash.events({
 
     'click .restoreTrashNote' : function(){
         var me = this;
-        Session.set('noteId', me._id);
-        var nTit = me.NoteTitle;
+        //Session.set('noteId', me._id);
+        //var nTit = me.NoteTitle;
 
         bootbox.confirm("Are you sure you want to restore \"" + me.NoteTitle + "\"", function (result) {
             if (result) {
@@ -46,10 +45,9 @@ Template.trash.events({
                         var objHistory = new clsHistory();
 
                         //add History  for delete
-                        objHistory.createHistoryForNote(Session.get('noteId'), Status.Restore, me.NoteTitle, me.NoteDetails);
+                        objHistory.createHistoryForNote(me._id, Status.Restore, me.NoteTitle, me.NoteDetails);
                         console.log('response:', response);
                     }
-                    clearNoteSessions();
                 });
             }
         });
