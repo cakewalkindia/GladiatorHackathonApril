@@ -11,22 +11,21 @@
 
                             <table class="table table-hover">
                                 <tbody>
-                                {{#if getNotes.count}}
-                                  {{#each getNotes}}
+                                {{#if getSharedByList.count}}
+                                  {{#each getSharedByList}}
                                       <tr class="borderTop">
-                                          <a href="#"><span class="glyphicon glyphicon-open-file restoreTrashNote paddingTop" alt="Restore Note" TITLE="Restore Note"></span></a>
 
-                                          <td>{{NoteTitle}}</td>
-                                          <!--<td>{{NoteDetails}}</td>-->
-                                          <td style="text-align: end">{{createdDate}}</td>
+                                          <td>{{getNotTitle}}</td>
+                                          <td>{{SharedWith}}</td>
+                                          <td style="text-align: end">{{sharedDate}}</td>
 
-                                          <a href="#"><span class="glyphicon glyphicon glyphicon-trash deleteTrashNote paddingTop pull-right" alt="Permanently Delete Note" TITLE="Permanently Delete Note"></span></a>
+                                          <a href="#"><span class="glyphicon glyphicon glyphicon-trash deleteSharedBy paddingTop pull-right" alt="Permanently Delete Note" TITLE="Permanently Delete Note"></span></a>
                                       </tr>
                                   {{/each}}
                                 {{else}}
                                     <tr>
                                         <td style="text-align: center;">
-                                            No Notes Exits.
+                                            No data Exists.
                                         </td>
 
                                     </tr>

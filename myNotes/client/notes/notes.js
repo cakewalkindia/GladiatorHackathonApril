@@ -6,7 +6,6 @@ Session.setDefault('noteMode','addNote');
 Session.setDefault('noteId', '');
 //Session.setDefault('editType', 'note');
 noteSubscription=Meteor.subscribe('noteList');
-Meteor.subscribe('sharedByList');
 
 getFormatedDate = function (dateToConvert, includeTime) {
     var mon = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];

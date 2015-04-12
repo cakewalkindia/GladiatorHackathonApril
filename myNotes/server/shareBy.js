@@ -1,6 +1,6 @@
 Meteor.publish('sharedByList', function() {
     var currentUserId = this.userId;
-    return sharedByList.find({CreatedBy: currentUserId});
+    return sharedByList.find({SharedBy: currentUserId});
 });
 
 
