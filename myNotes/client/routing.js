@@ -19,6 +19,7 @@ Router.map(function(){
     this.route('tagList', {path:'/tagList'});
 
     this.route('trash', {path:'/trash'});
+    
 
 });
 
