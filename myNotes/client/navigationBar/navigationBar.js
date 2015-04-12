@@ -40,6 +40,15 @@ Template.navigationBar.helpers({
             return  "Admin" ;
         }
 
+    },
+    'getSharedByCout':function(){
+        if(sharedByList.find().count()>0)
+        {
+            return '('+ sharedByList.find().count() +')';
+        }
+        else{
+            return '';
+        }
     }
 
 });

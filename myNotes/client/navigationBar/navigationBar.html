@@ -32,7 +32,7 @@
 
 
                         <li class="selected"><a href="{{pathFor 'notes'}}">My Notes {{noteCount}}<span class="pull-right hidden-xs showopacity glyphicon glyphicon-edit leftSideBarMenuItem"></span></a></li>
-                        <li ><a href="{{pathFor 'sharedBy'}}">Shared By Me<span class="pull-right hidden-xs showopacity glyphicon glyphicon-share leftSideBarMenuItem"></span></a></li>
+                        <li ><a href="{{pathFor 'sharedBy'}}">Shared By Me {{getSharedByCout}}<span class="pull-right hidden-xs showopacity glyphicon glyphicon-share leftSideBarMenuItem"></span></a></li>
 
                         <li ><a href="{{pathFor 'trash'}}">Trash {{trashCount}}<span class="pull-right hidden-xs showopacity glyphicon glyphicon-trash leftSideBarMenuItem"></span></a></li>
                         <li ><a href="{{pathFor 'tagList'}}">Tags<span class="pull-right hidden-xs showopacity glyphicon glyphicon-tags leftSideBarMenuItem"></span></a></li>
