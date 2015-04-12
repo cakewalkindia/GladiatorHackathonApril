@@ -39,7 +39,7 @@ Template.tags.events({
     'click .removeTag' : function() {
         var me = this;
 
-        var tDet = tagList.findOne(tagId);
+        //var tDet = tagList.findOne(tagId);
         bootbox.confirm("Are you sure you want delete \"" + me.TagName + "\"", function (result) {
             if (result) {
                 //PlayersList.remove(selectedPlayer);
