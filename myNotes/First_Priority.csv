@@ -1,0 +1,1664 @@
+Task ID,Created At,Completed At,Last Modified,Name,Assignee,Due Date,Tags,Notes,Projects,Parent Task
+42840905881044,2015-07-27,2015-07-28,2015-07-28,lost data,Soheb Rapati,,"Text,Group pop-up,Completed,Reed Hepatitis C","study ID: 576595
+user: Russell
+
+I am doing updates for the Elsevier Hep C project. I finished making result and qualifier changes, but when clicked on the ""validate"" button it showed errors telling me thatthe dose for all group pop ups should have a decimal or range or number. I saved my changes, then clicked ""close don't save"" because I wanted to make sure that I have studies in my queue for tomorrow. When I went to re-open that study I was working on, I noticed that a lot of the data/info that the previous analyst had filled out was missing, including all dose regimen information. All updates that I had made were still intact. Here are screen shots of what was lost. The screen shot of one of the arms is the same problem for all 10 arms of this study. Is there any way to retrieve this past information or do I need to re-extract the data?",First Priority,
+42651222938561,2015-07-24,2015-07-28,2015-07-28,update #/time fields in group popup on training site,Soheb Rapati,,"High Priority,Text,Group pop-up,Completed,Training Site","validation issue with the #/time fields in the group pop-up on the training site. It is only allowing a range in the # field and not a single number. Per the validation error it reports we should be allowed to have numerical or range data.
+
+It does not seem to be an issue on the live site.",First Priority,
+44683271521499,2015-08-07,,2015-08-13,transfer all tasks into Github,Amit,,"Highest Priority,admin",,First Priority,
+39209930888472,2015-06-25,,2015-07-23,Needed for Text QC:,,,,,First Priority,
+42482402030562,2015-07-23,2015-07-28,2015-07-28,[Duplicate] data from QC assignments is overwriting original text assignment,Soheb Rapati,,"Text,QC,Highest Priority",please keep original text assignment as they are. do not overwrite text assignments with the data that QC enters in the QC assignment,First Priority,
+42169506141368,2015-07-21,,2015-08-10,"track datapoint changes - who, what, when",Sumit Patel,2015-08-01,"Text,Table,QC,Highest Priority","user1
+role of user1
+original datapoint entry
+
+user2
+role of user2
+change to datapoint entry
+
+https://github.com/DoctorEvidence/DRE-General/issues/9
+",First Priority,
+42482402030585,2015-07-23,2015-08-03,2015-08-03,"update ""complete"" on QC assignments to ""QC finalized"" - same as tables",Soheb Rapati,,"High Priority,Text,Completed,admin,Ready to push live/training","very confusing - cannot tell if ""complete"" is the status of the original analyst assignment or the QC assignment. please update QC assignments to the same terminology as table QC - 
+QC Assigned 
+QC In Progress (after QC opens and adds any information/data to the study)
+QC In Progress (when assignment is sent back to analyst)
+QC Finalized
+",First Priority,
+42482402030592,2015-07-23,2015-08-03,2015-08-03,"Add ""Send Back"" button on QC assignment to send assignment back to assigned analyst or other user ",Soheb Rapati,,"High Priority,Text,QC,Completed,Ready to push live/training",,First Priority,
+43020433940071,2015-07-28,2015-08-03,2015-08-03,"add ""Send Back"" button at TOP of QC assignment. ",,,,,,"Add ""Send Back"" button on QC assignment to send assignment back to assigned analyst or other user "
+43020433940073,2015-07-28,2015-08-03,2015-08-03,"default push back to assigned user, but given the option to reassign to anyone  (add dropdown for all users)",,,,,,"Add ""Send Back"" button on QC assignment to send assignment back to assigned analyst or other user "
+43020433940069,2015-07-28,2015-08-03,2015-08-03,"QC user should not be allowed to open the study while it's in progress with the analyst. Only after the analyst completes it, should the QC user be allowed to open it again. ",,,,,,"Add ""Send Back"" button on QC assignment to send assignment back to assigned analyst or other user "
+43020433940075,2015-07-28,2015-07-28,2015-07-28,"add QC header bar across top of study with ""Send Back"" button so easier to differentiate QC assignment vs. extraction assignment",,,,,,"Add ""Send Back"" button on QC assignment to send assignment back to assigned analyst or other user "
+42482402030564,2015-07-23,2015-07-24,2015-07-24,"remove ""Save & QC finalize"" button on text & text QC assignments",Soheb Rapati,,"Text,QC,Completed,Highest Priority",we don't need this anymore now that we have QC assignments,First Priority,
+41028366095835,2015-07-10,2015-07-10,2015-07-10,assigning studies frozen in staging db,Chetan Bhimewal,,Bugs,"started when i tried to unassign (delete) a table of mine (successfully did it for one study, then froze on the next study)
+
+every other study i've pulled up the select user popup, it just circles ""please wait"" continuous - over 10 min now",First Priority,
+33024521798229,2015-05-01,2015-05-04,2015-05-04,[Duplicate] Selection of 'Therapy- Device/Surgery' Study Type in the study level tab incorrectly brings up 'Therapy-Drug' fields in treatment arms,Greg,,,"Username: Brett
+Study ID: 739716
+Location of Issue:
+1) Type of Assignment: Text Extraction
+2) Location within study: N/A
+Project: ARDS
+
+Summary:
+
+When “Therapy-Device/Surgery” is selected in the “Study Type” section of the Study Level tab, the incorrect treatment fields appear in each treatment arm. As shown in the screenshot, the “Therapy-Device/Surgery” study type is reflected
+in the treatment arm, but the fields below this study type correspond to the “Therapy-Drug” study type. This issue can be re-created simply by selecting the “Therapy-Device/Surgery” Study type in the study level tab.",First Priority,
+32832212527092,2015-04-29,2015-04-30,2015-04-30,"Study Summary: Data splitting across multiple rows, only one row in backend",Ajay,,Completed,"This is moved over from GitHub #514.
+
+It looks like for RefID  667229, for some reason the data is being sent over in two different rows, but according to https://app.asana.com/0/10415042720634/10415042720634 it's only one row on the form.  See images below.",First Priority,
+39009356929885,2015-06-24,2015-06-30,2015-06-30,Lost p-values,Jignesh Patel,,"Text,Completed,Highest Priority,AHA/ACC Hypertension","User: Mui
+Ref ID: 354395
+
+Within-group and between-group are being lost after saving and reopening.  P-value column is still present, but within-group p-value rows are gone.  There should be over 30 within-group p-values and about 15-20 between-group p-values present.
+",First Priority,
+39642429413094,2015-06-29,2015-07-09,2015-07-09,Save and Continue not working,Soheb Rapati,,"Text,Completed,Highest Priority,Training Site","Analyst: Bobby, Alicia
+Project: Training
+Ref ID: 6813
+Training Site
+
+When analyst presses ‘Save and Continue’ nothing appears to happen. Window does not close and timestamp does not update. The screenshot was taken after saving at 2:45 pm, the timestamp still reads 1:35.",First Priority,
+39235545113923,2015-06-25,2015-07-14,2015-07-14,All study level field data was lost except for Study Phases,Soheb Rapati,,"Bugs,Text,Study Level tab,Highest Priority,AHA/ACC Hypertension","Username: Rachel
+Study ID: 718035
+
+When I opened this study to review, all the appropriate study level fields were filled in. I was saving periodically while i was in the study. I saved and closed and and re-entered for the new subgroup fields to show in the drop-down and now the study level is completely blank except for the study phases. The result data is still entered and was not lost.",First Priority,
+39350009591833,2015-06-26,2015-06-30,2015-06-30,Extractor not allowing save and losing outcome and p-values.,Jignesh Patel,,"Text,Highest Priority,Statistics (pvalues & AM),AHA/ACC Hypertension","Username: mui
+Study ID: 354964
+
+Extractor will begin to not allow opening of tabs and quickly followed by not allowing saving.  After saving, sometimes data will still be lost when the extractor starts to freeze like that when it sits for a while.",First Priority,
+36355310148299,2015-06-02,2015-07-10,2015-07-10,"Adding AM flag causes P-value and AM fields to be unresponsive. AM flags disappear after saving, exiting, and reopening study.",Sumit Patel,,"Bugs,High Priority,Text,Completed,Statistics (pvalues & AM),NCCMH CBT for Psychosis"," Username: augusta
+Study ID: 402447
+
+ Adding flag to AM causes other AM boxes and P-value boxes to become unresponsive. Cannot click to view, edit, or add these values. Saving, exiting, and reopening the study resumed AM/P-value box functionality, but AM flags disappear.",First Priority,
+38710070929508,2015-06-22,2015-07-15,2015-07-15,"2.0 Template blank, but results showing on front end.",Soheb Rapati,,"Bugs,Text,Highest Priority,Natural History of HER2; Breast Cancer Database","Username: augusta
+Study ID: 547488
+
+Summary: Data displays in Study Summary on front end, but back end template is blank. Cannot edit/change results in text extraction form. Table extraction seems to work normally (data present, can edit).",First Priority,
+40773393977331,2015-07-08,2015-07-14,2015-07-14,Overlapping Population and Subgroup drop downs do not contain all groups on template,Soheb Rapati,,"High Priority,Text,Completed,BMS- Renal Cell Carcinoma","user: Joshua
+ID: 342904
+
+The subgroup and overlapping population drop downs in the group pop-up do not contain all of the groups on the template.
+
+appears to be a single study issue - logging out and back in (clearing cache) doesn't seem to work. but does work for other studies.",First Priority,
+39209930888497,2015-06-25,2015-07-30,2015-07-30,ability to expand/collapse iterations,Sumit Patel,2015-07-31,"Text,Medium Priority,QC,Ready to push live/training",within text assignment AND text QC assignments,First Priority,
+40730916180794,2015-07-08,2015-07-24,2015-07-24,summary notes - add section or result name,Soheb Rapati,,"High Priority,Text,QC,Completed",,First Priority,
+41431875808675,2015-07-14,2015-07-24,2015-07-24,"on the study level tab, use the ""section"" name (i.e. objective, power & statistics, document type) ",,,,,,summary notes - add section or result name
+41431875808680,2015-07-14,2015-07-24,2015-07-24,"on the group/results tab, use result - iteration name",,,,,,summary notes - add section or result name
+41431875808682,2015-07-14,2015-07-24,2015-07-24,"in group popup, use group name or intervention name",,,,,,summary notes - add section or result name
+39209930888495,2015-06-25,,2015-07-23,ability to drag & drop iterations within a result AND ability to add to different result,Sumit Patel,,"Text,Medium Priority,QC",within text assignment AND text QC assignments,First Priority,
+44091439709477,2015-08-03,,2015-08-07,Updates to analyst's when QC has been sent back,Soheb Rapati,,"High Priority,Text,QC",analyst status and QC status should be two SEPARATE things - saved separately,First Priority,
+44091439709485,2015-08-03,,2015-08-03,"After QC sends study back, analyst status should be:",,,,,,Updates to analyst's when QC has been sent back
+44091439709487,2015-08-03,,2015-08-03,"AR pending, not QC pending",,,,,,Updates to analyst's when QC has been sent back
+44091439709479,2015-08-03,,2015-08-03,When analyst completes study analyst status should say:,,,,,,Updates to analyst's when QC has been sent back
+44091439709489,2015-08-03,,2015-08-03,"""Complete"" not ""QC in progress""",,,,,,Updates to analyst's when QC has been sent back
+32735118871997,2015-04-28,,2015-07-15,Bugs/Problems:,,,,,First Priority,
+39406815744887,2015-06-26,2015-06-30,2015-06-30,MOA popup not saving,Sumit Patel,,"Text,Completed,Highest Priority","it appears that it will save if there is not a free textbox associated with it.  but if there is a textbox, the text is not there when you open the popup. we can't lose this data.",First Priority,
+40881982710117,2015-07-09,2015-07-10,2015-07-10,NA unitlabel not available on training site (please update training site to match live site),Sumit Patel,,"High Priority,Text,Table,Completed,Group/Results tab",,First Priority,
+40882157881923,2015-07-09,2015-07-10,2015-07-10,Arms not deleting - Training template,Soheb Rapati,,"Bugs,Text,Completed,Highest Priority,Group/Results tab","user: Linda 
+Ref ID 660681
+
+There were 2 arms she wanted to delete and clicked the white x. Both groups column headers disappeared, but the columns of data still appear on the template. For one arm, the data appears for all of the results. For the other arm, the result data is visible on about half of the template.
+
+Lauren tried testing on her account on a different study, and was able to delete arms fine. Linda has been working on a new study and everything working fine. so this appears to be a single study issue. ",First Priority,
+40748528404102,2015-07-08,2015-07-10,2015-07-10,Cannot reassign studies,Chetan Bhimewal,,"Highest Priority,admin,IBM/Watson","Username:  Mui
+Study ID:   889803
+
+I am unable to reassign studies, whether they are completed or in progress.  After performing searches for the kbase, using the search tool and hunting for it visually in an analyst’s queue, when I try to reassign,
+nothing happens.",First Priority,
+39985839899538,2015-07-01,2015-07-09,2015-07-09,Wrap notes ,Soheb Rapati,,"High Priority,Text,Completed,admin,IBM/Watson","Username: jaja
+Study ID: 889183/All
+
+The entirety of a note cannot be seen because it continues outside of the pop up window instead of continuing below.",First Priority,
+41038464724394,2015-07-10,2015-07-14,2015-07-14,incorrect validation errors for subgroups,Sumit Patel,,"Bugs,Text,Group pop-up,Highest Priority,Novartis Heart Failure",,First Priority,
+41077267089470,2015-07-10,2015-07-13,2015-07-13,no subgroup name is selected and yet validations are saying there are. error is actually saying that two subgroups were selected per group. and table field is disabled.,,,,,,incorrect validation errors for subgroups
+41077267089474,2015-07-10,2015-07-13,2015-07-13,"when narrative is checked, getting error that says need to select a table/figure/graph",,,,,,incorrect validation errors for subgroups
+41381970550403,2015-07-14,2015-07-14,2015-07-14,"Study ID: 640469 Table 1-3 shows up in the dropdown, but all of my subgroup data is found in Figure 3, and I receive validation errors from both not picking anything from the dropdown and if  I write in the figure and number.",,,,,,incorrect validation errors for subgroups
+41992922406393,2015-07-20,2015-07-23,2015-07-23,Save button freezing on training account,Sumit Patel,,"Text,Highest Priority","User:  Massy
+Ref ID 416312
+Training db
+
+After deleting an iteration (clicking the white x and then yes) the save button doesn’t work. You end up having to ‘Close & Don’t Save’, meaning you cannot delete an iteration on this template.
+
+She is using incognito and clearing the cache manually did not resolve the situation. This does not occur on my account for templates assigned to me, but does occur when I access her template on my computer through my account.",First Priority,
+41970416104970,2015-07-20,2015-07-21,2015-07-21,unable to save changes for frequency & time unit box on training & live studies,Soheb Rapati,,"High Priority,Text,Group pop-up,Completed","user: Linda
+ID: 386772 (continued to occur on other studies)
+
+I would delete the ""weeks"", save and close.  Then when I reopen the study, the ""weeks"" would still be there as if I never deleted.
+",First Priority,
+41582050357679,2015-07-15,2015-07-22,2015-07-22,cannot open tables in QC on 586553,Jignesh Patel,,"High Priority,Table,QC","just gives me ""please wait"" wheel",First Priority,
+41556237468841,2015-07-15,2015-07-15,2015-07-15,Need increase in memory because the system keeps crashing (640469),Sumit Patel,2015-07-15,"Text,Highest Priority,Novartis Heart Failure","Username: angelica
+Study ID: 640469 
+
+Results, Hazard Ratios
+Summary: I have to add in over 90 HRs and the system keeps crashing and erasing my work. I pressed “save finalize and complete” just to retain the information I currently have in the system. Needs to get finalized today, thanks!
+",First Priority,
+40734766484432,2015-07-08,2015-07-21,2015-07-21,"for # events, have unitlabel default to NA",Sumit Patel,,"Text,Table,Medium Priority,Group/Results tab,Ready to push live/training",,First Priority,
+41366578096027,2015-07-14,2015-07-14,2015-07-14,Validation issue: Treatment popup for dosage.,Soheb Rapati,,"Text,Group pop-up,Completed,Highest Priority,Novartis Heart Failure","Username: angelica
+Study ID: 640469
+
+I am getting several different validation issues with the treatment popup. The dosage value (fixed) is giving an error, as well as the dosage (#). I have attached a screenshot of the error and the group popup. I have both single numbers and ranges in the fixed dosage box, but they both give errors.
+",First Priority,
+40710415832276,2015-07-08,2015-07-22,2015-07-22,Allow subgroups to show without having to log out and back in,Sumit Patel,,"Bugs,High Priority,Text,Group pop-up,Group/Results tab,IBM/Watson,Ready to push live/training","Username: Rachel
+Study ID: 889190
+
+Eliminate logging out and back in - this is a huge time waster... (Once characteristics or results are added to the template, we must log out and back in for them to show in the subgroup field drop downs)
+
+(both in group popup and within outcome rows)",First Priority,
+40730916180765,2015-07-08,2015-07-28,2015-07-28,Subgroups stop being visible after correctly selecting for several arms & causes validation error.,Soheb Rapati,,"Bugs,Text,Group pop-up,Completed,IBM/Watson","Username: Rachel
+Study ID: 889190
+
+After the subgroups fields have been correctly selected for several arms, the subgroup fields stop being visible when the subgroup pop-up is closed (even though all fields are correctly entered and saved). It not only doesn’t visibly show as entered, but it causes a validation error. The work around is to log out and then back in, but this is time consuming. ",First Priority,
+40624882647498,2015-07-07,2015-07-10,2015-07-10,PDFs don't load on staging site (same PDF loads fine on live site),Soheb Rapati,,"Bugs,High Priority,Text,Table,Completed","example study - 379183
+both table & text assignments",First Priority,
+39807180101036,2015-06-30,2015-07-08,2015-07-08,Groups misaligned when adding a new arm,Sumit Patel,,"Bugs,Text,IBM/Watson","Username: Rachel/Katrina
+Study ID: 6383
+
+After initial extraction, QCer went back into study to add 2 new arm (for subgroups). When added, the alignment of the group columns and the pvalue column switched and result cells do not appear for the new groups. Closing out, clearing cache, and re-opening does not resolve the issue. Screenshot attached.",First Priority,
+39566731883555,2015-06-29,2015-07-13,2015-07-13,"Add ""No. of Tables"" button to table QC main page (before going into an individual table)",Jignesh Patel,,"High Priority,Table,QC,Completed,NCCMH CBT for Psychosis","User: luyao
+Study ID: 272482, Table 3
+
+Extraction analyst only marked the study has having 3 tables, so even though the analyst completed 4, only 3 show in QC. QC cannot change the number of tables when they open up the study.  Told the QC for now to send another table back, have the analyst change the # of tables in the study, and then re-submit.
+",First Priority,
+39661171772451,2015-06-29,2015-07-10,2015-07-10,"Add ""No. of Tables"" button on main table QC page (see QC screenshot - no button available as there is in the Extraction screenshot)",,,,,,"Add ""No. of Tables"" button to table QC main page (before going into an individual table)"
+39661171772453,2015-06-29,,2015-06-29,"if extraction completes more than the number of tables initially set, number should be confirmed and updated in Extraction",,,,,,"Add ""No. of Tables"" button to table QC main page (before going into an individual table)"
+39661171772455,2015-06-29,,2015-06-29,QC should have all extracted tables should come through to QC.,,,,,,"Add ""No. of Tables"" button to table QC main page (before going into an individual table)"
+39661171772457,2015-06-29,,2015-06-29,"if analyst missed a table, need to update the ""No of Tables"" and send the entire study (to extract the last table) back to the analyst.",,,,,,"Add ""No. of Tables"" button to table QC main page (before going into an individual table)"
+39622141248541,2015-06-29,2015-07-13,2015-07-13,"Remove autofill for ""protocol"" and ""fixed""",Jignesh Patel,,"High Priority,Text,Table,Group pop-up,Completed,Abbvie Alzheimer's","User: luyao
+Study ID: 682291 (example, but affects all)
+
+Summary: When an analyst does not fill out the dosage fields in group popup, it autofills as “Protocol, (blank), Fixed” when it comes into QC. This causes a validation error as the pre-selected “fixed” option requires the dosage number to be filled out. Since 90% of the time dosages will be left blank in tables, please remove either the autofill or the validation error since we’re just going back and undoing the computer’s work anyways.
+",First Priority,
+39220058616256,2015-06-25,2015-07-10,2015-07-10,"Text cutoff when "">"" ""<"" not recognized (in subgroups, this causes iterations un-identifiable)",Sumit Patel,,"Text,Table,Completed,Highest Priority,Group/Results tab,Janssen Diabetes,AHA/ACC Hypertension","user: emily
+Study ID: 730483
+
+Result [Age] with two iterations (see screenshot: < 60 years and >= 60 years). The iterations use the drop down menus in the qualifier pop up. I saved and closed out and reopened the study. The Subgroup Name dropdown menu doesn't recognize the two iterations; it only lists Age-N/A.
+
+Username: augusta
+Study ID: 356857
+
+Summary: Full text of footnote is not displaying on front end study summary. Text stops after ‘<’ symbol. Footnote is extracted correctly on back end.
+",First Priority,
+39209930888432,2015-06-25,2015-07-10,2015-07-10,Rater field edits,Sumit Patel,,"Text,Medium Priority,Group/Results tab",,First Priority,
+39209930888434,2015-06-25,2015-07-10,2015-07-10,"undo defaulting this field to ""researcher"" (no default) - in screenshot, the top iteration is defaulted to ""researcher"" and the bottom iteration is after i clear out the selection",,,,,,Rater field edits
+39209930888436,2015-06-25,2015-07-10,2015-07-10,allow this field to be blank (currently get an error if don't select anything) ,,,,,,Rater field edits
+39373501882384,2015-06-26,2015-07-10,2015-07-10,"add ""Independent Review Committee"" to Rater dropdown",,,,,,Rater field edits
+42957407366336,2015-07-28,2015-07-29,2015-07-29,Save/Close and Save/Finalize function does not work in 2.0 study.,Soheb Rapati,,"Bugs,Text,Completed,Highest Priority,Reed Hepatitis C","Username: Tin
+Study ID: 528561
+
+Unable to Save/Close or Save/Finalize. Other save functions work (Save/continue and Close/No-Save).",First Priority,
+42812114143485,2015-07-27,2015-07-29,2015-07-29,Need ability to delete information from Schedule/Route/Provider fields,Soheb Rapati,,"Bugs,High Priority,Text,Group pop-up,Completed,Reed Hepatitis C","User: luyao
+Study ID: 468976 (issue is not study specific)
+Location: Group popup
+Project: Elsevier Hep C
+
+Summary: When Schedule, Route and Provider boxes in the intervention section cannot be saved with blanks. If they were filled before, the study will always load with the old information and there is no way to delete them.
+
+Steps to recreate problem:
+1) Open any group popup. Remove information in schedule, route, or provider boxes and leave it blank.
+2) Save/close study.
+3) Reenter the study from job queue
+4) Open the group popup, and the boxes are again filled with information before they’re deleted.
+",First Priority,
+42930352106899,2015-07-28,2015-07-29,2015-07-29,Data cannot be deleted in study level fields,Soheb Rapati,,"High Priority,Text,Group pop-up,Completed,Reed Hepatitis C","User: luyao
+Study ID: 386879 (issue is for all studies)
+Location: Text
+Project: Elsevier Hep C
+
+Summary: Similar to the group popup, several boxes in the study level page cannot be emptied. If they used to be filled with NR and I change them to blank and save, they’ll load up as NR again when I come back to the study later. A few of these boxes actually load up as “N” or a random choice in the dropdown. As our current protocol is to leave all non-reported boxes blank, there is no way to do that because of this tech issue.",First Priority,
+42306495966323,2015-07-22,2015-07-28,2015-07-28,overlapping population text is not placed well and it runs over the rest of the fields,Soheb Rapati,,"Bugs,High Priority,Text,Group pop-up,Completed,Ready to push live/training","user: Rachel
+ID: 889190 
+visibility issue with the overlapping populations - Since multiple overlapping populations are selecting the text fields overrun the subgroup fields and I can no longer see or click on them",First Priority,
+41038464724335,2015-07-10,2015-07-22,2015-07-22,"if switch from SD to SE (or reverse), value is removed from data cell, but still in popup. keep value in data cell",Sumit Patel,,"Bugs,Text,Medium Priority,Group/Results tab,Ready to push live/training","1 - initial extraction selected mean/SD
+2 - changed from mean/SD to mean/SE and value for SD disappeared (1.5)
+3 - value (1.5) was still in popup
+4 - after clicking save, value (1.5) reappears in data cell
+
+please make it so that you don't have to resave - keep 1.5 on the data cell. ",First Priority,
+41261180740385,2015-07-13,2015-07-21,2015-07-21,"if click out of field type popup after making a change, the change is not saved",Sumit Patel,,"Bugs,Text,Medium Priority,Ready to push live/training","1. click on field type
+2. change standard deviation to standard error
+3. click on the mean +/- SD on the form instead of clicking on the save icon - changes aren't saved (force save in this situation)",First Priority,
+40883862385849,2015-07-09,2015-07-10,2015-07-10,unitlabel (when initially opened) defaults to showing first entry instead of search box,Sumit Patel,,"Bugs,Text,Medium Priority,Completed,Group/Results tab","you have to scroll up to see the searchbox. and then when you open it the second time, the search box shows right away. ",First Priority,
+40080278173013,2015-07-02,2015-07-09,2015-07-09,Study Freezes at Group/Results tab,Jignesh Patel,,"Bugs,Text,Completed","Username: Michael F
+Study ID: 272893
+Location of Issue: Group/Results extraction
+Project: Full Text Training
+
+As soon as I click on the Group/Results tab the site immediately becomes unresponsive and remains unresponsive after 20&#43; minutes. There are 7 groups, 3 p value columns, and 1 AM column. I have already cleared the Chrome cache, restarted
+the browser, restarted the computer, and tried the same thing on another computer.",First Priority,
+40624882647528,2015-07-07,2015-07-08,2015-07-08,flag popup cut off at bottom of page,Soheb Rapati,,"Bugs,High Priority,Text,Completed","i added 1 more row after ""QC note - setting type"" (as you can see, there's no + button next to it) but i cannot see the next row. can you have the popup move up when a new row is added or add a scroll bar? ",First Priority,
+43123085967865,2015-07-29,2015-07-29,2015-07-29,'Notes' window doesn't open,Soheb Rapati,,"Bugs,Text,Completed,Highest Priority,Reed Hepatitis C","Username: kaitlyn
+Study ID: 272873
+
+‘Notes’ window at the bottom of the template will not open when clicked.  Relogging and clearing cache have no effect.  Worked earlier in the day with a different study.",First Priority,
+43241407917748,2015-07-30,2015-07-30,2015-07-30,Save/Close and Save/Finalize function does not work in 2.0 study.,Soheb Rapati,,"Text,Completed,Highest Priority,Reed Hepatitis C","Username: Tin
+Study ID: 558032
+
+Unable to Save/Close or Save/Finalize. Other save functions
+work (Save/continue and Close/No-Save). Validation function does not work. This issue is similar to the one previously reported for 528561 under the same Subject line, which has been resolved.",First Priority,
+44397508456379,2015-08-05,2015-08-10,2015-08-10,Restore data from 4 studies from before 7/30/15,Sumit Patel,,"Bugs,Text,Highest Priority,Elsevier Alzheimer’s","Username: augusta
+Study IDs: 30065, 286531, 600526, 600539
+
+These 4 studies all had text data before the entire dataset was reimported on 7/30/15. Study Level fields and Group Popups are still filled out, but there are no results. I don’t have screenshots of the front- or backend before the data was reimported, but I have notes of fixes that need to be made on the backend, so there were definitely results in the template at one point.",First Priority,
+43434656971136,2015-07-31,2015-08-05,2015-08-05,Getting a validation error for a field NOT on the extraction form. ,Soheb Rapati,,"Bugs,Table,Group pop-up,Completed,Highest Priority,Elsevier COPD,Ready to push live/training","Username: augusta
+Study ID: 286539, 690328
+
+User: luyao
+Study ID: 817100
+
+User: LaurenB
+IDs: 629774, 722572
+
+(occurring on ALL studies marked surgery/device)
+
+When trying to QC Finalize a table, the following validation error is produced: ‘Group Popup: Group: Participants - Please select Unit in dosage.‘ There is no dosage field in the group popup, since the study type is not Therapy – Drug.",First Priority,
+43444348063726,2015-07-31,2015-08-04,2015-08-04,iteration doesn't appear in subgroup dropdown,Sumit Patel,,"Bugs,Highest Priority,Group/Results tab","User: Russell
+Ref ID: 576595 
+
+""IL28B-CT"" does not appear on the subgroup drop down despite the fact that it was recorded as a result.",First Priority,
+43425015756027,2015-07-31,2015-08-04,2015-08-04,Validation error for duplicate iterations even though subgroups differentiate iterations,Sumit Patel,,"Text,Highest Priority,Reed Hepatitis C","User: Russell
+Ref ID: 576595 
+
+Iterations for SVR are not the same because the subgroup names are all different.  
+",First Priority,
+43427649452805,2015-07-31,2015-08-03,2015-08-03,2nd Subgroup is not being recognized as unique,Sumit Patel,,"Text,Highest Priority,Group/Results tab,Reed Hepatitis C","Username: Bobby
+Study ID: 719562
+
+There are multiple double subgroup iterations in this template and each is unique based upon the second subgroup. The system is not recognizing the second subgroup and is causing a validation error that reads ""Iteration should not be duplicate.""
+",First Priority,
+43415758003786,2015-07-31,2015-08-04,2015-08-04,"dosage related validation issue is unwarranted (whole numbers were used without any decimals, as required)",Soheb Rapati,,"High Priority,Text,Group pop-up,Completed,Reed Hepatitis C","Username: ourania
+Study ID: 495923
+
+I entered the dosage for intervention fields of group pop-ups according to the proper format (i.e. only used whole numbers), but got validation issues saying that the dosage field value can only have whole numbers or decimal and cannot have multiple decimals.",First Priority,
+43304770821235,2015-07-30,2015-07-31,2015-07-31,Save/Close and Save/Finalize function not working,Soheb Rapati,,"Text,Completed,Highest Priority,Reed Hepatitis C","Username: Tin
+Study ID: 387038
+
+Unable to Save/Close or Save/Finalize. Other save functions work (Save/continue and Close/No-Save). Validation function does not work. This issue is similar to the one previously reported for 528561 and 558032 under the same Subject line, which has been resolved.",First Priority,
+43304044787337,2015-07-30,2015-07-31,2015-07-31,Study Phase dropdown for interventions in group pop-ups don't save,Soheb Rapati,,"Text,Group pop-up,Completed,Reed Hepatitis C","Username: ourania
+Study ID: 495923
+
+After selecting a study phase from the dropdown for each intervention within the group pop-ups, I saved and closed the study, but when I re-opened the study, the study phase dropdown was no longer selected/saved.",First Priority,
+43262493456094,2015-07-30,2015-07-30,2015-07-30,Data cannot be deleted from subgroup field in group popup,Soheb Rapati,,"Text,Group pop-up,Completed,Highest Priority,Reed Hepatitis C","User: luyao
+Study ID: 558034
+
+To reproduce:
+1) Open any group with subgroup filled in. Open the subgroup popout.
+2) Click the green “clear” button. Text inside the dropdown “this is a subgroup of” disappears.
+3) Click the save button. The “subgroup of” text on the group popup does not change. Reopening the subgroup popup it shows up empty.
+4) Reload study. All subgroup information will come back.",First Priority,
+43257632375653,2015-07-30,2015-07-30,2015-07-30,Misaligned Cells,Sumit Patel,,"Text,Highest Priority,Group/Results tab,Reed Hepatitis C","Username: Michael F
+Study ID: 586549
+
+In the Group/Results section of full text extraction the rows do not properly align with their corresponding iteration. Additionally, the symbols for minimizing and maximizing root results are not showing up (although the function still works if you click where they should be).",First Priority,
+43135361233096,2015-07-29,2015-07-30,2015-07-30,'Save/Finalize' does not function ,Soheb Rapati,,"Text,Completed,Highest Priority,Reed Hepatitis C","Username: kaitlyn
+Study ID: 419182
+
+‘Save and Close’ and ‘Save, Finalize, and Close’ have no effect when pressed.  ‘Save and Continue’ and ‘Close and Don’t Save’ function as normal.  Clearing cache and relogging have no effect.",First Priority,
+43127864539024,2015-07-29,2015-07-31,2015-07-31,Group/Results page will not load at appropriate size and is not expandable,Sumit Patel,,"Bugs,Text,Highest Priority,Group/Results tab,Reed Hepatitis C","Username: carlando
+Study ID: 419236
+
+I am unable to bring up the results page upon my first time going to the group/results tab, as well as unable to view the notes page, error report, validations, or save/close page. Returning to the Study level tab, and then back to the group/results
+tab, the result window comes up but is cut off right below the population/group headings and the window is unsizable.
+
+1) Open study and click on group/results tab
+2) Click on anyone of the buttons on the bottom
+3) Press ""esc"" key
+4) Click on Study Level tab
+5) Return to group/results tab
+6) Resize the divider",First Priority,
+44594555061225,2015-08-06,2015-08-07,2015-08-07,"""Fixed"" dosage on non-drug study type",Soheb Rapati,,"Text,Table,Completed,Highest Priority,Elsevier Alzheimer’s","User: luyao
+Study ID: 600532, Table 1
+
+Similar to before, this study has a Counseling study type and validation errors are coming up complaining about a dosage entered as a “Fixed”. With Counseling study type, there is no fixed dosage field so there should not be an error.
+
+Please make sure ALL studies that do NOT have ""fixed"" auto-filled in. I thought we changed that a few weeks ago, so please make sure that user can deselect ""fixed"" if a visible field. If not showing, it cannot be filled in.",First Priority,
+42609073825016,2015-07-24,2015-08-07,2015-08-07,Add + button back to location & flag popups (also the ability to TAB through to add a new row),Sumit Patel,,"Bugs,Text,Medium Priority,Study Level tab,Group pop-up,Group/Results tab,Ready to push live/training",somehow the + button disappeared? please add back.,First Priority,
+42306495966290,2015-07-22,2015-07-30,2015-07-30,Cannot have a subgroup of the same iteration,Sumit Patel,,"Text,Medium Priority,Group/Results tab,Ready to push live/training",,First Priority,
+42142967804523,2015-07-21,2015-07-23,2015-07-23,add validation error for when the name in Miscellaneous section is not unique,Soheb Rapati,,"Text,Medium Priority,Group pop-up,Completed,Ready to push live/training","i.e. in screenshot, ""tidal volume"" was added to name twice. 
+
+if added once to name and once to description, that is OK 
+or
+ if added to description twice, but has different names, that is OK
+",First Priority,
+44447221904475,2015-08-05,2015-08-07,2015-08-07,Subgroup Table/Figure Validation Error,Sumit Patel,,"Text,Group/Results tab,Reed Hepatitis C","Username: Bobby
+Study ID: 586550
+
+When running validation errors I get the message ""Group / Result: Outcome: SVR - Iteration: N/A : Please select/enter table name from Table/Graph/Figure dropdown in Subgroup."" The system fails to recognize that all table or figure names have been entered into the appropriate drop down of the subgroup pop-up.
+",First Priority,
+44596672805335,2015-08-06,2015-08-10,2015-08-10,Cant clear validation error,Ajay,,"High Priority,Table,QC,Elsevier Alzheimer’s","Joshua
+600537, Table 1
+
+This study contains an Attribute / Group Value that is mapped to a Group that doesn't exist: ext-data-231192912145. [ name | type | interval | (method of analysis &#43; subgroup &#43; unitLabel &#43; rater &#43; locationStr) | field type] Medication, Any psychotropic medication||Maximum:Baseline|",First Priority,
+44683271521422,2015-08-07,2015-08-10,2015-08-10,clear function on flag popups on live database not working correctly,Sumit Patel,,"Text,Medium Priority,Group/Results tab","i tested this and it was working correctly on staging, so not sure what happened, but here are the steps:
+
+1) add pvalue
+2) add note (note in far right paragraph textbox does not turn flag red)
+3) click on the clear arrow in the pvalue popup
+4) the flag turns red and the note was not deleted 
+
+(i did the same steps on staging and the note was cleared out)",First Priority,
+45194612311622,2015-08-11,2015-08-12,2015-08-12,cannot deselect overlapping arms,Soheb Rapati,,"Bugs,High Priority,Text,Completed,Elsevier Alzheimer’s","ID: 600526 (happening globally) 
+user: Emily 
+
+I can't seem to deselect the overlapping arms for this group. I unselect, but the selection still shows up. ",First Priority,
+45238673397994,2015-08-11,2015-08-12,2015-08-12,"Loading issues - won't save/close, pull up error report",Soheb Rapati,,"Bugs,High Priority,Text,Completed,PCSK-9/CETP inhibitor evidence hub","Username: Daniel
+Study ID:  889945
+
+Daniel: I am trying to finalize my study but when I press “save, finalize and close” nothing happens.  I tried logging out and closing the window and making sure I have no validation issues, but it still will not let me submit.
+
+Karin: I went in to see if I could open the error report - was loading for 20 minutes before i closed out. ",First Priority,
+45635852652646,2015-08-14,2015-08-15,2015-08-15,subgroup popup cut off in tables,Soheb Rapati,,"Bugs,Table,Completed,Highest Priority,Group/Results tab","Separate issue that we just discovered, there isn’t any way to unselect subgroups in table QC (we clicked on the box/cleared cache/tried on different computers/etc):",First Priority,
+45653487251690,2015-08-14,,2015-08-16,"merge groups - duplicated groups (both ""laser"" and ""laser bullectomy"") ",Ajay,,"Bugs,Highest Priority","ID 630115
+
+laser + laser bullectomy duplicating
+staple + lung reduction surgery with staples duplicating",First Priority,
+45653487251708,2015-08-14,,2015-08-17,groups tagged incorrectly as subgroups,Ajay,,"Bugs,Highest Priority","ID 817100
+
+""Endobronchial Valve Therapy, Complete Fissure, Lobar Occulsion"" - incorrectly tagged as subgroup. doesn't share name in merge groups with any other groups and no subgroup tag
+
+""Endobronchial Valve Therapy, Complete Fissure, No Lobar Occulsion"" - tagged correctly (not a subgroup) but tagged exactly like ""Endobronchial Valve Therapy, Complete Fissure, Lobar Occulsion""  is.
+",First Priority,
+45373669604069,2015-08-12,,2015-08-13,Unable to Finalize Study,Soheb Rapati,,"High Priority,Text,Completed,PCSK-9/CETP inhibitor evidence hub","Username: Daniel
+Study ID:  889945
+
+I am trying to finalize my study but when I press “save, finalize and close” nothing happens.  I tried logging out and closing the window and making sure I have no validation issues, but it still will not let me submit.",First Priority,
+44683271521439,2015-08-07,,2015-08-14,flag popup appearing on opposite side of page,Chetan Bhimewal,,"Text,Low Priority,Completed,Group/Results tab,Ready to push live/training","steps to recreate:
+1) click on pvalue popup
+2) do not close out pvalue popup, but open up pvalue flag right away - 
+3) flag popup appears on the left side of the screen",First Priority,
+44972121756289,2015-08-10,,2015-08-17,"AM popup won't close after clicking on undo button & flag disappeared; then after save & close, flag turns red with no data",Sumit Patel,,"Bugs,Text,Medium Priority,Statistics (pvalues & AM)","test study (try on any ID):
+
+2 issues but second only occurs after first issue 
+
+steps to reproduce:
+1) type in AM value
+2) open flag and enter in text -- this step is not required (will happen with or without this step)
+3) open AM popup and click clear button
+4) popup warning comes up (""Are you sure you want to clear all fields and any text in the associated flag.?"")
+5) click ""OK""
+--> popup won't close and clicking on save icon or clicking elsewhere on the form does not close the popup (and no other popups work). only have the option of closing the study
+(opened a new study and recreated the same issue above)
+
+on first study (recreated on second study as well):
+when i reopen the study after i click ""save & close,"" the value is still there (not cleared) and the flag is showing red, even though there's no value there
+
+- reopen flag popup and save - flag turns black
+- reopen AM popup and save - flag turns red again
+- clear out AM values, this time the popup closes, but flag turns red (with no values) & cannot open red flag to turn off.
+
+tried to recreate first issue (popup won't close) on the AM column but the popup does close; however, the flag stays red and i can't open it until i put data back in the AM value box. when i open the flag then, there's no text (created the second issue)",First Priority,
+44972121756302,2015-08-10,,2015-08-14,pvalue flag will open after clearing data,Sumit Patel,,"Bugs,Text,Medium Priority,Statistics (pvalues & AM),Ready to push live/training","test study - recreated on two separate test studies
+
+steps to recreate: 
+1) enter pvalue
+2) enter text in pvalue flag (occurs with or without this step)
+3) clear pvalue
+4) flag opens (there is no ""You cannot add flag if there is no data"" popup)
+
+this only happens AFTER pvalue has been cleared. if open a new study, you cannot open the flag (you get ""You cannot add flag if there is no data"" popup).
+
+once you clear data, you no longer get the popup and can open the flag.
+
+occurs same in columns & rows",First Priority,
+41595670073526,2015-07-15,2015-08-11,2015-08-11,"add ""Committee"" to Rater dropdown with corresponding fill in textbox",Sumit Patel,,"High Priority,Text,Group/Results tab,Ready to push live/training","studies have different types of committees so instead of adding each name to the list, can we add a generic ""committee"" to the list and then type in a qualifier to it?
+
+in the JSON, please switch these names around i.e. if ""independent"" was written into the textbox, then the JSON would have ""Independent Committee"" ",First Priority,
+39661171772440,2015-06-29,,2015-06-29,Enhancements/Changes:,,,,,First Priority,
+32722672937464,2015-04-28,2015-04-29,2015-04-29,The default radio button for groups populations in text extraction does not save and prevents finalizing,Soheb Rapati,,"Completed,Highest Priority,BMS- Renal Cell Carcinoma","Username: Rachel
+Study ID: 325410 (and all kbases)
+Location of Issue: Text Extraction - Groups
+Project: BMS Renal Cell Carcinoma
+
+Username: augusta
+Study ID: 341836
+Location of Issue: Text Extraction - Group Popup - Whole Study
+Project: BMS - Renal Cell Carcinoma
+
+Username: Christina
+Study ID: 341680
+Location of Issue: Text Extraction
+Project: BMS - Renal Cell Carcinoma
+
+Summary:
+The default button for the populations within the groups for text extraction sometimes does not save at all after selecting a radio button and closing out of the window and other times, even though the default button is selected, it is not being recognized as being selected and is causing a validation error that prevents the study from being finalized (screen shots attached).
+
+This is affecting all studies",First Priority,
+32478049643739,2015-04-24,2015-04-28,2015-04-28,"Tables are not loading after attempting to open them.  Stuck on ""Please wait...""",Jignesh Patel,,,"Username: Joshua
+Study ID 663467, 661818, 662883, 663796, 641809, 445823
+Location: Table QC
+Project: Novartis HF IP
+
+Username: alicia
+Study ID: 847657
+Location of Issue: Table Extraction - Table 4
+Project: Radioiodine-refractory differentiated thyroid cancer
+
+Username: Chrisitna
+Study ID:  663796
+Location of Issue: Table QC
+Project: Novartis Heart Failure
+
+Table 1 wont load when clicked. Not sure of the source of the issue.  Seems to be occurring a lot today.",First Priority,
+32711788395840,2015-04-28,2015-04-29,2015-04-29,"Validation Issue: ""n"" Label is causing an  invalid field type error when all data are integers and is labeled correctly (potentially caused by ""0""s)",Sumit Patel,,"Completed,BMS- Renal Cell Carcinoma","Username: Rachel
+Study ID: 341719
+Location of Issue: Table QC - Table 3
+Project: BMS Renal Cell Carcinoma
+
+Summary: 
+Data for the 2 adverse event outcomes “Adverse Event, Gastrointestinal, Mucositis (functional), oral cavity” and ""Adverse Event, Neurologic, Confusion"" in Group ""Interferon, Adverse event grade ≥ 3"" are labeled with “#” and all contain whole numbers and appear correctly labeled. Not sure what is causing this invalid field type error, possibly the “0” values?
+",First Priority,
+32713206430659,2015-04-28,2015-04-28,2015-04-28,"Validation Issue: Dose fields for text and tables causing validation error for a value that is not visible in any group and default buttons so not save, and extraneous letters appear in frequency fields",Soheb Rapati,,"Completed,BMS- Renal Cell Carcinoma","Username: Rachel
+Study ID: 341719
+Location of Issue: Text and Table QC - Group dose fields and Table QC group dose fields
+Project: BMS Renal Cell Carcinoma
+
+Summary: 
+Receiving the error “The FieldValue for: Dosage Field Value was sent over in the wrong format, instead of the proper array. 600” and “The FieldValue for: Dosage Field Value was sent over in the wrong format, instead of the proper array. 400” for both text and tables in kbase 341719. The 600 value is not visibly captured on the template anywhere on the in text or tables, so I do not know how to resolve. Also, extraneous letters appear in the frequency fields even after deleting them and saving the changes. The default buttons for text groups also do not save. Screen shots attached.",First Priority,
+35393462384099,2015-05-22,2015-05-26,2015-05-26,Remove Import option on training site,Sumit Patel,,"High Priority,Completed","When completing a study on the training site, analysts are getting the ‘Do you want to import to the frontend’ option.
+",First Priority,
+35699591290709,2015-05-26,2015-05-29,2015-05-29,pop-ups on text assignments showing at top of page and/or not fully displaying,Sumit Patel,,"Text,Highest Priority","first screenshot is from study opened through DOC Extract
+second screenshot is from study opened through DOC Data - when i clicked on the qualifier popup, a big white box appeared.
+third screenshot shows subgroup popup not opening either.",First Priority,
+35632914705617,2015-05-26,2015-05-27,2015-05-27,Filter menu in job queue disappears,Chetan Bhimewal,,"Completed,admin",Summary: The filter menu (which should appear in the circled area in screenshot) disappears as soon as the mouse cursor gets into the sub-menu with the text box(es). This makes it impossible to use the filter function at all since I cannot type into it. This was not a problem until around Thursday last week.,First Priority,
+37509677116152,2015-06-11,2015-06-12,2015-06-12,"No ""select table"" button to re-extract simple tables",Jignesh Patel,,"High Priority,Table,QC","we have a bunch that were not finalized or somehow undone. but they are simple tables and there is no ""select table"" on the form. 
+
+two examples (but have more):
+
+IDs
+702437
+702440
+",First Priority,
+37508825271501,2015-06-11,2015-06-18,2015-06-18,unitlabel link no longer showing in tables,Jignesh Patel,,"High Priority,Table",,First Priority,
+37810562389182,2015-06-15,2015-06-16,2015-06-16,Study Phases show as code instead of drop-down selection on the back-end after they are correctly selected and then logged out and back in,Soheb Rapati,,"High Priority,Text,Group pop-up,Completed,Natural History of HER2; Breast Cancer Database","Username: Rachel
+Study ID: 808336 (and all studies)
+
+Summary: In the group pop-up, when a selection is made from the drop-down for the study phase of an intervention, once I  log out and back in to the template the study phase shows as code instead of the selection that was just made and
+saved. The code shows on the front-end as well (which is a known issue). This issue is occurring on all studies and a screenshot is attached.",First Priority,
+37181392462962,2015-06-09,2015-06-17,2015-06-17,ability to add multiple subgroups,Sumit Patel,,"High Priority,Text,Table,Completed,Group/Results tab","
+
+",First Priority,
+37181392462979,2015-06-09,,2015-06-09,"indent ""subgroup name"" and location ",,,,,,ability to add multiple subgroups
+37181392462981,2015-06-09,,2015-06-09,+/- buttons with dotted line between,,,,,,ability to add multiple subgroups
+39235909210253,2015-06-25,2015-06-26,2015-06-26,"Subgroup Fields are filled in but causing a validation error that the ""Subgroup of:"" is not selected",Soheb Rapati,,"Bugs,Text,Completed,Highest Priority,Group/Results tab,AHA/ACC Hypertension","Username: Rachel
+Study ID: 718035
+
+Summary: Within the group pop-up, when the subgroup fields are all filled in completely and selected from the drop-down, the template still is not recognizing the “Subgroup Of:” field and it is causing a validation error. Additionally, the subgroup data is only visible when you click into the fields, it appear as blank when only in the group-pop up. ",First Priority,
+39039583635823,2015-06-24,2015-06-30,2015-06-30,"add ""Brand Name"" at top of group popup",Stewart,,"High Priority,Text,Group pop-up,Completed","some groups are a combination of multiple interventions in 1 pill that has its own brand name. it's the same field as the brand name within each intervention. 
+",First Priority,
+37450966665453,2015-06-11,2015-07-08,2015-07-08,Add validation error when Unitlabels have not been selected for the following field types - ,Soheb Rapati,,"High Priority,Text,Table,Completed","both text & tables
+
+average
+mean
+median
+% - default to %
+total range
+ratio - default to NA
+",First Priority,
+39623497496056,2015-06-29,2015-07-13,2015-07-13,"Change ""NR"" to ""Not Reported"" in unitlabel dropdown ",Soheb Rapati,,"Text,Table,Highest Priority,Abbvie Alzheimer's","User: luyao
+Study ID: 359778, Table 1
+
+Summary: When a value is tagged with the unit “NR”, it comes up in validations as missing unit - same as if the unit box was left blank. This should not be the case as manually labeling NR means that the unit is actually not reported instead of being overlooked.
+
+Instead of using ""NR,"" we need to use ""Not Reported""
+
+Needs to be fixed in both tables & text assignments.",First Priority,
+40734165414057,2015-07-08,2015-07-10,2015-07-10,"require unitlabel to be selected for fixed, flex, and individual for dosage ",Soheb Rapati,,"Text,Table,Medium Priority,Group pop-up,Completed",add validation if unitlabel not selected,First Priority,
+39097676413509,2015-06-24,2015-06-26,2015-06-26,Notes to allow multi-selection for email,Soheb Rapati,,"Text,Table,Completed,Highest Priority",ability to select multiple people from dropdown and send email ,First Priority,
+39039583635811,2015-06-24,2015-06-25,2015-06-25,"remove ""funding data"" error",Soheb Rapati,,"Text,Study Level tab,Completed,Highest Priority,IBM/Watson","please remove popup that appears if funding data was not added at study level. this popup appears when you move over to the group/results tab, but does not appear when you click on ""validate."" ",First Priority,
+45099121252410,2015-08-10,2015-08-13,2015-08-13,"add AD, QN to iteration row (keep on result row too)",Sumit Patel,,"Text,Highest Priority","add AD & QN to iteration row as well as keeping on result row.
+
+- option for analyst to add at the result row level OR the iteration level. 
+- if added at result row level, should be replicated at each iteration 
+- at iteration level, analyst should be able to open AD or QN and ADD to what was already added at the result row level (does not erase)",First Priority,
+45374436558386,2015-08-12,,2015-08-12,Add 'Subgroup Category' dropdown to subgroup popup,Soheb Rapati,,"Text,Group pop-up,Highest Priority,Group/Results tab","(both from group popup and iteration popup)
+
+For pre-populated terms, the result name (result row) is pre-populated into the category dropdown; the iteration name is pre-populated into the subgroup name.
+
+For current male & female pre-populated options, ""Gender"" is pre-populated into the subgroup category dropdown and if you select that, male and female are the ONLY options that pre-populate in the subgroup name. You can also select the other way - select male or female from the subgroup name and the subgroup category prepopulates to ""Gender"" ",First Priority,
+29244964947920,2015-03-13,2015-08-17,2015-08-17,Intervention & Subgroup tag on group headers ,Sumit Patel,,"Text,Highest Priority,Group/Results tab","Note for analysts (Lauren to add to manual) - intervention is per study and dependent on study type (usually only have an intervention when selecting therapy study type, i.e when drug vs. drug); analysts can confirm intervention through study's objective statement",First Priority,
+43290988527401,2015-07-30,,2015-07-30,Subgroup Label:,,,,,,Intervention & Subgroup tag on group headers 
+43290988527422,2015-07-30,,2015-07-30,"Automatically add ""Subgroup Name"" when the dropdown is filled in in group popup (see screenshot - ""Subgroup"")",,,,,,Intervention & Subgroup tag on group headers 
+43290988527403,2015-07-30,,2015-07-30,"If ""Subgroup name"" is too long, use ellipses and add entire ""Subgroup name"" to Tooltip for rollover",,,,,,Intervention & Subgroup tag on group headers 
+43290988527424,2015-07-30,,2015-07-30,"""Subgroup name"" gets appended to group name when sent over in JSON (I believe this is already being done?)",,,,,,Intervention & Subgroup tag on group headers 
+43290988527411,2015-07-30,,2015-07-30,"Intervention ""I"" checkbox:",,,,,,Intervention & Subgroup tag on group headers 
+43290988527420,2015-07-30,,2015-07-30,"Add a checkbox to the column headers which displays an ""I"" (capital ""i"") if checked on. use courier new font. Can click on the ""I"" again and it would revert back to checkbox.",,,,,,Intervention & Subgroup tag on group headers 
+43290988527413,2015-07-30,,2015-07-30,"""I"" would be sent over in JSON as ""Intervention"" ",,,,,,Intervention & Subgroup tag on group headers 
+43290988527415,2015-07-30,,2015-07-30,"Total Population does NOT have ""I"" checkbox",,,,,,Intervention & Subgroup tag on group headers 
+45224178882401,2015-08-11,,2015-08-12,add additional name to attribute name in JSON,Ajay,,"High Priority,Text,Group/Results tab",is stadditional name still called acronym in JSON?,First Priority,
+45224178882406,2015-08-11,,2015-08-12,add author flag options to iteration level and remove flag at result row,Sumit Patel,,"High Priority,Text,Group/Results tab","add AD, Category, outcome name, pos/neg, QN to iteration level and hide/remove flag on result row. ",First Priority,
+44948050020094,2015-08-10,,2015-08-14,Add tooltip to FR dropdown,Soheb Rapati,,"Text,Frequency Report,Ready to push live/training","Username: augusta
+Study ID: 601979
+FR Item: ""Phasor Magnitude"" 
+
+hard to tell that it was marked as inclusion",First Priority,
+39661171772499,2015-06-29,,2015-07-24,"update ""Study Type"" - Therapy"" sub-type dropdown",Soheb Rapati,,"Text,Table,Medium Priority",,First Priority,
+39768600422688,2015-06-30,,2015-08-11,refreshing the group popup after study type is changed (see notes below and within task) ,Soheb Rapati,,,"When you initially select a study type and then if you change it, the fields don't update on the group popup. as you see in my screenshot (""group popup update""), i changed the study type from drug to radiotherapy. but instead of replacing intervention A fields, it just added intervention B fields. 
+",,"update ""Study Type"" - Therapy"" sub-type dropdown"
+39768600422691,2015-06-30,2015-07-24,2015-07-24,"1) if there is no data in the intervention fields, can you replace instead of adding a new intervention section? ",,,,,,refreshing the group popup after study type is changed (see notes below and within task) 
+39768600422693,2015-06-30,,2015-06-30,"2) if there is data in the intervention fields, but the fields are the same, can you move the data over and just relabel the study type (""Therapy-Radioatherapy"" in this example)",,,,,,refreshing the group popup after study type is changed (see notes below and within task) 
+39768600422695,2015-06-30,2015-07-24,2015-07-24,"3) if there is data in the intervention fields, and the fields are different, please use a confirmation popup saying that ""Please confirm you would like to change your study type. Data is entered in the group pop-up and if you change the study type, you will lose any data associated with the previous study type."" (options - yes or cancel)",,,,,,refreshing the group popup after study type is changed (see notes below and within task) 
+39661171772503,2015-06-29,2015-07-10,2015-07-10,"rename ""Drug"" to ""Pharmacological Drugs""",,,,,,"update ""Study Type"" - Therapy"" sub-type dropdown"
+39661171772505,2015-06-29,2015-07-10,2015-07-10,"Vaccines (use same fields in group popup as ""drug"")",,,,,,"update ""Study Type"" - Therapy"" sub-type dropdown"
+39661171772507,2015-06-29,2015-07-15,2015-07-15,"Surgical (use same fields in group popup as ""Device/Surgery"") - remove brand field",Soheb Rapati,,Completed,,,"update ""Study Type"" - Therapy"" sub-type dropdown"
+39661171772509,2015-06-29,2015-07-13,2015-07-13,"Rename ""Device/Surgery"" to ""Medical devices"" (use same fields in group popup as ""Device/Surgery"")",,,,,,"update ""Study Type"" - Therapy"" sub-type dropdown"
+39661171772511,2015-06-29,2015-07-10,2015-07-10,Cellular and gene,,,,,,"update ""Study Type"" - Therapy"" sub-type dropdown"
+39661171772513,2015-06-29,2015-07-02,2015-07-02,"Radiotherapy (use same fields in group popup as ""Drug"")",Soheb Rapati,,"Completed,Highest Priority",,,"update ""Study Type"" - Therapy"" sub-type dropdown"
+39661171772515,2015-06-29,2015-07-10,2015-07-10,Physical,,,,,,"update ""Study Type"" - Therapy"" sub-type dropdown"
+39661171772517,2015-06-29,2015-07-10,2015-07-10,"Educational (keep intervention type dropdown from  ""Behavioral/Counseling"" & associated fields in group popup as those options)",,,,,,"update ""Study Type"" - Therapy"" sub-type dropdown"
+39661171772519,2015-06-29,2015-07-10,2015-07-10,"Rename ""Behavioral/Counseling"" to ""Behavioral"" (keep intervention type dropdown  & associated fields in group popup as those options)",,,,,,"update ""Study Type"" - Therapy"" sub-type dropdown"
+39661171772521,2015-06-29,2015-07-10,2015-07-10,Screening,,,,,,"update ""Study Type"" - Therapy"" sub-type dropdown"
+39661171772523,2015-06-29,2015-07-10,2015-07-10,"Complementary (use same fields as ""drug"" in group popup)",,,,,,"update ""Study Type"" - Therapy"" sub-type dropdown"
+39661171772525,2015-06-29,2015-07-10,2015-07-10,"Psychological (keep intervention type dropdown from  ""Behavioral/Counseling"" & associated fields in group popup as those options)",,,,,,"update ""Study Type"" - Therapy"" sub-type dropdown"
+39661171772527,2015-06-29,2015-07-10,2015-07-10,Resources and infrastructure,,,,,,"update ""Study Type"" - Therapy"" sub-type dropdown"
+39661171772529,2015-06-29,2015-07-10,2015-07-10,Complex,,,,,,"update ""Study Type"" - Therapy"" sub-type dropdown"
+39661171772531,2015-06-29,2015-07-10,2015-07-10,Other,,,,,,"update ""Study Type"" - Therapy"" sub-type dropdown"
+14792540511183,2014-07-16,,2015-08-14,pop-up functionality update,Chetan Bhimewal,,"High Priority,Text",,First Priority,
+14792540511186,2014-07-16,2014-11-05,2014-11-05,all popups should close and save the data if click outside the pop-up area; ,,,,,,pop-up functionality update
+14792540511188,2014-07-16,,2015-08-14,make popups standard across forms (all have save button),Chetan Bhimewal,,,,,pop-up functionality update
+14792540511190,2014-07-16,,2015-08-14,"be able to tab through gender fields pop-up to next gender (male -- tab and opens female, etc)",Soheb Rapati,,,,,pop-up functionality update
+27065761298977,2015-02-16,,2015-08-12,updates to AM cells/columns,Sumit Patel,,"High Priority,Text,Group/Results tab,Statistics (pvalues & AM)","make sure all dropdowns are alphabetized & 
+make wider and/or add line to separate options within dropdown - hard to see where options begin and end
+",First Priority,
+43290988527443,2015-07-30,,2015-07-30,"only show ""Stats Test"" and ""d.f."" if you click on the graph icon",,,,,,updates to AM cells/columns
+36969098369465,2015-06-08,,2015-06-08,"degrees of freedom - Whole numbers only. No negative, no decimals, no ranges, no text",,,,,,updates to AM cells/columns
+43290988527464,2015-07-30,,2015-07-30,"Stats Test - decimal value, include negative values, but NO ranges, NO text, NO symbols",,,,,,updates to AM cells/columns
+43290988527453,2015-07-30,,2015-07-30,"if same comparison across different iterations, use same colors & numbers for tagging",,,,,,updates to AM cells/columns
+43290988527447,2015-07-30,,2015-07-30,AM dropdown updates:,,,,,,updates to AM cells/columns
+43290988527449,2015-07-30,,2015-07-30,"remove Kaplan Meier Curve (if being used in any study, please hide so no future study can use this)",,,,,,updates to AM cells/columns
+43290988527451,2015-07-30,,2015-07-30,remove Coefficient of Variation (see separate field for this in screenshot),,,,,,updates to AM cells/columns
+43290988527462,2015-07-30,,2015-07-30,"remove the following from the AM dropdown: Binomial test, Cox Proportional-Hazards Regression, Chi-square Goodness-of-Fit, Cohen's D, Chi Square, Fisher's Exact test, Hedges G, Independent (unpaired) 2 sample-t test, Kruskal Wallis, Log-Rank test, McNemar, One-Sample median, One sample t-test, One-way ANOVA, Overlapping two-sample t-test, Poisson Regression model, Pairwise Comparisons, Paired t-test, Student t-test, Tukey's Range test (Studentized range), Wilcoxon Signed Ranks test, Wilcoxon-Mann Whiteny test (Wilcoxon Rank-Sum test) ---> these are all added to new Statistical test dropdown - just move these values over from ""AM"" field to ""Stats Test"" value field",,,,,,updates to AM cells/columns
+36969098369467,2015-06-08,,2015-07-30,new Statistical Test dropdown:,,,,,,updates to AM cells/columns
+43290988527438,2015-07-30,,2015-07-30,"Add to this dropdown: Binomial test, Cox Proportional-Hazards Regression, Chi-square Goodness-of-Fit, Cohen's D, Chi Square, Fisher's Exact test, Hedges G, Independent (unpaired) 2 sample-t test, Kruskal Wallis, Log-Rank test, McNemar, One-Sample median, One sample t-test, One-way ANOVA, Overlapping two-sample t-test, Poisson Regression model, Pairwise Comparisons, Paired t-test, Student t-test, Tukey's Range test (Studentized range), Two-way ANOVA, Wilcoxon Signed Ranks test, Wilcoxon-Mann Whiteny test (Wilcoxon Rank-Sum test)",,,,,,updates to AM cells/columns
+37470416816875,2015-06-11,,2015-07-14,subgroup updates,Sumit Patel,,"High Priority,Text,Table",,First Priority,
+37508825271435,2015-06-11,2015-06-17,2015-06-17,"if subgroup field is filled in, add validation error if characteristic OR result isn't filled in (must select one or the other)",,,,,,subgroup updates
+37508825271437,2015-06-11,2015-06-15,2015-06-15,"if subgroup field is filled in, add validation error if narrative or table/graph/figure isn't filled in",,,,,,subgroup updates
+37508825271439,2015-06-11,2015-07-10,2015-07-10,"if select from table/graph/figure dropdown, automatically check off the checkbox",Sumit Patel,,,,,subgroup updates
+37508825271441,2015-06-11,,2015-07-10,"in subgroup name, instead of linking by name, link by ID (still display name in dropdown). ",,,,,,subgroup updates
+37508825271469,2015-06-11,2015-06-15,2015-06-15,"""subgroup of"" doesn't remove on group popup after you click on the green arrow (see screenshot)",,,,,,subgroup updates
+38281306408640,2015-06-17,2015-06-24,2015-06-24,"add validation error if ""subgroup of"" in group popup is filled out and subgroup name is blank",,,,,,subgroup updates
+38281306408634,2015-06-19,2015-06-24,2015-06-24,"if subgroup name is not filled out/selected, then disable checkboxes below.",,,,,,subgroup updates
+39596682659654,2015-06-29,2015-07-10,2015-07-10,"add ""type"" with choice --can only pick 1 of 3 -- ""Stratified Randomization"" or ""Not Stratified Randomization"" or ""Post-Hoc"" (see screenshot: ""subgroup popups) or here https://moqups.com/klawsonr/INKsW7xe)",Soheb Rapati,,,,,subgroup updates
+36061599325729,2015-05-29,2015-06-12,2015-06-12,"add ""ratio"" as a new field type",Jignesh Patel,,"High Priority,Text,Table,Completed","acts same as mean/median/average, but no unitlabel",First Priority,
+36075847815160,2015-05-29,,2015-05-29,in text assignments:,,,,,,"add ""ratio"" as a new field type"
+36075847815162,2015-05-29,2015-06-10,2015-06-10,"do not add to Age, timepoint, or phase. ",,,,,,"add ""ratio"" as a new field type"
+36075847815164,2015-05-29,2015-06-10,2015-06-10,Yes add to dosage and main outcome field type,,,,,,"add ""ratio"" as a new field type"
+36075847815166,2015-05-29,,2015-06-10,outstanding tasks:,,,,,,"add ""ratio"" as a new field type"
+37318410103587,2015-06-10,2015-06-10,2015-06-10,"in tables & text - when select ratio from dosage dropdown, no textbox appears to fill in data",,,,,,"add ""ratio"" as a new field type"
+36075847815168,2015-05-29,2015-06-12,2015-06-12,"in tables - add main field type dropdown (see ""no ratio"" screenshot)",,,,,,"add ""ratio"" as a new field type"
+37450966665450,2015-06-11,2015-06-12,2015-06-12,"default unitlabel to ""NA"" when ""ratio"" is selected",,,,,,"add ""ratio"" as a new field type"
+38234387754025,2015-06-17,2015-06-18,2015-06-18,Subgroups as results are not showing the name in the subgroup field and can only be seen when clicking into the pop-up,Sumit Patel,,"Text,Group pop-up,Completed,Group/Results tab,Natural History of HER2; Breast Cancer Database","Username: Rachel
+Study ID: 609302
+
+The subgroup names do not show within the result iterations even though data is entered in the pop-up. In the second screenshot, you can see that “Subgroup” shows when the subgroup name should show. One cannot tell which subgroup was entered or if one was entered all all. Should also have the rollover in case the subgroup name is too long to display. The subgroup name, as described here, used to show before these current changes.",First Priority,
+38119670973844,2015-06-16,2015-06-23,2015-06-23,Phase selected in the dosage section of the group pop up cannot be unselected,Soheb Rapati,,"High Priority,Text,Group pop-up,Completed,BMS- Renal Cell Carcinoma","Username: jaja
+Study ID: 702466/All
+
+Summary: It is currently impossible to remove a ""study phase"" after it has been selected. Please allow removal in case the initial phase selected needs to be removed",First Priority,
+36075847815170,2015-05-29,2015-06-18,2015-06-18,fraction field type update,Sumit Patel,,"High Priority,Text,Table,Completed",this is in regular outcome field type,First Priority,
+37450966665467,2015-06-11,,2015-06-11,"hide ""unitlabel"" option",,,,,,fraction field type update
+33731262826085,2015-05-11,2015-07-07,2015-07-07,"Add ""10 & 90th Percentile"" field type, under variable range",Sumit Patel,,"High Priority,Text,Completed,BMS- Renal Cell Carcinoma","similar to IQR as it is a range field (sent over in JSON same as IQR but labeled as ""10 & 90th Percentile""). red outline in screenshot.
+
+Username: akira
+Study ID: 702469
+Table 6
+
+Need to update text, tables, and data model",First Priority,
+34223838248829,2015-05-14,2015-06-12,2015-06-12,"Add Semi IQR field type, under variance",Jignesh Patel,,"High Priority,Table,Completed,NCCMH CBT for Psychosis","User: luyao
+Study ID: 562504
+Location: Table QC, Table 1
+
+Summary: This study reports data as Semi-IQR (which is defined as IQR/2). 
+
+single number, (sent over in JSON same as SD but labeled as ""Semi IQR""). blue outline in screenshot.
+
+Need to update text, tables, and data model
+",First Priority,
+37450966665473,2015-06-11,2015-06-12,2015-06-12,"default 'unitlabel' to ""%"" when selecting ""%"" field type",Jignesh Patel,,"High Priority,Table,Completed",,First Priority,
+35155008024612,2015-05-20,2015-06-10,2015-06-10,updates to subgroup pop-up,Soheb Rapati,,"Text,Table,Completed,Highest Priority","first two dropdowns must be filled in (cannot be free text). add validations. 
+last dropdown - allow free text; still needs validations
+
+subgroup popup both in text and tables",First Priority,
+35155008024616,2015-05-20,2015-06-09,2015-06-09,"new dropdown ""This is a subgroup of"" - - dropdown populated by the other groups (not subgroups). do not allow free text. require to be filled in. Must fill in before closing popup. - to clarify, ONLY required if other fields are filled in. if ALL blank, then no error message.",,,,,,updates to subgroup pop-up
+35155008024618,2015-05-20,2015-06-09,2015-06-09,"the dropdown for ""this study arm is a subgroup of the following characteristic/outcome"" needs to be changed to ""Subgroup name"" and populated by the characteristics/rsults (iterations in text assignments, all characteristics/outcomes in tables if already extracted, & male, female in group popup). have dropdowns filled in, but don't require. prompt error message if free text written in - ""The subgroup name entered is not associated with a characteristic or result. Please double check the selections."" - not pre-populated",,,,,,updates to subgroup pop-up
+35155008024623,2015-05-20,2015-06-09,2015-06-09,"table/graph/figure dropdown needs to be prepopulated by tables extracted (i.e. ""table 1""), but allow free text. if free text, prompt an error message ""This table/graph/figure selection is not associated with a collected table/graph/figure. Please review before finalizing."" - did not get error message",,,,,,updates to subgroup pop-up
+36061599325718,2015-05-29,2015-06-01,2015-06-01,"“Subgroup Name” field within the group pop-up appears to be a drop-down, but when it is clicked on - no dropdown options appear and user cannot enter free-text. This is the one field that I said to allow free text. ",,,,,,updates to subgroup pop-up
+36061599325720,2015-05-29,2015-06-01,2015-06-01,Need the ability to de-select or clear the selections that are made in both the “This is a subgroup of” field and the “Subgroup Name” field in case a subgroup is incorrectly captured and needs to be cleared from the arm.,,,,,,updates to subgroup pop-up
+37318410103605,2015-06-10,2015-06-11,2015-06-11,"change ""subgroup?"" in group popup to ""Subgroup of:""",Soheb Rapati,,"Text,Table,Medium Priority,Group pop-up,Completed",,First Priority,
+37181392462968,2015-06-09,2015-06-10,2015-06-10,"Subgroup popups - Rename ""Baseline Value"" to ""Characteristic"" and ""Outcome"" to ""Result""",Soheb Rapati,,"Text,Table,Completed,Group/Results tab",,First Priority,
+30256797004854,2015-03-26,2015-06-10,2015-06-10,ranges in mean/median/avg/%/SD/SE fields,Soheb Rapati,,"Text,Completed,Highest Priority,Group/Results tab",See subtasks,First Priority,
+30293024040784,2015-03-27,2015-03-30,2015-03-30,"allow mean/median/avg/%/(n/%)/SD/SE/unknown variance fields to allow a range for groups tagged ""total"" and ""pooled"" (gets low & high slot)",,,,,,ranges in mean/median/avg/%/SD/SE fields
+30293024040786,2015-03-27,2015-03-31,2015-03-31,"add dropdown for Type of Groups - options: ""Total/Single/Pooled"" at top of Group pop-up (next to ""Additional Information"")",,,,,,ranges in mean/median/avg/%/SD/SE fields
+30556879934526,2015-03-31,2015-06-09,2015-06-09,"""total"" option only appears in ""total population"" column. ""pooled"" does not; default to ""total"" but keep ""single"" option.",,,,,,ranges in mean/median/avg/%/SD/SE fields
+30556879934528,2015-03-31,2015-06-10,2015-06-10,"rest of columns are defaulted to ""single"" but with both ""single"" and ""pooled"" options (need to default to ""single"" when adding new group)",,,,,,ranges in mean/median/avg/%/SD/SE fields
+30556879934530,2015-03-31,2015-06-10,2015-06-10,"ranges should only be allowed when you select ""total"" or ""pooled"" - not for ""single""",,,,,,ranges in mean/median/avg/%/SD/SE fields
+36075847815185,2015-05-29,2015-06-10,2015-06-10,"Add ""overlapping population"" popup to table & merge group popups",Jignesh Patel,,"Table,Completed,Highest Priority",doesn't show in table group popup or merge group group popups. only text. please add - needs to be on all three. ,First Priority,
+36804901902186,2015-06-05,2015-06-11,2015-06-11,study phase doesn't display properly in Group Popup.,Soheb Rapati,,"Bugs,Text,Table,Group pop-up,Completed,Highest Priority,Elsevier ARDS","Username: augusta
+Study ID: 722728
+
+Summary: Treatment phase field in Group Popup doesn’t display correct text for Treatment phase after saving and reopening. Correct text can be selected, but once study is closed, text reverts to being incorrect.",First Priority,
+36804149276942,2015-06-05,2015-06-09,2015-06-09,Miscellaneous popup in Group Treatment Info not functioning.,Soheb Rapati,,"Bugs,Text,Group pop-up,Completed,Highest Priority,Elsevier ARDS","Username: augusta
+Study ID: 722728
+
+When adding miscellaneous info, the first field name defaults to ‘Description’ regardless of what is in the ‘Name’ field (see pt 1). When saving, closing, reopening study and reopening the Miscellaneous popup, the popup now displays additional fields that were not entered by analyst (see pt 2). These can be edited to display the Miscellaneous info correctly on the Group Popup, but if saving and reopening the study, the Miscellaneous popup still displays incorrectly (see pt 3).",First Priority,
+31989900810176,2015-04-17,2015-06-11,2015-06-11,"Need warning for any results that do not have a population in tables.  If the population is blank, they will get a warning:  ""Please confirm no populations were added for Group."" ",Sumit Patel,,"High Priority,Table,Group pop-up,Completed",,First Priority,
+37181392463002,2015-06-09,,2015-06-09,"""OK"" or ""Cancel"" (only cancel button currently showing)",,,,,,"Need warning for any results that do not have a population in tables.  If the population is blank, they will get a warning:  ""Please confirm no populations were added for Group."" "
+37181392463006,2015-06-09,,2015-06-09," OK - automatically adds ""NA"" to population field & closes group popup",,,,,,"Need warning for any results that do not have a population in tables.  If the population is blank, they will get a warning:  ""Please confirm no populations were added for Group."" "
+37181392463004,2015-06-09,,2015-06-09, Cancel - keeps group popup open for analyst to add population ,,,,,,"Need warning for any results that do not have a population in tables.  If the population is blank, they will get a warning:  ""Please confirm no populations were added for Group."" "
+38858167676701,2015-06-23,2015-06-24,2015-06-24,fraction getting unitlabel validation when shouldn't have units,Sumit Patel,,"Text,Completed",i'm getting a validation error that the iteration for fraction doesn't have units when it should not have units (the unit dropdown is hidden because it is not supposed to be used) ,First Priority,
+30891468378732,2015-04-06,2015-06-25,2015-06-25,"Typo in data label for Unknown Variation, says ""Unknown Variaration""",Jignesh Patel,,"High Priority,Table,Completed","Username: Lauren
+Ref ID: 378894 (all)
+
+There is a typo in the data label for “Unknown Variation”. The dropdown currently reads “Unknown Variaration”.",First Priority,
+39209930888474,2015-06-25,2015-07-22,2015-07-22,separate assignment for text QC (only those with ExtractQC status would be assigned),Soheb Rapati,2015-07-03,"Text,QC,Completed,Ready to push live/training","we do not want to overwrite data on the initial text assignment
+
+ExtractAdmin can open/view QC assignments but do not have those users in the dropdown. 
+
+if user has both statuses, then they have the ExtractQC access",First Priority,
+40624882647513,2015-07-07,2015-07-08,2015-07-08,FQs are not filtered after being selected,Chetan Bhimewal,,"Medium Priority,QC,Completed","all FQs show on existing assignment page, even after selecting the FQ you want to see. 
+
+i selected ""studies for digitization - client-selected, march 2015"" from the dropdown, but got both that and ""all references - NCCMH - CBT for psychosis"" - the page should only show what was selected from the dropdowns (""studies for digitization - client-selected, march 2015"")",First Priority,
+39209930888476,2015-06-25,2015-07-22,2015-07-22,Tri-state toggle for each section on text assignment,Soheb Rapati,2015-07-03,"Text,QC,Completed,Ready to push live/training","can we use the flag as the toggle, just add a ""green"" option (only viewable in QC); keeps the notes the analysts are made. if QC wants to add another note, they just click on the + button
+
+to mark:
+QCed (green)
+not QCed (black)
+needs review (red)",First Priority,
+38886607894943,2015-06-23,2015-06-25,2015-06-25,Pvalues and AM have been lost.,Jignesh Patel,,"Text,Completed,Highest Priority,Statistics (pvalues & AM),AHA/ACC Hypertension","Kbase 350003
+
+Extractor slowed and when study is opened on another computer it appears the Pvalues and AM have been lost.",First Priority,
+39058647695469,2015-06-24,2015-06-25,2015-06-25,pvalues deleted,Jignesh Patel,,"Text,Completed,Highest Priority,Statistics (pvalues & AM),AHA/ACC Hypertension","User: emily
+ID: 335877
+
+Issue: All pvalues deleted. I believe this happens most often when the first drop down in the pvalue pop up isn't selected for anything. ",First Priority,
+36040237858804,2015-05-29,2015-06-11,2015-06-11,Using radio button to assign time points to all groups does not work for Total Population.,Sumit Patel,,"Bugs,High Priority,Text,Completed,NCCMH CBT for Psychosis","Username: augusta
+Study ID: 402477
+
+When creating a new iteration under a result, changing the time points for all arms doesn’t change the time point for the Total Population. Going directly into the result pop-up for the Total Population and changing the time point there works. This is an old study that is being updated to current extraction protocols—not sure if that may be affecting the issue.",First Priority,
+36672962733914,2015-06-04,2015-06-11,2015-06-11,Allow study type to be changed in table QC and AR pending modes,Jignesh Patel,,"Table,Medium Priority,QC,Completed,Novartis COPD","User: luyao
+Study ID: 257689, 343719
+
+There is currently no way to change the study type in QC. When I send the study back into AR, the usual “Study Type” button (located at circled place in screenshot when extracting new studies) does not show up at all.",First Priority,
+37866890622978,2015-06-16,2015-06-18,2015-06-18,assign selected as char/outcome doesn't work,Jignesh Patel,,"Table,Medium Priority","if only selecting part of the terms, but not all, can only change by selecting individually ",First Priority,
+37470416816869,2015-06-11,2015-06-23,2015-06-23,Notes button/buttons at bottom of extraction form ,Jignesh Patel,,"Text,Table,Medium Priority,Completed","
+",First Priority,
+37508825271443,2015-06-11,2015-06-12,2015-06-12,"remove ""you can login...""",,,,,,Notes button/buttons at bottom of extraction form 
+37508825271445,2015-06-11,2015-06-15,2015-06-15,"change colors - all start as blue. once you add a note, turn that to green. ",,,,,,Notes button/buttons at bottom of extraction form 
+37508825271449,2015-06-11,2015-06-23,2015-06-23,add notes to tables,,,,,,Notes button/buttons at bottom of extraction form 
+37508825271455,2015-06-11,2015-06-12,2015-06-12,"in the email, add a space between ""comment"" and the actual comment",,,,,,Notes button/buttons at bottom of extraction form 
+36527194286423,2015-06-03,2015-06-09,2015-06-09,Duration Timepoint should only have 1 box (not a range) in table QC,Jignesh Patel,,"Table,QC,Completed,Highest Priority,Janssen Diabetes","User: luyao
+Study ID: 597529
+Location: Table QC, Table 3
+
+Summary: After selecting “duration” timepoint type, I get two sets of value-unit boxes. The duration type is supposed to have only one set of fields. After saving the timepoint it displays exactly the same as a total timepoint on the table,
+so I can’t tell if it is being saved correctly.",First Priority,
+36364783965570,2015-06-02,2015-06-03,2015-06-03,import removes text/data after <= and <,Ajay,,"Bugs,Text,Natural History of HER2; Breast Cancer Database","Username: Tin
+Study ID: 389627
+
+cuts off anything following <= or <",First Priority,
+36053465808777,2015-05-29,2015-06-03,2015-06-03,Data Import: HTML in units - causing issues with unit conversion,Chetan Bhimewal,,"Text,Table,Highest Priority",,First Priority,
+36389502759727,2015-06-02,2015-06-05,2015-06-05,Allow table assignment to be sent back for missing tables without rejecting a table,Jignesh Patel,,"Table,Completed,PCSK-9/CETP inhibitor evidence hub","User: luyao
+Study ID: 401749
+
+Show ""# of tables"" button so QC can update and send back if analyst omits a study
+
+Summary: The analyst of this study forgot to extract supplementary tables. After approving all tables that were extracted, I cannot send back the study to analyst because the system thinks all tables were approved. The only way to do it now is to reject one of the tables even though it’s not wrong, which means all work done on it would be lost.",First Priority,
+33463934563779,2015-05-07,2015-06-09,2015-06-09,[Duplicate] Save & Finalize button on table QC & text assignments to update already imported studies,Ajay,,"Highest Priority,admin",Save & Finalize on table & text assignments would replace/update edits made to the study on the 2.0 front end,First Priority,
+34056091083630,2015-05-13,2015-05-28,2015-05-28,characteristic tag on tables is showing as outcome in JSON,Ajay,,Highest Priority,"clearly shows ""race or ethnic group, white"" tagged as a characteristic in the table, but it's being sent over in the JSON as an outcome. need fixed ASAP. ",First Priority,
+34211276835405,2015-05-14,2015-05-19,2015-05-19,convert FR assignments to text assignments,Ajay,,"Text,Highest Priority,Frequency Report","Client: Novartis
+Package: Heart Failure - AE Background Incidence & Prevalence, Extraction Package
+FQ: AE Background Incidence & Prevalence – Dementia
+
+(if these two tasks 
+https://app.asana.com/0/31569084342869/30321173066778 and
+https://app.asana.com/0/31569084342869/30842789612808 
+are completed, we should have to worry about this anymore)
+
+",First Priority,
+34197566702033,2015-05-14,2015-05-18,2015-05-18,[Duplicate] 2 options for import into DOC Data,Sumit Patel,,admin,,First Priority,
+34197566702037,2015-05-14,,2015-05-14,"2) if study is already in DOC Data, on text extraction and table QC, if changes are made and ""save & Finalize"" is clicked, then give option to replace what's on DOC Data",,,,,,[Duplicate] 2 options for import into DOC Data
+29979615049130,2015-03-24,2015-06-09,2015-06-09,The typing cursor jumps to other cells while typing a word in Tables.,Jignesh Patel,,"Bugs,Table","Username: Amanuel
+Study ID: 778723
+Location of Issue: Table Extraction - Table 2
+Project: Elsevier Insect Repellent
+
+Username: Avani Bedagkar
+
+Summary: 
+When I type in labeling mode, the cursor will move to different cells mid word. I have to re-select the previous cell multiple times to continue typing in the desired location. It takes several tries per word.  Included a screenshot of typing the word (Picture 1) and a screenshot of the letters jumping to the title row (Picture 2).  This occurs between outcomes too (text from 1 outcome will jump to a previous outcome).",First Priority,
+30550082540117,2015-03-31,2015-05-13,2015-05-13,Parenthesis are being pulled into the Result data labeling mode,Amit,,"High Priority,Table,Elsevier Cystic Fibrosis","Username: Amanuel
+Study ID: 82937
+Location of Issue: Table Extraction - Table 1
+Project: Elsevier CF
+
+Summary: 
+When I assign result data, the parenthesis surrounding the data values now get pulled through as well. This makes any data value with parenthesis a negative value with the current protocol. This issue began yesterday and takes a lot of time to fix.  Can we change it so it removes the parentheses at did, and have analysts input the parentheses for negative values in labeling mode?  It's easier to add parentheses to negative values than delete them.",First Priority,
+30529221285949,2015-03-31,2015-05-12,2015-05-12,Device/Surgery Therapy fields are not showing with selected from Study Type,Soheb Rapati,,"Bugs,Text,Group pop-up,Completed,Highest Priority,Group/Results tab","username: emily
+study id: 604324
+Location: text extraction, group/results tab, group pop-up
+Project: Elsevier COPD
+
+Username: Brett
+Study ID: 739716
+Location: text extraction, group/results tab, group pop-up
+Project: ARDS
+
+When Therapy-->Device/Surgery is selected as the study type on the study level tab, the correct intervention fields should display in the group popup windows",First Priority,
+30533923498266,2015-03-31,,2015-03-31,,,,,,,Device/Surgery Therapy fields are not showing with selected from Study Type
+31648258626375,2015-04-14,2015-05-05,2015-05-05,"Template will not save, ""error during data inserting"" message potentially due to 39 study arms",Soheb Rapati,,"Bugs,Text,Completed,Highest Priority,Group/Results tab,PCSK-9/CETP inhibitor evidence hub","Username: Stephen
+Study ID: 613474
+Location of Issue: Text extraction - group/results
+Project: Amgen PCSK9
+
+Summary:
+This bulky results section has 39 arms and many results/iterations which seems to be causing issues. After saving many times over several hours I had 2 result iterations (that I know of) disappear, as well as some AD text, and rater and objective information.
+It has now gotten to the point where it is no longer saving any data.  Just says ""Error during data inserting.""",First Priority,
+33003465452757,2015-05-01,2015-05-04,2015-05-04,Validation issue: >15 dosage error message displays but the data is not within the study.,Soheb Rapati,,"Completed,Natural History of HER2; Breast Cancer Database","Username: jaja
+Study ID: 452905
+Location of Issue: Table/Text Extraction - Group pop up
+Project: Genentech NatHer
+
+Summary:
+A similar error happened previously https://app.asana.com/0/31569084342869/31845818122317 and was fixed but it came back, though this one is slightly different hence the new task. This error shows for 1 group only. Unable to correct this issue in the group pop-up as there is no >15 within the popup.  The data is not present on our end to fix.
+",First Priority,
+33003496238624,2015-05-01,2015-05-04,2015-05-04,Tech Issue: Trying to Parse selected cell but nothing happens,Jignesh Patel,,"Completed,BMS- Renal Cell Carcinoma","Username: emily
+Study ID: 702403
+Project: BMS RCC
+
+Summary: 
+Trying to change text to Total Raneg High but nothing happens when I click ""Parse selected cells"" when anything is input, even NR.  Only occurs in this one cell.",First Priority,
+33332078426786,2015-05-06,2015-05-06,2015-05-06,"For Therapy - Device/Surgery the ""Misc"" fields not appear in treatment details portion of Group Pop-up.",Soheb Rapati,,Completed,"Username: augusta
+Study ID: 739722 (and others)
+Location of Issue: Text Extraction - Group Pop-up
+Project: Elsevier - ARDS
+
+Summary:
+Misc field does not appear in treatment details portion of Group Pop-up. Study Type selected is Therapy - Device/Surgery.  Considering this just started occuring, this may be related to the fix yesterday for https://app.asana.com/0/31569084342869/30529221285949 ",First Priority,
+33713184171182,2015-05-11,2015-05-13,2015-05-13,Table 2 not opening in table QC mode,Jignesh Patel,,"Completed,Elsevier COPD","Username: akira
+Study ID: 629774
+Table 2
+
+When I click on the ""Show"" button for Table 2, it freezes on the ""loading"" status.",First Priority,
+34230525746898,2015-05-14,2015-05-15,2015-05-15,Validation Issue: Total Range label causes error when there are no other values in cell,Ajay,,NCCMH CBT for Psychosis,"User: luyao
+Study ID: 562538, Table 1
+Project: NCCMH CBT for Psychosis
+
+When a cell has only a pair of total range values, it is flagged as a validation error. This error doesn’t occur if the cell has another value in it (for example median).",First Priority,
+32525212236560,2015-04-25,2015-05-20,2015-05-20,"AMs and pvalue columns from tables should not go into merge groups pages - add ""Stats"" tag",Karin,,"Table,Completed","can we add a tag on tables so that they don't come in? (select entire column, select entire row, and select individual cells). the pvalue & AM columns don't come in on merge groups for text; they should not come in for tables",First Priority,
+39097676413518,2015-06-24,2015-07-07,2015-07-07,Allow ExtractQC and ExtractAdmin to edit & delete notes; DataExtractor users cannot edit/delete,Soheb Rapati,2015-07-03,"Text,Table,Medium Priority,Completed","On the training site, yesterday: 
+user: Tin (Extract only permissions) and left a note in Ref ID 417336. The edit/delete buttons didn't show up because he doesn't have the permissions. [GOOD]
+ 
+user: Lauren (QC/Admin permissions) replied to the note in ID 417336 (assigned to Tin). Did not get edit/delete buttons. (BAD - she's logged into her acct with correct permissions - she should have edit/delete functionality). 
+ 
+On training site today: 
+user: Lauren  (QC/Admin permissions) left note in ID 389471, which had edit/delete options [GOOD]
+ 
+user: Lauren (QC/Admin permissions) opened  Tin’s study (Ref ID 417336) through own account, I have edit/delete buttons on all comments, even ones that I did not leave [BAD - she should only have edit/delete options on her OWN notes].",First Priority,
+39209930888484,2015-06-25,2015-07-08,2015-07-08,use the Notes button/popup to show all the notes within the flags across the text assignment (summary view).,Soheb Rapati,2015-07-03,"Text,Table,Medium Priority,QC,Completed","keep running list in the notes section (keep emails/other notes entered within the Notes popup separate and timestamped)
+
+bulletpoint list. 
+is not timestamped 
+first dropdown - bold & underlined
+second dropdown - italics
+textbox is normal text
+
+show in text & table QC as well",First Priority,
+37142993418432,2015-06-09,,2015-06-11,UI/Import Issues:,,,,,First Priority,
+36512646514317,2015-06-03,2015-06-15,2015-06-15,Pop-up asking to import is not appearing for several studies (studies are already in DOC Data),Amit,,"Bugs,Highest Priority,admin,Natural History of HER2; Breast Cancer Database","Popup appearing, but not being added to queue - examples: 385115, 379194, 778722, 609477, 609445
+",First Priority,
+37593492179948,2015-06-12,2015-06-15,2015-06-15,missing data from text assignments after reimport,Ajay,,Highest Priority,"
+547488, 566095
+
+",First Priority,
+30380955459132,2015-03-29,2015-06-16,2015-06-16,date field showing incorrectly on UI,Ajay,,"Text,Study Level tab,Highest Priority",,First Priority,
+38388861366481,2015-06-18,2015-06-24,2015-06-24,add SE field (continuous data value) to AM popup,Jignesh Patel,,"Text,Completed,Highest Priority,Statistics (pvalues & AM)",,First Priority,
+40726838407548,2015-07-08,2015-07-09,2015-07-09,Transfer FR Assignment to Text,Ajay,2015-07-09,"Text,Highest Priority,Novartis Heart Failure","transfer 640469 from an FR assignment to text
+
+package: ""Novartis Heart Failure, Term Index""
+
+FQ: “Heart Failure – RCT Treatment Studies”",First Priority,
+39762509757498,2015-06-30,2015-07-09,2015-07-09,Validation Issue: Falsely reporting about non-unique table names,Amit,,,"Username: Michael F
+Study ID: 402638
+Location of Issue: Table Validation
+Project: NCCMH CBT for Psychosis
+
+There is a report for each table stating that the Study contains the same Table Name multiple times. Each table does have a unique Table Name.",First Priority,
+38086131119173,2015-06-16,2015-07-07,2015-07-07,study phase not displaying correctly,Ajay,,"High Priority,Text,Group pop-up,Natural History of HER2; Breast Cancer Database",ref ID: 390266,First Priority,
+38388861366534,2015-06-18,2015-06-25,2015-06-25,#845 updated translation function for MOA popup,Ajay,,"Text,Completed,Highest Priority","github task: https://github.com/DoctorEvidence/DocData/issues/845
+
+needed for project due July 6",First Priority,
+37470416816879,2015-06-11,2015-06-25,2015-06-25,add blank mean field when sending over any range or variance by itself,Ajay,,"High Priority,Text,Table,NCCMH CBT for Psychosis","ID 342607 
+ID 562552 ",First Priority,
+32342626773183,2015-04-23,2015-06-26,2015-06-26,add staging website,Ajay,,,"this is for extraction new features/bugs/changes, not to do with imports",First Priority,
+43270770246416,2015-07-30,2015-07-30,2015-07-30,Exclusion not importing completely when '<' symbol is present,Ajay,,"Bugs,High Priority,Text","Username: augusta,
+Study ID: 601977
+
+Exclusion is not importing completely when ‘<’ is present in the extraction template. Only ‘MMST’ is pulled into the Binding Tool/Study Summary, but the criteria was extracted as ‘MMST < 9’.",First Priority,
+45540053954888,2015-08-13,2015-08-14,2015-08-14,Text assignment merge groups edits not working,Ajay,,"Bugs,Text,Highest Priority","Please look at the JSON to make sure the data is being sent over correctly. 
+
+Ref ID 628972
+
+https://github.com/DoctorEvidence/DocData/issues/1038
+
+Group name edits for text data from the merge groups page are not displayed with the edited value. The changes in group names in tables are reflected on Doc Data but not the groups on the text form.
+
+",First Priority,
+41247010854032,2015-07-13,,2015-08-17,Single login & home page for all users - internal and external,Ajay,,"Highest Priority,admin","as requested by Bob. 
+Github link: https://github.com/DoctorEvidence/DocData/issues/931 
+https://github.com/DoctorEvidence/DRE-General/issues/15 
+
+with links to take you to the following platforms if you have access to them: 
+
+Extract (including live, training & staging, admin)
+Data (including production, staging, testing)
+DOC Create
+DOC Label
+DOC Library
+LMS
+1.0 DOC Data
+1.0 backend extraction
+GROWTH
+
+1.0 Admin (master creation pages)
+GRADE
+Elsevier webform
+Error report pages (production, staging)
+import page
+",First Priority,
+41261180740403,2015-07-13,,2015-07-13,home page:,,,,,,Single login & home page for all users - internal and external
+41261180740415,2015-07-13,,2015-07-13,ability to access all logins that user has access to,,,,,,Single login & home page for all users - internal and external
+41261180740417,2015-07-13,,2015-07-13,keep home icon on subsequent environments so user can always go back to that home page and go into a different environment (or a dropdown list of environments from the home icon?),,,,,,Single login & home page for all users - internal and external
+41261180740419,2015-07-13,,2015-07-13,internal only - dropdown for users to register meetings (need for time documentation),,,,,,Single login & home page for all users - internal and external
+41261180740405,2015-07-13,,2015-07-13,admin page (super admin users only):,,,,,,Single login & home page for all users - internal and external
+41261180740411,2015-07-13,,2015-07-13,"users/roles/environments settings - which users get access to which environments/links and what role within those (should be a couple universal internal roles - full access to all environments, default settings for analysts, etc.)",,,,,,Single login & home page for all users - internal and external
+41261180740409,2015-07-13,,2015-07-13,add meetings to an internal user dropdown so users can document time spent ,,,,,,Single login & home page for all users - internal and external
+41261180740413,2015-07-13,,2015-07-13,"reporting & metrics export (right now, need data dump, but eventually this would be real-time updated webpage version) - see below)",,,,,,Single login & home page for all users - internal and external
+41261180740421,2015-07-13,,2015-07-13,Metrics/Reporting:,,,,,,Single login & home page for all users - internal and external
+41261180740423,2015-07-13,,2015-07-13,"time/date stamp of sign in, which items on which pages were touched/changed, time/date stamp of signout",,,,,,Single login & home page for all users - internal and external
+41261180740425,2015-07-13,,2015-07-13,client/project/FQ,,,,,,Single login & home page for all users - internal and external
+44441441155383,2015-08-05,2015-08-10,2015-08-10,"Add ""meters"" to interations unit dropdown",Sumit Patel,,"Text,Table,Highest Priority",,First Priority,
+43456509788522,2015-07-31,2015-08-10,2015-08-10,characteristic tag on age & gender fields,Stewart,,"High Priority,Text","please confirm that the group age & gender fields are being tagged as ""characteristics"" not ""study level"" or ""group level""",First Priority,
+44597546934628,2015-08-06,2015-08-07,2015-08-07,Age fields imported with field types,Stewart,,"Text,Table,Medium Priority,Group pop-up","the field types (mean/SD, range, etc.) are being imported with ""age"" when age is collected in the group tab. do NOT send this over in the import in the name - it should be sent over as at the field type - just like all the results.",First Priority,
+42508837422434,2015-07-23,2015-07-24,2015-07-24,Inclusion data is not being sent over,Ajay,,"Bugs,Text,Study Level tab,Highest Priority,IBM/Watson","Study ID: 226820
+
+inclusion criteria not in the JSON
+
+",First Priority,
+42142967804536,2015-07-21,2015-07-28,2015-07-28,"when multiple locations added to an iteration, it duplicates the pos/neg item and crashes the import",Ajay,,"Bugs,Text,Completed,Group/Results tab",,First Priority,
+41077267089476,2015-07-10,2015-07-23,2015-07-23,direct import not working,Ajay,,"Bugs,Text","all of these study IDs were imported last night, but when analyst went to reimport directly from the extraction form, the form did not prompt an import. (we reimported again manually through Stew's page). 
+
+718035
+335877
+346345
+730492
+725199
+730961
+730762
+724576
+730374
+730897
+730687
+354153
+
+
+",First Priority,
+45196615771714,2015-08-11,2015-08-12,2015-08-12,inclusion/exclusion criteria not separated,Ajay,,"Bugs,Text","Reported by: augusta
+Study ID: 601979
+Dataset: Alzheimer's Disease
+
+not sure if this is specific to this study or in multiple studies
+
+From Stew: ""In this particular case (""Observed to have sleep problemsObserved to have agitation problems...""), that is how it's being sent over from Extract. So it looks like the problem is actually on their end. (I'd guess they have a bug in their code that parses the HTML bulleted list out into an array.)""",First Priority,
+42501611049473,2015-07-23,,2015-07-23,"from DOC Data, link to QC text assignment, if QC assignment has been made (whether assigned, in progress, or finalized)",Soheb Rapati,,"High Priority,Text,admin",,First Priority,
+34056091083617,2015-05-13,,2015-07-08,Allow editable access to table & text assignments through DOC Data with ExtractAdmin access ONLY,Chetan Bhimewal,,"High Priority,admin",ExtractQC and DataExtractor access only have read-only access on front end,First Priority,
+32493863669889,2015-04-24,,2015-08-06,add read-only link for tables & FR to DOC Data study summaries,Jignesh Patel,,High Priority,,First Priority,
+33618422697158,2015-05-10,2015-08-07,2015-08-07,"Display ""text"" data field type in table assignments on front end",Stewart,,"Table,Low Priority,Statistics (pvalues & AM)",,First Priority,
+39235559402031,2015-06-25,,2015-06-25,New table format:,,,,,First Priority,
+38721417945278,2015-06-22,,2015-06-25,table updates for new interface,Amit,,"High Priority,Table,to discuss","Will need to apply all of this to the table interface.
+
+Should discuss efficiency... perhaps we can use shortcut keys to open these fields and mass-apply to all outcomes (usually they will be applied to a bunch of terms, half the terms, or all the terms in the table)
+
+we should also discuss the field type options and if we should use the text format or something different from the current huge dropdown",First Priority,
+39063696392567,2015-06-24,,2015-06-24,1- categories,,,,,,table updates for new interface
+39063696392570,2015-06-24,,2015-06-24,2- MOA popup,,,,,,table updates for new interface
+39063696392572,2015-06-24,,2015-06-24,3- rater,,,,,,table updates for new interface
+39063696392574,2015-06-24,,2015-06-24,4- subgroups,,,,,,table updates for new interface
+39063696392578,2015-06-24,,2015-06-24,5- timepoints,,,,,,table updates for new interface
+39063696392580,2015-06-24,,2015-06-24,6- pos/neg,,,,,,table updates for new interface
+39063696392582,2015-06-24,,2015-06-24,7- unitlabels,,,,,,table updates for new interface
+39063696392588,2015-06-24,,2015-06-24,"8- inequality, #, and unit selection in qualifier popup",,,,,,table updates for new interface
+39063696392592,2015-06-24,,2015-06-24,"9- ""type"" of field type (rename to ""ValueType"")",,,,,,table updates for new interface
+39063696392584,2015-06-24,,2015-06-24,10- use the footnote linking to display in same AD or QN field as the text assignment,,,,,,table updates for new interface
+39063696392598,2015-06-24,,2015-06-24,"stats - association measures, statistical tests, & pvalues - need to add linking and directionality, similar to text assignments ",,,,,,table updates for new interface
+41028366095820,2015-07-10,,2015-07-22,"default population to ""Participants"" and have radio button clicked ON",Amit,,"Group pop-up,New table",,First Priority,
+37866890622927,2015-06-16,2015-06-18,2015-06-18,table QC doesn't ask for import,Sumit Patel,,"Table,Medium Priority,Completed",,First Priority,
+36603347258134,2015-06-04,2015-06-09,2015-06-09,"Add ""Protocol-Based Fields"" section ""Name"" and ""Description"" textboxes to study level tab",Soheb Rapati,,"Text,Study Level tab,Completed,Highest Priority","below funding/above setting
++ button, giving the ability to add multiple
+same name/description textbox as miscellaneous field in group popup
+
+put inclusion, exclusion, qualitative note, and early study termination on separate lines",First Priority,
+36603347258117,2015-06-03,2015-06-04,2015-06-04,"Add ""Brand"" to Therapy - Drug & Therapy - Device/Surgery study types",Soheb Rapati,,"Text,Table,Group pop-up,Completed,Highest Priority",please add to group popup for both table & text & merge group assignments,First Priority,
+33735162192059,2015-05-11,2015-06-04,2015-06-04,"when sending over standard deviation that was captured by itself, include blank ""mean"" field",Ajay,,"Text,Table,Elsevier Diabetes","user: emily
+ID: 26227
+location: Table 2
+
+Include a blank mean field with SD in JSON so it is accepted.
+",First Priority,
+36603347258143,2015-06-04,2015-06-05,2015-06-05,add unitlabel dropdown in tables when only SD or SE is selected,Jignesh Patel,,"Table,Completed,Highest Priority",,First Priority,
+36708896906130,2015-06-04,2015-06-09,2015-06-09,Additions to dropdowns in the dosage section,Soheb Rapati,,"Text,Table,Completed,Highest Priority,Natural History of HER2; Breast Cancer Database",,First Priority,
+36718259574113,2015-06-04,,2015-06-04,Dosage Type:,,,,,,Additions to dropdowns in the dosage section
+36718259574115,2015-06-04,2015-06-09,2015-06-09,Loading Dose,,,,,,Additions to dropdowns in the dosage section
+36718259574117,2015-06-04,2015-06-09,2015-06-09,Maintenance Dose,,,,,,Additions to dropdowns in the dosage section
+36718259574119,2015-06-04,,2015-06-04,Time:,,,,,,Additions to dropdowns in the dosage section
+36718259574121,2015-06-04,2015-06-09,2015-06-09,Cycles,,,,,,Additions to dropdowns in the dosage section
+33691674447204,2015-05-11,2015-05-12,2015-05-12,"add ""unit label"" dropdown to ""individual"" field type",Jignesh Patel,,"Table,Completed","when select ""individual"" field type, the unit label dropdown should be visible & usable",First Priority,
+33618422697148,2015-05-10,2015-05-11,2015-05-11,Error when opening QC approved table,Jignesh Patel,,"Table,Completed,admin","ID 778677
+all tables in this study won't open. after clicking ""OK,"" the ""please wait"" just continues",First Priority,
+33576986445612,2015-05-08,2015-05-11,2015-05-11,Convert ID 640727 from Frequency Report to Text Assignment,Chetan Bhimewal,,"Text,Completed,admin,Frequency Report,Novartis COPD",,First Priority,
+33559386181365,2015-05-08,2015-05-11,2015-05-11,Merge groups do not save,Jignesh Patel,,"Bugs,Highest Priority,Elsevier Venous Thromboembolism,PCSK-9/CETP inhibitor evidence hub","ID: 778677 
+ID: 401353
+
+After completing merge groups, clicking the “save data” button will bring up the spinning wheel for a second, but the usual “saved successfully” message box does not pop up after the spinning wheel disappears. Clearing cache/etc
+",First Priority,
+33584672084780,2015-05-08,2015-05-11,2015-05-11,Ability to uncheck text-only tables ,Jignesh Patel,,Table,"Tables are not displaying in merge groups COPD
+Username: Angelica
+Study ID: 571611 Table 2 NOT text only, not showing in merge groups
+Study ID: 648625 Table 1: NOT text only, not showing in merge groups
+Location: Merge Groups
+Project: COPD
+
+Summary:
+Regular tables are not displaying within the Merge Groups page. Typically this happens with Text only tables but these tables are not text only.  This issue came up before https://app.asana.com/0/31569084342869/32845797820344 and the issue was that these were checked off by tech as Text Only tables.  The solution was simply unchecking them as text.  We may need an overall fix so this doesnt keep occurring.",First Priority,
+33848583500791,2015-05-12,2015-05-12,2015-05-12,Cannot click on subgroup buttons,Soheb Rapati,,"Text,Completed,BMS- Renal Cell Carcinoma","Username: Gabrielle
+Study ID: 702411
+
+The buttons in the subgroup pop-up (baseline, narrative, etc.) are square and cannot be selected.",First Priority,
+33248679005163,2015-05-05,2015-05-12,2015-05-12,Validation Issue: Not Reported checkbox not registering in validation report until box is opened and closed.,Sumit Patel,,Completed,"Username: Angelica
+Study ID: All
+Location: Text Extraction - Results
+Project: All
+
+Summary: Even though it does automatically check the NR checkbox within the outcome popup, it does not recognized that NR is checked until a cell has been opened and closed.  If the cell is not opened and close (so it registers the NR checkbox) this causes a validation error on the validations report page (pictured). 
+
+Current work around is to click on cells, no need to press save, just open pop-up and close. If it is an entire row, open first cell and hold down tab and it will skip across the whole row and readjust once whole row has been completed. Repeat with the next row.  Very tedious.
+",First Priority,
+33483241653580,2015-05-07,2015-05-08,2015-05-08,The Finalize QC button fails to work,Sumit Patel,,"Completed,PCSK-9/CETP inhibitor evidence hub","Username: Bobby
+Study ID: 613500
+Location of Issue: Table QC, Table 2
+Project: Amgen PCSK-9
+
+Summary:
+The table is ready to be finalized and approved, but the ""Finalize QC"" button specific to this table fails to work. Due to this, I am unable to approve the table and ultimately approve the study.",First Priority,
+32748121763577,2015-04-28,2015-05-13,2015-05-13,Validation Issue: Accept minimum or maximum of a range when given alone and the total range is not given,Sumit Patel,,"BMS- Renal Cell Carcinoma,Natural History of HER2; Breast Cancer Database","Username: Rachel
+Study ID: 342656
+Location of Issue: Table QC - Table 2
+Project: BMS Renal Cell Carcinoma
+
+Summary: 
+This table presents data as a maximum end of range, but validation does not accept only one part of the range—only a total inputted range passes the report. We need validation to accept minimum and maximum values on their own.
+
+Screen shot attached.",First Priority,
+33390213021512,2015-05-06,2015-05-14,2015-05-14,Validation Issue: Data with blank labels and blank values generate an error,Jignesh Patel,,PCSK-9/CETP inhibitor evidence hub,"Username: luyao
+Study ID: 613448
+Location of Issue: Validations, Table 3
+Project: Amgen PCSK-9
+
+Summary: 
+Cells in this table have on text field, and two blank fields that are supposed to be deleted. The data labels and data values are all left blank, but they show up as validation errors and there’s no way to remove them other than
+deleting the table and starting over.",First Priority,
+32845797820344,2015-04-29,2015-05-05,2015-05-05,Individual Tables / Merge Groups not loading for specific Study IDs,Jignesh Patel,,"Completed,Highest Priority,BMS- Renal Cell Carcinoma,Novartis COPD","Username: Joshua
+Study ID: 341396 - Table 3
+Location: Merge Groups
+Project: BMS RCC
+
+Username: Joshua
+Study ID: 359500 - Table 3
+Location: Merge Groups
+Project: BMS RCC
+
+Username: Emily
+Study ID: 652279 - Table 2
+Location of Issue: Table Extraction
+Project: Novartis COPD
+
+Username: luyao
+Study ID: 341636 - Table 4 not loading
+Location of Issue: Merge Groups
+Project: BMS RCC
+
+Username: luyao
+Study ID: 230838
+Location of Issue: Merge groups, Table 1
+Project: Janssen SGLT2
+
+Summary:
+When trying to access merge groups page, gets stuck on loading screen.  Seems to be due to individual tables with loading issues for each study.  Tables listed aswell",First Priority,
+32845797820354,2015-04-29,2015-04-30,2015-04-30,341396 - Merge Groups / Table 3,,,,,,Individual Tables / Merge Groups not loading for specific Study IDs
+32845797820356,2015-04-29,2015-04-30,2015-04-30,359500 - Merge Groups / Table 3,,,,,,Individual Tables / Merge Groups not loading for specific Study IDs
+32845797820368,2015-04-29,2015-04-30,2015-04-30,652279 - Table 2,,,,,,Individual Tables / Merge Groups not loading for specific Study IDs
+32845797820371,2015-04-29,2015-05-05,2015-05-05,341636 - Merge Groups / Table 4 not loading,,,,,,Individual Tables / Merge Groups not loading for specific Study IDs
+33245584356636,2015-05-05,2015-05-06,2015-05-06,"The ""Range"" field type does not cause the units dropdown to appear for the cell.",Jignesh Patel,,"Completed,Elsevier COPD","user: emily
+study ID: 604324
+location: table 1
+project: elsevier COPD
+
+summary: Total range is the only data collected in the last row ""Range, exacerbations, per person"". When I go to input a unit, there is no unit drop down that shows up in the box. See attached picture",First Priority,
+32110220498461,2015-04-20,2015-05-06,2015-05-06,Add validation error if radio button is not selected for group populations,Sumit Patel,,"Text,Table,Completed",,First Priority,
+32219208668134,2015-04-21,2015-04-30,2015-04-30,Error Report shows duplicate group name for text,Stewart,,"Reed Hepatitis C,Elsevier Insect Repellent","Username: laurenb
+
+Study ID: 510078
+Location of Issue: Text Extraction (Groups)
+Project: Elsevier Hepatitis C
+
+Study ID: 586549
+Location of Issue: Text Extraction (Groups)
+Project: Elsevier Hepatitis C
+
+Study ID: 586550
+Location of Issue: Text Extraction (Groups)
+Project: Elsevier Hepatitis C
+
+Study ID: 778723
+Location of Issue: Text Extraction (Groups)
+Project: Elsevier Insect Repellant
+
+Study ID: 778748
+Location of Issue: Text Extraction (Groups)
+Project: Elsevier Insect Repellant
+
+Study ID: 778751
+Location of Issue: Text Extraction (Groups)
+Project: Elsevier Insect Repellant
+
+Study ID: 778752
+Location of Issue: Text Extraction (Groups)
+Project: Elsevier Insect Repellant
+
+Error message states “This study has a group with a duplicate name. Only the first one will be imported.
+PR (G3 HCV)”.  The text template has been checked for each Study ID and no duplicate groups can be found.",First Priority,
+31843844470121,2015-04-16,2015-04-30,2015-05-01,[Duplicate] 'validation: 95%CI range not accepting the range in the format of #-NR,Stewart,,Natural History of HER2; Breast Cancer Database,"Username: emily
+Study ID: 390255
+Location: text, group/results, #CI range field
+Project: Natural History of HER2; Breast Cancer Database
+
+Summary:
+Study reports the 95% CIs for OS and Post-CNS-OS in the format of #-NR. Validations do not want to accept non-number in range",First Priority,
+32335957161879,2015-04-22,2015-04-28,2015-04-28,"[Duplicate] Population radio buttons not working in group pop-up, causing validation error.",Soheb Rapati,,BMS- Renal Cell Carcinoma,"Username: augusta
+Study ID: 341836
+Location of Issue: Text Extraction - Group Popup - Whole Study
+Project: BMS - Renal Cell Carcinoma
+
+Username: Christina
+Study ID: 341680
+Location of Issue: Text Extraction
+Project: BMS - Renal Cell Carcinoma
+
+Summary:
+Population radio buttons stop working randomly. Button is selected, but the Validation Error that the default population must be selected for the group still displays. Saving, exiting, and reopening the study temporarily fixes the problem, but buttons
+need to be re-toggled. Sometimes the screen moves up, leaving a white rectangle at the bottom of the browser window when this error occurs.
+
+I think the default population de-selecting happens when adding another arm, all previous arms lose the default",First Priority,
+32476331753111,2015-04-24,2015-04-28,2015-04-28,"The ""same result"" validation error pops up even though the outcome's timepoints are actually different",Greg,,,"Username: Luyao (Table analyst); Bobby (Table QC)
+Study ID: KB 493155
+Location of Issue: Table assignment - Table 2
+Project: ACC/AHA DAPT (dual antiplatelet therapy)
+
+Summary: The ""same result"" validation error pops up even though the outcome's timepoints are actually different.
+",First Priority,
+32426531155926,2015-04-23,2015-04-24,2015-04-24,A QC'ed table is creating additional groups after finalizing the study.,Jignesh Patel,,"Bugs,Table,Highest Priority","Username:
+Fasahath Husain
+
+Study ID: 493094
+
+Location of Issue:
+
+1)      Type of Assignment: Table QC
+
+2)      Location with Study: Table 1
+
+Project: ACC/AHA DAPT (Dual antiplatelet therapy)
+
+Summary:
+
+The top left panel is qc’ed and just before finalizing it looks exactly as it should. But the anomalous table seen on the right bottom was noticed during or just before validation. The table was finalized correctly the first time and it jumbled up. It was fixed the second time and it jumbled up again.",First Priority,
+32620438705856,2015-04-27,2015-04-27,2015-04-27,"Selecting multiple cells does not change the timepoints for all cells, only for a single cell",Jignesh Patel,,"Bugs,Completed,Highest Priority,Janssen Diabetes","Username: Rachel
+Study ID:  602368 (and all studies)
+Location of Issue: Table QC - Table 1 and all tables
+Project: Janssen Diabetes
+
+Summary: 
+After the tech fix for the timepoint issue this morning (timepoints changing when field types are changed), now the timepoints cannot be mass-assigned by clicking multiple cells. Only one single cell accepts the timepoint change. 
+
+Screen shot attached.",First Priority,
+31845818122317,2015-04-16,2015-04-28,2015-04-28,"validations: system showing error for dosage field value being <15, but no dosage on the template matches this",Soheb Rapati,,"Completed,Natural History of HER2; Breast Cancer Database","User: emily
+Study ID: 452905, 230838, 560884
+Location: text extraction
+Project: Natural History of HER2; Breast Cancer Database
+
+Summary: 
+Cannot find a dosage field on the template with <15 input as the value. This error is also showing up for tables, so not sure where the system is pulling this error from.",First Priority,
+31987665753095,2015-04-17,2015-04-28,2015-04-28,validation: add validation for group + subgroup - unique group name,Soheb Rapati,,"Text,Table,Completed","user: emily
+id: 711473
+location: text, group/results, group popup windo
+project: novartis Heart Failure Incidence/Prevalence - other country level
+
+Summary:
+System showing error for duplicate arm names. It was unable to identify the groups as different from subgroup alone, as they were both AA.  Had to rename the groups with subgroup identifier (AA-->AA, White and AA-->AA, African American, etc..) in order to fix this. System needs to recognize that subgroup info input in the group pop up makes the arm unique; the group name should still be allowed to be the same across arms",First Priority,
+33349549574426,2015-05-06,2015-05-13,2015-05-13,"Validation Issue: Single value IQR data not passing validation, receiving error message ""can only have numeric range or decimal range""",Jignesh Patel,,"Table,Completed","Username: Rachel
+Study ID: 678138
+Location of Issue: Table QC - Table 1
+Project: Elsevier PE
+
+Summary: 
+The “IQR” data label is selected from the drop down for a single value (data is not presented as a range), but the IQR label is causing a validation error within the Table QC interface that prevents the table from being finalized (but not on the error report). 
+
+IQR data is not always given as a range.  Sometimes it is presented as the high range minus the low range as a single value as it is in this case.
+
+Screen shots attached.",First Priority,
+33389891045973,2015-05-06,2015-05-13,2015-05-13,Validation Issue: N/A population for tables not being automatically applied,Jignesh Patel,,"Completed,PCSK-9/CETP inhibitor evidence hub","Username: luyao
+Study ID: 613448
+Location of Issue: Table QC, Table 3
+Project: Amgen PCSK-9
+
+Summary: 
+Any groups that does not have a population filled in also generates an error that prevents finalizing, even though the N/A should be automatically applied.",First Priority,
+36073056820939,2015-05-29,2015-06-03,2015-06-03,"Validation Issue: Population in group pop-up must be whole numbers or 'na'. Population is entered as required, validation issue still occurs.",Soheb Rapati,,"Text,Group pop-up,Group/Results tab,NCCMH CBT for Psychosis","Username: augusta
+Study ID: 436689
+
+Summary: Validation error that population must be whole numbers or NA occurs, but population fields are filled in correctly. This is an old study being updated to current protocol.",First Priority,
+36243949379754,2015-06-01,2015-06-03,2015-06-03,Highlights Pop-up Does Not Disappear After Clicking Away,Soheb Rapati,,"Text,Completed,NCCMH CBT for Psychosis","Username: gregl
+Study ID: 562481
+
+Project: NCCMH--CBT for Psychosis
+
+Summary: While updating this study, trying to either delete highlights that were already templated or trying to add new highlights both result in the ""Highlights"" pop-up becoming permanently opened, thus preventing me from being able to switch between study/group
+level, among other restrictions. The only way I've figured out to remove the ""Highlights"" pop-ups is to save & continue the study and then close & don't save and reopen the study. Attached is a screenshot of 2 different highlights getting stuck open after adding
+the terms to the frequency report, and they stay open even though I closed the FR pop-up and even if I click anywhere else on the template.",First Priority,
+34108979688115,2015-05-13,2015-05-14,2015-05-14,change textbox to paragraph box/able to expand,Soheb Rapati,,"Completed,frequency report tab,Frequency Report",,First Priority,
+34404483346863,2015-05-15,2015-05-18,2015-05-18,Cannot choose Continuous/Variance/Range field type from dropdown in FR pop-up when only Result radio button is checked.,Soheb Rapati,,"Bugs,High Priority,Completed,frequency report tab,Elsevier Diabetes","Username: augusta
+Study ID: 591375
+
+When creating new lines in the FR pop-up, if only the Results radio button is checked, Continuous/Variance/Range is not a selectable field type in the drop-down. Can be worked around by also checking Characteristic radio button when creating
+new lines.",First Priority,
+29232107242820,2015-03-13,2015-05-18,2015-05-18,Add a QC Flag feature to FR items,Soheb Rapati,,"Completed,frequency report tab,Frequency Report","Include same 'flag' feature in FR as text extraction. 
+",First Priority,
+34108979688120,2015-05-13,,2015-05-13,add 1 overall at top of page,,,,,,Add a QC Flag feature to FR items
+34108979688122,2015-05-13,,2015-05-13,add per item on left side,,,,,,Add a QC Flag feature to FR items
+30842789612808,2015-04-03,2015-05-18,2015-05-18,do not allow text & FR assignments to be open at the same time by different users.,Chetan Bhimewal,,"Text,Frequency Report","if linked, as would occur with completion of task: https://app.asana.com/0/31569084342869/30321173066778 then shouldn't be allowed to open one if another user (or you) already has it open",First Priority,
+24269964433672,2015-01-15,2015-05-14,2015-05-14,don't allow inclusion & exclusion selected at same time,Soheb Rapati,,"Bugs,Completed,frequency report tab,Frequency Report",these choices are mutually exclusive - can't select at same time,First Priority,
+32731778313433,2015-04-28,2015-04-29,2015-04-29,Validation Error: system recognizing table 2 and 5 names as occurring more than once,Soheb Rapati,,"Completed,BMS- Renal Cell Carcinoma","Username: emily
+Study ID: 341827
+Location of issue: tables
+Project: BMS RCC
+
+Summary: validation system is reporting that tables 2 and 5 are used multiple times. I've checked all table names for the study and there is only one occurrence of each",First Priority,
+32465306044900,2015-04-24,2015-04-29,2015-04-29,"""S"" appears in objective box after deleting and reopening",Soheb Rapati,,"Completed,BMS- Renal Cell Carcinoma","Username: Katrina
+Study ID: 342115
+Location of issue: text extraction - Objectives box on Study Level tab
+Project: BMS Renal Cell Carcinoma (MASTER subscription)
+
+Summary: 
+an ""S"" appears in the objective box on the study level tab every time the study is re opened. I will delete the 'S' save and close the study then reopen the study and it will be back. I have cleared cache and I'm in incognito mode.
+
+I've also noticed, in this same study as the S, is the 'study date' box keeps re-appearing saying ""accrued to this trial"". This study was reassigned to me from another analyst and originally had these boxes filled out, but I deleted them to fit the project instructions.
+",First Priority,
+33000712241400,2015-05-01,2015-05-04,2015-05-04,Table 3 will not load in Table QC,Soheb Rapati,,"Completed,Janssen Diabetes","Username: luyao
+Study ID: 427237
+Location of Issue: Table QC, Table # 3
+Project: Janssen SGLT2
+
+Summary: Table does not load in QC mode. Just getting the ""Please Wait""",First Priority,
+33248714220792,2015-05-05,2015-05-06,2015-05-06,Table 2 will not load,Jignesh Patel,,"Completed,Janssen Diabetes","Username: Angelica
+Study ID: 325063
+Location of Issue: Table Extraction - Table 2
+Project: Janssen Diabetes
+
+Summary:
+The rest of the study is ready to go and QC'ed but Table 1 wont open. Don't know if it has been extracted or QC'ed. I do know it was working before, but suddenly is not loading.
+",First Priority,
+33396298967469,2015-05-06,2015-05-08,2015-05-08,2 Tables will not load,Jignesh Patel,,"Completed,PCSK-9/CETP inhibitor evidence hub","Username: luyao
+Study ID: 401750
+Location of Issue: Table QC, supplementary table 1
+Project: Amgen PCSK-9
+
+Summary: Table cannot load in QC mode or in merge groups
+
+Username: luyao
+Study ID: 401353
+Location of Issue: Table QC, supplementary table 1
+Project: Amgen PCSK-9
+
+Summary: Table cannot load in QC mode.
+",First Priority,
+33146913716196,2015-05-04,2015-05-08,2015-05-08,"Validation Issue:  System error for ""="" time point with only unit data filled in and no #",Sumit Patel,,Completed,"user: emily
+id: 82917
+Location: table 1
+Project: Elsevier CF
+
+Summery: validation error for two time points with ""="" and free text unit w/ no # data. Pictures attached
+",First Priority,
+34216542587207,2015-05-14,2015-05-15,2015-05-15,Non-text-only table not showing in merge groups,Jignesh Patel,,"High Priority,Completed,Natural History of HER2; Breast Cancer Database","user: Joshua
+ID: 389512, Table 1
+Merge groups
+",First Priority,
+34684212659882,2015-05-18,2015-05-19,2015-05-19,IQR values (within Age) get deleted after closing and returning to the study,Soheb Rapati,,"Text,Group pop-up,Completed,Group/Results tab,Novartis Heart Failure","Username: Ourania
+Study ID: 666755
+
+In the group pop-up, I checked the boxes for ""Median"" and ""IQR"" for age and entered those values in the appropriate boxes. After I saved the study and returned back to it, those values were no longer there.",First Priority,
+34617240509738,2015-05-18,2015-05-20,2015-05-20,table assignment won't assign out ,Chetan Bhimewal,,"Bugs,Table,Completed","ID 5625312
+
+this is table assignment not text/FR, so table should be able to assign out. ",First Priority,
+34883964606459,2015-05-19,2015-05-20,2015-05-20,PDF loading with wrong tables,Jignesh Patel,,"Table,QC,Elsevier Diabetes","Username: Michael F
+Study ID: 288389
+
+There are 4 tables in the study, but only 2 masks are showing up filled with table information that isn’t from the PDF.",First Priority,
+34488970124381,2015-05-15,2015-05-20,2015-05-20,Table not showing in merge groups,Jignesh Patel,,"Completed,Elsevier Malaria","User: Joshua
+Ref: 87304, Table 2
+",First Priority,
+34491670877501,2015-05-15,2015-05-20,2015-05-20,Merge groups not loading,Jignesh Patel,,"Completed,Elsevier Malaria","Joshua
+778689
+Elsevier Malaria Prevention
+",First Priority,
+32993975081472,2015-05-01,2015-05-19,2015-05-19,Validation Issue: receiving error for a duplicate parent result when results are captured with different timepoints,Amit,,Janssen Diabetes,"Username: Rachel
+Study ID:  379696
+Location of Issue: Table QC - Table 5
+Project: Janssen SGLT-2 Subscription
+
+Summary: 
+Receiving the validation error “duplicate parent result for Fasting Lipid profile, HDL-C” but the 2 outcomes are distinct and are captured with 2 different timepoints. Screen shot attached.",First Priority,
+32948292913036,2015-04-30,2015-05-04,2015-05-04,Study PDF is unable to fully load.  Causes whole or part of the PDF to turn blank.,Jignesh Patel,,"Completed,Janssen Diabetes","Username: Joshua
+Study ID: 288582
+Location of Issue: Table QC
+Project: Jannsen Diabetes
+
+Summary:
+The study initially loads fine, but if you attempt to scroll down a few pages the entire study goes blank and causes any google docs to turn completely black.",First Priority,
+32942471549094,2015-04-30,2015-05-01,2015-05-01,Table 1 not loading during Table QC ,Jignesh Patel,,"Completed,Janssen Diabetes","Username: aya
+StudyID: 597545
+Location of issue: Table QC
+Project: Janssen SGLT2
+
+Summary:
+Table 1 not loading during Table QC update for merging.",First Priority,
+32945346734048,2015-04-30,2015-05-01,2015-05-01,Table 2 will not load in Table QC,Jignesh Patel,,"Completed,Janssen Diabetes","Username: Joshua
+Study ID: 230865
+Location: Table QC - Table 2
+Project: Jannsen Diabetes
+
+Summary:
+Table 2 will not load. Gets stuck on loading screen.",First Priority,
+34246567323672,2015-05-14,2015-05-20,2015-05-20,"Cannot unselect ""rater"" when it has been selected",Sumit Patel,,"Bugs,High Priority,Completed,Group/Results tab,BMS- Renal Cell Carcinoma","user: emily
+id: 216285
+
+summary: cannot de-select rater after it has been chosen. clicking on the highlighted NR just closes the popup window and NR stays selected.
+",First Priority,
+32128522605851,2015-04-20,2015-05-29,2015-05-29,Variable Range options (IQR and CI only) to be added in the Phase Field,Soheb Rapati,,"Text,Completed,BMS- Renal Cell Carcinoma","
+",First Priority,
+32120600269639,2015-04-20,2015-04-23,2015-04-23,[Duplicate] Need Tables that are just extracted (but not QC finalized) to have their terms sent over to Frequency Reports.,Jignesh Patel,,"Highest Priority,admin","We need Tables that are just extracted but not finalized to have their terms sent over to Frequency Reports.  Tables that are QC finalized will have data sent out.
+
+Additional details within original conversation within task: https://app.asana.com/0/31569084342869/30694469043109 ",First Priority,
+12339008339111,2014-05-14,2015-04-24,2015-04-24,"use existing unit label dropdown (from text) and add to outcomes. have code recognize from this dropdown/list of units if unit is already there in the outcome and have it parsed out/labeled as unit. if not in the outcome, analyst needs to select from dropdown",Jignesh Patel,,"High Priority,Table","add to continuous outcomes (mean, median, average, all ranges)
+add validation error if not selected",First Priority,
+32404290022597,2015-04-23,2015-04-24,2015-04-24,Unable to remove unit labels from the popup. Need to add delete option.,Jignesh Patel,,"Bugs,Completed,Highest Priority,Novartis Heart Failure","Username: Bobby
+Study ID: 249021
+Location: Table QC - Table 2
+Project: Novartis HF
+
+Summary:
+Sometimes unit labels are imported when, instead, the field should remain blank. When this occurs, I am unable to remove the unit label from the field. To recreate this issue, open an individual cell pop-up and attempt to erase the unit label.",First Priority,
+32404988703863,2015-04-23,2015-04-28,2015-04-28,"Changing time points changes data labels, and vice versa",Jignesh Patel,,"Bugs,Highest Priority,Novartis Heart Failure,Elsevier Alzheimer’s","Username: Andre
+Study ID: 430571 
+Location: Table QC Table 1
+Project: Novartis HF
+
+Username: Rachel
+Study ID:  All studies (example ID 286543)
+Location of Issue: Table QC - All tables (example table 2 in 286543)
+Project: Elsevier Alzheimer’s (and all projects)
+
+Summary:
+Changing data labels, changes all the time points, and changing time points changes all the data labels. You can see in this screen shot, as I was assigning time points, it changes mean (sd) to  n(%) from the label above
+
+Additional details in duplicate task.",First Priority,
+32088324830623,2015-04-20,2015-04-22,2015-04-22,Send Participant labeled data as n/% not #/%,Jignesh Patel,,Table,,First Priority,
+31993694427181,2015-04-17,2015-04-22,2015-04-24,Error Report shows duplicate group name for text,Soheb Rapati,,"Text,Highest Priority,Reed Hepatitis C,Elsevier Insect Repellent","Username: laurenb
+Study ID: 778723
+Location of Issue: Text Extraction
+Project: Elsevier Insect Repellent
+
+Summary:
+Error message states
+
+“This study has a group with a duplicate name. Only the first one will be imported. Terminix ALLCLEAR Sidekick Trial 2”.
+
+When the text template is checked, the study only has 1 group with that name so unclear why it shows that a duplicate exists.",First Priority,
+31968270509674,2015-04-17,2015-04-20,2015-04-20,"Validaiton Issue: duplicate result error message, but has all different timepoints",Ajay,,,"Username: Rachel
+Study ID: 668835
+Location of Issue:Table QC Validation - Table 2
+Project: Novartis Heart Failure
+
+Summary:
+Receiving the error message “this study contains the same Parent Result more than once. Only the first one was imported and the others ignored. HF Per 100000 person-years” , but the result has distinct timepoints and contains no duplicates.",First Priority,
+31989900810174,2015-04-17,2015-04-20,2015-04-20,Add validation for if a radio button is not selected for the population within the group pop-up.  Must be selected.,Jignesh Patel,,Table,,First Priority,
+31865846923310,2015-04-16,2015-04-17,2015-04-17,Allow radio button functionality in Table Extraction so that if the population radio button is selected it attributes that population to all cells within the group (except for those with custom population),Soheb Rapati,,"Table,Novartis Heart Failure","If the radio button is selected in the population group pop-up we need this population to automatically be applied to each cell related to that group EXCEPT for those with custom populations.  It is critical that this change does not over-ride custom populations that have already been attributed to the cells as if these populations are lost it will be impossible to identify them and correct them.
+
+Right now we are selecting cells and adding the populations in mass, but having it all done through the radio button (which should be the same population added to the cells anyways in most cases) will save a lot of time and correct the current problem we are having where analysts are having to go through each complete study and add populations to each cell (which all currently say ""na""
+
+Picture 1: Currently, even though 1535 is selected in the popup (Picture 2) is says ""Participants: na""
+Picture 2: We want it so that if the radio button is selected, pictured
+Picture 3: It automatically adds to each cell of that group the selected population, BUT
+Picture 4: It leaves cells with input custom population alone, and doesnt change them.
+
+So once again I want to stress, if there is already a custom population for that cell or if one is input later, these population should not be automatically changed.",First Priority,
+31755028197759,2015-04-15,2015-04-16,2015-04-16,Novartis Export,Ajay,,,"Client - Novartis
+Package - Heart Failure - Incidence/Prevalence
+FQ - All References 2.11.2015  ",First Priority,
+31755028197761,2015-04-15,,2015-04-15,"Author, year",,,,,,Novartis Export
+31755028197765,2015-04-15,,2015-04-15,setting & location type & name fields only (don't need total location/setting),,,,,,Novartis Export
+31755028197769,2015-04-15,,2015-04-15,"all outcome name & qualifiers (mean/median/average/n-%) with follow-up time period, units, Ns - tables & text",,,,,,Novartis Export
+31767590232562,2015-04-15,,2015-04-15,subgroup name,,,,,,Novartis Export
+31755028197771,2015-04-15,,2015-04-15,"(no group data, no pvalues, no association measures)",,,,,,Novartis Export
+31755028197775,2015-04-15,,2015-04-15,frequency report on separate tab,,,,,,Novartis Export
+31698320683071,2015-04-14,2015-04-22,2015-04-22,Validation error with system not registering outcome populations,Jignesh Patel,,"Table,Novartis Heart Failure,Reed Hepatitis C","Username: Dara
+Study ID:
+665485
+Location of Issue:
+
+1)
+Type of Assignment: Table extraction
+
+2)
+Location with extraction form: Result cells
+Project: Novartis HF I/P
+
+Summary: These cells are tagged to populations and the group N is captured as well. However, the system is suddenly not recognizing that the populations have already been captured. In order to clear these errors, we have to manually click
+into each cell (and just click X out of the pop-up; no need to parse the cell). This is similar to the ‘Not Reported’ checkbox issue for text extraction. Any possibility that we shouldn’t need to click all the cells in these tables? This is affecting a bunch
+of other studies in this database as well.
+
+Reference ID: 665485
+Source: Table 1
+Type: Results
+
+This study contains a Result within the Group Study Population that doesn't contain N data and will not be imported. [ name | type | interval | (method of analysis &#43; subgroup &#43; unitLabel &#43; rater &#43; locationStr) | field type] Chronic kidney disease||Time
+Zero:Time Zero||
+
+This study contains a Result within the Group Study Population that doesn't contain N data and will not be imported. [ name | type | interval | (method of analysis &#43; subgroup &#43; unitLabel &#43; rater &#43; locationStr) | field type] LV ejection fraction <50%||Time
+Zero:Time Zero||
+Source: Table 2
+Type: Results
+
+This study contains a Result within the Group Total Population that doesn't contain N data and will not be imported. [ name | type | interval | (method of analysis &#43; subgroup &#43; unitLabel &#43; rater &#43; locationStr) | field type] Pacemaker mode, AAI||Time
+Zero:Time Zero||",First Priority,
+31786162183755,2015-04-15,2015-04-17,2015-04-17,Validation Error: Total range for only the first group listed in a table,Ajay,,,"Username: Andrew
+Study ID: 665077
+Location of Issue: Table QC, Tables 1, 2, & 3
+Project: Novartis I/P Geography Priority Subset
+
+Summary:
+Getting this validation error:
+
+""Attribute ""Leukocytes, millions/mL"" in Group ""Total Population"" contains an invalid Field Type. Choose a valid Field Type and fill it with the proper data.
+
+Name: Low Value: 2.0
+Name: High Value: 4.6""
+
+However, the proper range field type is entered. In addition, there are three groups with the same outcome and range field type; however, no validation error reads for these groups. The same problem occurs in Tables 2 and 3, always with the first group reported and not for subsequent groups.",First Priority,
+31873000767833,2015-04-16,2015-04-17,2015-04-17,Tables that have been QC Finalized are not loading,Jignesh Patel,,"Bugs,Table,QC,Highest Priority,Elsevier Malaria","Username: laurenb
+Study ID: 778689
+Location of Issue: Table QC, Table 1 & 4
+Project: Elsevier Malaria
+
+Summary:
+This study and all of its tables were QC Finalized. Tables 2 and 3 are able to be reopened but Tables 1 and 4 just keep loading indefinitely so unable to check them on the QC end.",First Priority,
+31815392838184,2015-04-16,2015-04-16,2015-04-16,"[Duplicate] population in group pop-up is set, but outcome populations show na",Jignesh Patel,,"Table,Novartis Heart Failure","Population for the group N in the column header shows as 1535... this should be allocated down the column if no other population is entered (radio button for 1535 is selected in the column header), but individual outcome populations show as ""na”
+",First Priority,
+31961954767930,2015-04-17,2015-04-20,2015-04-20,"Validation Issue: Report is reading a comma within a value, but even after it was corrected, it still reads a comma within the value.",Soheb Rapati,,Completed,"Username: Rachel
+Study ID: 657025
+Location of Issue: Table QC Validation - Table 1 Group population
+Project: Novartis Heart Failure
+
+Summary: Receiving error message
+
+""Attribute ""First HF diagnoses"" in Group ""Women"" contains unparseable Population data. 37,356”
+
+when comma has been removed from the population and is saving the correction—but it still does not clear the error report. Screen shots attached.",First Priority,
+31789617017372,2015-04-15,2015-04-22,2015-04-22,"validation: system showing error for total range with bad range data, but cannot find the ""bad range"" anywhere on the template",Soheb Rapati,,"Completed,Novartis Heart Failure","user: emily
+ID: 640838
+location: text extraction
+project: Heart
+Failure Incidence/Prevalence - Germany, US, Canada
+
+summary: ""A Total Range contains bad Range data 65-74 "" I get this validation error 9 times on the report.",First Priority,
+30665232470774,2015-04-01,2015-04-16,2015-04-16,Need to change the functionality of the population radio buttons to allow for different selections between groups.,Soheb Rapati,,"Text,Group pop-up,Completed,Highest Priority,need ASAP ","Username: Emily
+Study ID: 629640
+Location: text extraction, group popup
+
+Summary:
+We need to be able to select the radio button for each individual arm, and not have it be the same across arms. For example in the image attached, I would like to select the ""Randomized"" population for the LVRS and MT arms, and the ""Matched"" population for the control arm. The tech only allows for the same selection across arms.  We need this changed so the radio buttons for population can be different between groups.",First Priority,
+30694469043099,2015-04-01,,2015-04-01,un-link the radio button that has to be the same across all groups ,,,,,,Need to change the functionality of the population radio buttons to allow for different selections between groups.
+30694469043103,2015-04-01,,2015-04-01,validation error if user doesn't select radio button per group popup (cannot be zero or NR for the population selected with radio button),,,,,,Need to change the functionality of the population radio buttons to allow for different selections between groups.
+29891890956284,2015-03-23,2015-04-16,2015-04-16,"""Text"" data label - validation error",Ajay,,"Bugs,Table,QC,Highest Priority,Novartis Heart Failure,Janssen Diabetes,error report","Username: N/A
+Study ID: 420385
+Location of Issue: Table QC; Table 1.
+Project: Janssen Diabetes
+
+Summary:
+Field type is shown as being inaccurate for ""Total Population"" group that is not within the table. This error occurred even though “text” was selected from the field type dropdown. The error mentioned is for the group “Total Population” but none of the groups in the table had that name (closest was “All patients”) so it might be a glitch related to text issues.
+
+Error message: “Attribute ""____"" in Group ""____"" contains an invalid Field Type. Choose a valid Field Type and fill it with the proper data. Name: text Value: NC” and related message of “Attribute ""____"" does not have a valid Value Type so no row level attributes (Attribute Labels) will be imported for it”.
+",First Priority,
+30061248034303,2015-03-25,2015-04-16,2015-04-16,546044/218506 - Attribute / Group Value that is mapped to a Geroup that doesn't exist,Ajay,,"Highest Priority,error report","This study was QC Finalized on 3/13/2015 and did not show up on any error report until 3/24/2015 2:24PM (Emailed Subject: Error Report FQ 30264  2:24PM). 
+
+Was there something changed in validations to cause this to show up in the error report after being previously accepted? We're not sure what this error is referring to and after checking the tables in QC we saw that everything looked normal",First Priority,
+31667605170696,2015-04-14,2015-04-17,2015-04-17,Text Validation: system not recognizing <= and > timepoint types as unique,Sumit Patel,,"Text,Completed","username: emily
+
+study id: 662622
+
+location: text, group/result tab
+
+project: Heart
+Failure Incidence/Prevalence - Germany, US, Canada
+
+summary: error report not recognizing <= and > as unique time points with ""28 days after the ACS admission""",First Priority,
+31790573069667,2015-04-15,2015-04-17,2015-04-17,validations: result contains unparseable/blank Field data,Soheb Rapati,,,"user: emily
+study id: 666350
+Location: text
+Project: Heart Failure Incidence/Prevalence - Germany, US, Canada
+
+Summary: Errors for two results that say, ""contains unparseable/blank Field Value data. Fix the Field Type, data, and/or set to 'Not Reported' if meant to be blank.  Can't
+determine Field Type because there is no field value data!""
+
+I've checked and not reported is selected, cannot figure out why this error is happening.",First Priority,
+31966088959708,2015-04-17,2015-04-17,2015-04-17,Validation Issue: 'Individual' field type,Jignesh Patel,,,"Username: Christina
+Study ID: 641803
+Location of Issue: Table QC, Table 2
+Project: Novartis HF
+
+Summary:
+·
+‘Individual’ field type still yielding validation error of : ’unparseable/blank Field Value data’
+·
+For present deadline, changed field type to #",First Priority,
+31980698342152,2015-04-17,2015-04-20,2015-04-20,"validations: system not recognizing ""duration"" timepoints as unique",Soheb Rapati,,,"user: emily
+id: 711202
+location: text, group/results tab, timepoint popup box
+project: Heart Failure Incidence/Prevalence - other country level
+
+summary: 
+template does not give validation error for this, but system showing error for duplicate results for HF incidence with ""duration"" timepoints. see images",First Priority,
+31961189478042,2015-04-17,2015-04-18,2015-04-18,"validations: system showing validation error in back system for timepoints the use = and descriptive unit, with no number input for # field",Soheb Rapati,,Completed,"user: emily
+id: 641015
+location: text extraction, group/results tab, time points
+project: Heart Failure Incidence/Prevalence - other country level
+
+summary: system showing validation error for timepoints in the format of = descriptive unit, with no # input. see images attached",First Priority,
+31791977143131,2015-04-15,2015-04-18,2015-04-18,validation: system error for within group AM,Soheb Rapati,,Completed,"user: emily
+ID: 662622
+Location: text extraction, group/results tab
+project: Heart Failure Incidence/Prevalence - Germany, US, Canada
+
+summary:
+
+Type: PropertySet
+
+Group ""Residents of Perth, Western Australia aged 25-64 with no history of HR, who experienced AMI"" contains Within-Group Property Set data that won't get imported because of unparseable FieldValue data",First Priority,
+31960901279419,2015-04-17,2015-04-18,2015-04-18,"Validation Issue: Two arms show up on group/results tab page with the heading of ""Study 1"" when they only contain pvalues",Soheb Rapati,,Completed,"user: emily
+id: 363941
+location: text extraction, group results page
+project: novartis Heart Failure Incidence/Prevalence - other country level
+
+summary: This is most likely due to pooled analysis studies shifting study arms.  It looks like all study arms were shifted right.  As a result, two arms show up on group/results tab page with the heading of ""Study 1"" ; the cells under these arms only show pvalues. This is causing a validation error.",First Priority,
+31676559027609,2015-04-14,2015-04-15,2015-04-15,validations: system error report does not accpet  when na is used in group popup window,Ajay,,"Text,Completed","user: emily
+
+study ID: 4737
+
+location: text, group/results tab, group popup window
+
+project: Heart
+Failure Incidence/Prevalence - Germany, US, Canada
+
+summary: system error report does not accpet  when na is used in group popup window",First Priority,
+31275846445795,2015-04-09,2015-04-09,2015-04-14,"[Duplicate] Study lags, freezes, and pages go missing from the PDF upon opening the study.",Greg,,Novartis Heart Failure,"Username: Joshua
+Study ID: 711310
+Location of Issue: Table QC
+Project: Novartis Heart Failure I/P
+
+Summary:
+When trying to open the study, my computer freezes, the screen flashes, the pdf goes blank, and all the google docs I have open go completely black. After clearing cache and re-opening multiple times, the black gdoc issue stops, but the pdf is still blank.
+",First Priority,
+31530873048042,2015-04-13,2015-04-14,2015-04-14,"in group pop-up, population box - allow ""na""; do not allow NR",Soheb Rapati,,Completed,add as validation error on form - do not allow NR,First Priority,
+31379820836600,2015-04-10,2015-04-13,2015-04-14,[Duplicate] Validation Issue: Inclusion and Exclusion criteria fields are receiving array format validation error messages,Ajay,,"Text,QC,Study Level tab,Highest Priority,Elsevier Motion Sickness","Username: Rachel
+
+Study ID: 779565 and 16/18 total Motion Sickness studies
+Location of Issue: Text Extraction Validation - Study Level – Inclusion and Exclusion Criteria
+Project: Elsevier Motion Sickness
+
+Summary: 
+16 of the 18 Motion sickness studies are receiving error messages like the one below about the inclusion or  exclusion criteria not being sent over in the proper array format. The criteria appear to be captured correctly, per protocol,
+in the bullet format.",First Priority,
+31556247702176,2015-04-13,2015-04-14,2015-04-14,Outcome Type not saving in Statistics pop up,Soheb Rapati,,"Text,Study Level tab,Completed,Highest Priority,Novartis Heart Failure","Username: Jerrin
+
+Study ID: 661452
+Location of Issue:
+1) Text Extraction
+
+2) Outcome Type in Statistics pop up
+
+Project: Novartis I/P Geography Priority Subset
+
+Summary: One of the Outcome Types in the Statistics pop up should be ""Continuous Variables"", but this is currently not being saved after saving the study to close or finalize.  The Outcome Type was entered numerous times, but after saving and
+reopening the study, it was not saved.  Attached is the screenshot showing the issue.",First Priority,
+31565290740140,2015-04-13,2015-04-14,2015-04-14,No masks show up,Jignesh Patel,,"Table,Completed,Highest Priority,Novartis Heart Failure","andre
+
+475298
+
+Table QC, entire study
+
+Project: Novartis Heart Failure - All References 2.11.15
+
+No masks show up on the study",First Priority,
+31659629846874,2015-04-14,2015-04-14,2015-04-14,Double Overlay - Table is captured is twice and the overlay is persistent on QC end.,Jignesh Patel,,"Bugs,Table,QC,Highest Priority,Novartis AE I/P","Username: Fasahath Husain
+Study ID: 662883
+Location of Issue: Table QC - Table 1
+Project: Novartis Heart Failure Incidence/Prevalence
+
+Summary:
+This table is captured twice, once during older protocol and again recently. One version is approved and the other version looks exactly like ‘text-only’ table. The Analyst, Alicia, ‘restarted’ the bad table to get rid of it and it disappeared on analyst's end but shows up in qc end.",First Priority,
+31631328282876,2015-04-14,2015-04-16,2015-04-16,PDF with tables extracted from another PDF,Jignesh Patel,,"Bugs,High Priority,Table,Novartis AE I/P","Username: Andrew
+Study ID: 694172
+Location of Issue: Table QC, Entire PDF
+Project: Novartis Heart Failure
+
+Summary:
+It turns out the Library team had to replace the original PDF with another one due to copyright.  However, the tables for the original study were completed, yet now do not match the PDF displayed on 2.0.  Is there a way to resolve this issue if the original was already completed?",First Priority,
+30849638563073,2015-04-03,2015-04-15,2015-04-15,"Validation Issue: Study Phases with the field type ""Average"" receiving validation error for the study level and for each result that the phase is used as a timepoint",Soheb Rapati,,"Text,Completed,Highest Priority,Elsevier Insect Repellent","Username: Rachel
+Study ID: 778749
+Location of Issue: Text Extraction - Study Phase field on study level tab
+Project: Elsevier Insect Repellent
+
+Summary:  
+Study phases that contain the field type “average” are causing validation errors both for the study phase fields on the study level and for each outcome the phase is used for as a result (means are passing the validation, just not “averages”).",First Priority,
+31786740430067,2015-04-15,2015-04-16,2015-04-16,"No ""Unknown Variable"" in table, but error message pops up",Sumit Patel,,"Bugs,Table,Completed,Highest Priority,Novartis Heart Failure","Username: Andre
+Study ID: 711514
+Location: Table QC, Table 2
+Project: Novartis Heart Failure
+
+Summary:
+There are no unknown variables in the table (as you can see) but the error still pops up. I reparsed all the values as n and % and the message still pops up.",First Priority,
+31374660631180,2015-04-10,2015-04-16,2015-04-16,"Statistics & Power fields won't clear out ""NR"" and showing validation errors",Soheb Rapati,,"Text,Completed","phantom data being sent in the JSON that does not show up on the form
+
+examples:
+Reference ID: 226884
+Source: Text
+Type: Study
+
+This study contains a Statistics property that is missing a value. response rate 
+ 
+Reference ID: 566127
+Source: Text
+Type: Study
+
+This study contains a Statistics property that is missing a value. Comparability between LTS and STS continuous data
+",First Priority,
+31198704336752,2015-04-08,2015-04-15,2015-04-15,"Add ""Study 1,"" ""Study 2"" etc. labels to name/acronym fields under Pooled Analysis study design (see ""study labels"" screenshot); remove delete buttons",Soheb Rapati,,"Text,QC,Study Level tab,Completed,Highest Priority,NCCMH CBT for Psychosis","Username: Rachel
+Study ID: 562531
+Location of Issue: Text Extraction Validation - Study Level
+Project: NCCMH – CBT for Psychosis
+
+Summary:
+This study has 2 study designs selected: pooled analysis and a randomized controlled trial. The pooled analysis design is receiving the error (screen shot attached) “Duplicate study design attribute row” for the names of the 2 studies in the pooled analysis, but each of the names entered in the field is different.",First Priority,
+31320978138505,2015-04-09,,2015-04-09,add study labels to name/acronym fields,,,,,,"Add ""Study 1,"" ""Study 2"" etc. labels to name/acronym fields under Pooled Analysis study design (see ""study labels"" screenshot); remove delete buttons"
+31320978138507,2015-04-09,,2015-04-09,remove delete buttons to name/acronym fields,,,,,,"Add ""Study 1,"" ""Study 2"" etc. labels to name/acronym fields under Pooled Analysis study design (see ""study labels"" screenshot); remove delete buttons"
+31642123603152,2015-04-14,2015-04-14,2015-04-14,Tables suddenly won't load in Table QC,Jignesh Patel,,"Bugs,Table,QC,Highest Priority,need ASAP ","Username: Andre
+Study ID: 664538
+Table QC, Table 2
+project: Novartis All References 2.11.15
+
+Summary:
+Very simple issue, the table wont load. I closed out of my browser, cleared cache, re-opened and the table still wont load.",First Priority,
+31898229621744,2015-04-16,2015-04-17,2015-04-17,"[Duplicate] Validation/Error Report issue: data entered in ""outcome type"" field does not save",Soheb Rapati,,,"Username: jaja
+Study ID: 665077
+Location of Issue: Text Extraction - Statistics pop up
+Project: Novartis HF I/P
+
+Summary:
+Data entered in the ""outcome type' field does not remain saved after the study is finalized and closed
+",First Priority,
+31875684240773,2015-04-16,2015-04-18,2015-04-18,"Validation/Error Report issue: data entered in ""outcome type"" does not save, and the first 2 rows in the pop up do not permanently deletes",Soheb Rapati,,"Completed,Novartis Heart Failure","Username: jaja
+Study ID: 336417
+Location of Issue: Text Extraction - Statistics pop up
+Project: Novartis HF I/P
+
+Username: jaja
+Study ID: 665077
+Location of Issue: Text Extraction - Statistics pop up
+Project: Novartis HF I/P
+
+Summary:
+The first 2 rows need to be deleted but they keep on coming back after study is finalized. Also, data entered in the ""outcome type' field is lost after study is finalized",First Priority,
+31790190765829,2015-04-15,2015-04-17,2015-04-17,Table wont load,Jignesh Patel,,,"andre
+
+665103
+
+Table QC, table 2
+
+Novartis Heart Failure All References 2.11.15
+
+Table wont load in study. I refreshed my browser but it seems to only not load for table 2. Was able to QC table 3",First Priority,
+31954991251245,2015-04-17,2015-04-17,2015-04-17,"PDF Comes Up as Symbols and Chinese Characters (No Text).  No Masks, unable to QC",Jignesh Patel,,,"Username: amanda
+Study ID: 711433
+Location of Issue: Table QC - Entire PDF
+Project: Novartis HF I/P
+
+Summary: 
+Entire PDF (5 pages) loads without any text, only symbols (e.g. () , ; , etc.) and Chinese characters. There are no tables visible (no tables, no masks, etc.) so I cannot open the tables (there are 2 tables) to QC them.
+",First Priority,
+37450966665493,2015-06-11,2015-08-07,2015-08-07,Add validation button to tables,Jignesh Patel,,"High Priority,Table","just like we have in text assignments, tables need a validate button so they can see if there's any errors they must fix before submitting the table. ",First Priority,
+39239340852310,2015-06-25,,2015-08-07,updates to AM popup,Sumit Patel,,"Medium Priority,Statistics (pvalues & AM),BMS- Renal Cell Carcinoma","User: Emily
+Study ID: 702466, Table 2
+
+No specific “pooled SD” label.
+Since the column header is a comparison, this should be located within an AM-type column",First Priority,
+39661171772468,2015-06-29,2015-07-10,2015-07-10,"Do not save labels (CI, p, and SE) when no data is added to the form (in screenshot, i added a little ""clear button"" if you need.... only happens if you open popup and hit save icon. if you open popup and then click back on the cell to close it, the labels don't save",,,,,,updates to AM popup
+39661171772470,2015-06-29,2015-07-07,2015-07-10,"Add ""Pooled SD"" to AM popup in Text/",,,,,,updates to AM popup
+41028366095816,2015-07-10,,2015-07-30,"Add ""Pooled SD"" to tables",Jignesh Patel,,Table,,,updates to AM popup
+41028366095813,2015-07-10,2015-08-07,2015-08-07,"once click on clear button, should give warning ""Are you sure you want to clear all fields and any text in the associated flag"" with options ""OK"" (data is cleared from both cell and flag popup) or ""Cancel"" (data is NOT cleared)",Sumit Patel,,High Priority,,,updates to AM popup
